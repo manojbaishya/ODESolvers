@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "math.h": "c",
+        "algorithms.h": "c",
+        "gnuplot_i.h": "c",
+        "odesolvers.h": "c",
+        "stdlib.h": "c",
+        "stdbool.h": "c",
+        "string.h": "c"
+    }
+}

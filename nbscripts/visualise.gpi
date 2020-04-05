@@ -1,0 +1,1 @@
+plot "./iodata/DPP-System1/RK4SYS_step=2.50e-01.dat" using 4:5 with linespoints ls 2, "./iodata/DPP-System1/RK4SYS_step=2.50e-01.dat" using 6:7 with linespoints ls 4

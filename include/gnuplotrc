@@ -1,0 +1,59 @@
+
+###
+### Language initialization
+###
+# set locale
+set encoding utf8
+
+set terminal qt title 'Figure 1' enhanced size 1150, 680 position 0, 0 font 'Noto Sans, 10' persist
+set samples 10000
+
+###
+### Default line colors and repeat cycle
+###
+set style line 1 lt 1 lw 2 lc rgb '#0072bd' pt 7 ps 1.5 # blue
+set style line 2 lt 1 lw 2 lc rgb '#d95319' pt 5 ps 1.5 # orange
+set style line 3 lt 1 lw 2 lc rgb '#edb120' pt 9 ps 1.5 # yellow
+set style line 4 lt 1 lw 2 lc rgb '#7e2f8e' pt 11 ps 1.5 # purple
+set style line 5 lt 1 lw 2 lc rgb '#77ac30' pt 13 ps 1.5 # green
+set style line 6 lt 1 lw 2 lc rgb '#4dbeee' pt 15 ps 1.5 # light-blue
+set style line 7 lt 1 lw 2 lc rgb '#a2142f' pt 2 ps 1.5 # red
+set style line 8 lt 1 lw 2 lc rgb '#F781BF' pt 3 ps 1.5 # pink
+set style line 9 lt 1 lw 2 lc rgb '#754098' pt 7 ps 1.5 # violet
+set style line 10 lt 1 lw 2 lc rgb '#504971' pt 7 ps 1.5 # purple
+
+# Palette
+set palette maxcolors 8
+set palette defined (\
+0 '#352a87',\
+1 '#0363e1',\
+2 '#1485d4',\
+3 '#06a7c6',\
+4 '#38b99e',\
+5 '#92bf73',\
+6 '#d9ba56',\
+7 '#fcce2e',\
+8 '#f9fb0e')
+
+# Borders - XY
+
+set style line 101 lc rgb '#000000' lt 1 lw 1
+set border 3 front ls 101
+set tics nomirror out scale 0.75
+set format '%g'
+
+# Legend
+
+set key top right outside enhanced font 'Noto Sans, 10' spacing 1.5 horizontal
+
+
+###
+### Some commonly used functions that are not built in
+###
+rgb(r,g,b) = sprintf("#%06x",256.*256.*255.*r+256.*255.*g+255.*b)
+hsv(h,s,v) = sprintf("#%06x",hsv2rgb(h,s,v))
+
+
+# Standard grid
+set style line 102 lc rgb '#808080' lt 0 lw 0.5
+set grid back ls 102

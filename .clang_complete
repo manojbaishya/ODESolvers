@@ -1,0 +1,2 @@
+-I include
+-I ~/.local/include/vcpkg/installed/x64-linux/include
