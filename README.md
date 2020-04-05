@@ -17,6 +17,7 @@
 ### Contributing
 
 ## TODO
+
 1. Redesign CashKarpRKF45 to output variable stepsize data directly instead of predefined gaps.
 2. Implement Events to detect critical points in solution.
 3. Debug existing CashKarpRKF45 for DPP (GNC Assignment 2 Problem 1).
