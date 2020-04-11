@@ -4,6 +4,158 @@
 		"selected_items":
 		[
 			[
+				"illus",
+				"illustration\t🕮"
+			],
+			[
+				"frie",
+				"friendly\t🕮"
+			],
+			[
+				"Philosop",
+				"Philosophy\t🕮"
+			],
+			[
+				"cons",
+				"consts\tabc"
+			],
+			[
+				"si",
+				"sig\tabc"
+			],
+			[
+				"V",
+				"Vt\tdouble Vt"
+			],
+			[
+				"deg",
+				"deg2rad\tdeg2rad(angleInDegrees)"
+			],
+			[
+				"const",
+				"constptr\tabc"
+			],
+			[
+				"set",
+				"set_parameters\tvoid set_parameters(struct params *)"
+			],
+			[
+				"g_",
+				"g_consts\t(derivatives.c)"
+			],
+			[
+				"EX",
+				"EXIT_FAILURE\t(ODESolvers.c)"
+			],
+			[
+				"char",
+				"char\tabc"
+			],
+			[
+				"ODE",
+				"ODEinit\tabc"
+			],
+			[
+				"strca",
+				"strcat\tchar * strcat(char *restrict __dest, const char *restrict __src)"
+			],
+			[
+				"rel",
+				"relative_errorPC\tabc"
+			],
+			[
+				"input",
+				"inputfile\tabc"
+			],
+			[
+				"con",
+				"conditions\tabc"
+			],
+			[
+				"nc",
+				"include/"
+			],
+			[
+				"incl",
+				"include\tinclude \"header\""
+			],
+			[
+				"Istdi",
+				"I-stdio\tinc"
+			],
+			[
+				"for",
+				"for\tFor Loop"
+			],
+			[
+				"json_object_get",
+				"json_object_get_array\t(parson.h)"
+			],
+			[
+				"Istd",
+				"I-stdlib\tinc"
+			],
+			[
+				"json_object",
+				"json_object_get_number\t(parson.h)"
+			],
+			[
+				"json",
+				"json_object\tabc"
+			],
+			[
+				"init",
+				"initConditions\tabc"
+			],
+			[
+				"JSON",
+				"JSON_Value\tJSON_Value"
+			],
+			[
+				"inc",
+				"inc\t#include \"…\""
+			],
+			[
+				"yIn",
+				"yInitCond\tabc"
+			],
+			[
+				"printf",
+				"printf\tprintf …"
+			],
+			[
+				"_object_ar",
+				"json_object_array_get_idx\tstruct json_object * json_object_array_get_idx(struct json_object *obj, int idx)"
+			],
+			[
+				"json_obje",
+				"json_object_get_string\tconst char * json_object_get_string(struct json_object *obj)"
+			],
+			[
+				"json_object_arr",
+				"json_object_array_length\tint json_object_array_length(struct json_object *obj)"
+			],
+			[
+				"out",
+				"outputInterval\tabc"
+			],
+			[
+				"step",
+				"stepsize\tabc"
+			],
+			[
+				"json_object_obj",
+				"json_object_object_get_ex\tjson_bool json_object_object_get_ex(struct json_object *obj, const char *key, struct json_object **value)"
+			],
+			[
+				"fre",
+				"fread\tsize_t fread(void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream)"
+			],
+			[
+				"ada",
+				"adaptive_switch\t(initial-conditions.json)"
+			],
+			[
 				"erro",
 				"errorMax\tdouble errorMax"
 			],
@@ -108,20 +260,12 @@
 				"sprintf\tabc"
 			],
 			[
-				"out",
-				"outputfile\tabc"
-			],
-			[
 				"fun",
 				"func\tabc"
 			],
 			[
 				"_sol",
 				"_solutionSYS\t(ODESolvers.h)"
-			],
-			[
-				"for",
-				"for\tFor Loop"
 			],
 			[
 				"Cal",
@@ -216,10 +360,6 @@
 				"do_\tDo While Loop"
 			],
 			[
-				"ODE",
-				"ODESolver\t(problems.c)"
-			],
-			[
 				"plot",
 				"plotData\tabc"
 			],
@@ -280,24 +420,12 @@
 				"I-stdlib\tinc"
 			],
 			[
-				"EX",
-				"EXIT_SUCCESS\tEXIT_SUCCESS"
-			],
-			[
 				"swi",
 				"switch(${1\t(switch_case.sublime-snippet)"
 			],
 			[
 				"varia",
 				"variable\t🕮"
-			],
-			[
-				"si",
-				"sizeof\tabc"
-			],
-			[
-				"init",
-				"initCond\tabc"
 			],
 			[
 				"res",
@@ -328,10 +456,6 @@
 				"return\tabc"
 			],
 			[
-				"Istd",
-				"I-stdio\tinc"
-			],
-			[
 				"pa",
 				"parameters\tabc"
 			],
@@ -358,10 +482,6 @@
 			[
 				"str",
 				"struct\tabc"
-			],
-			[
-				"inc",
-				"inc\t#include \"…\""
 			],
 			[
 				"ifnd",
@@ -394,53 +514,11 @@
 			[
 				"Alpha",
 				"AlphaM\tabc"
-			],
-			[
-				"The",
-				"ThetaTdot\tabc"
-			],
-			[
-				"AL",
-				"AlphT0\tabc"
-			],
-			[
-				"Apl",
-				"AlphaM\tabc"
-			],
-			[
-				"state",
-				"state_evol\tabc"
-			],
-			[
-				"p2",
-				"p2PP\t(p2PP.m)"
-			],
-			[
-				"deg2",
-				"deg2rad\tMatlab method"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "src/simulations.c",
-			"settings":
-			{
-				"buffer_size": 1063,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "include/initial_conditions.ini",
-			"settings":
-			{
-				"buffer_size": 320,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Build Project",
 	"build_system_choices":
@@ -556,6 +634,78 @@
 				"Build Project",
 				""
 			]
+		],
+		[
+			[
+				[
+					"Build Project",
+					""
+				],
+				[
+					"Build Project",
+					"Silent Build & Run in New Tab"
+				],
+				[
+					"Build Project",
+					"Build & Run in New Tab"
+				],
+				[
+					"Build Project",
+					"Run in New Tab"
+				],
+				[
+					"Build Project",
+					"Clean in New Tab"
+				],
+				[
+					"Build Project",
+					"Debug in New Tab"
+				],
+				[
+					"Build Project",
+					"Clean, Build & Run in Split Tab"
+				],
+				[
+					"Build Project",
+					"Build & Run in Split Tab"
+				],
+				[
+					"Build Project",
+					"Run in Split Tab"
+				],
+				[
+					"Build Project",
+					"Clean in Split Tab"
+				],
+				[
+					"Build Project",
+					"Debug in Split Tab"
+				],
+				[
+					"Build Project",
+					"Clean, Build & Run in Panel"
+				],
+				[
+					"Build Project",
+					"Build & Run in Panel"
+				],
+				[
+					"Build Project",
+					"Run in Panel"
+				],
+				[
+					"Build Project",
+					"Clean in Panel"
+				],
+				[
+					"Build Project",
+					"Debug in Panel"
+				]
+			],
+			[
+				"Build Project",
+				""
+			]
 		]
 	],
 	"build_varint": "",
@@ -566,12 +716,76 @@
 		"selected_items":
 		[
 			[
-				"ini",
-				"Set Syntax: INI"
+				"Git",
+				"Git: Status"
+			],
+			[
+				"div",
+				"ASCII Art: Add large divider"
+			],
+			[
+				"wra",
+				"Word Wrap: Toggle"
+			],
+			[
+				"small",
+				"ASCII Art: Add small divider"
+			],
+			[
+				"large",
+				"ASCII Art: Add large divider"
+			],
+			[
+				"Keyb",
+				"Preferences: Key Bindings"
+			],
+			[
+				"UI",
+				"UI: Select Theme"
+			],
+			[
+				"thuna",
+				"Thunar: Open here"
 			],
 			[
 				"mark",
 				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"prevew",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"or rig",
+				"Origami: Create Pane on the Right"
+			],
+			[
+				"orog ",
+				"Origami: Create Pane on the Right"
+			],
+			[
+				"origa",
+				"Origami: Create Pane Below"
+			],
+			[
+				"move right",
+				"Origami: Move File to Pane on the Right"
+			],
+			[
+				"ori",
+				"Origami: Create Pane on the Right"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"ini",
+				"Set Syntax: INI"
 			],
 			[
 				"MArkd",
@@ -600,10 +814,6 @@
 			[
 				"rain",
 				"RainbowBrackets: tinct view"
-			],
-			[
-				"div",
-				"ASCII Art: Add small divider"
 			],
 			[
 				"wr",
@@ -746,10 +956,6 @@
 				"Package Control: Remove Package"
 			],
 			[
-				"pi",
-				"Package Control: Install Package"
-			],
-			[
 				"Syn Gnu",
 				"Set Syntax: gnuplot"
 			],
@@ -788,10 +994,6 @@
 			[
 				"orig des",
 				"Origami: Destroy Current Pane"
-			],
-			[
-				"UI",
-				"UI: Select Theme"
 			],
 			[
 				"PI",
@@ -1024,58 +1226,6 @@
 			[
 				"divi",
 				"ASCII Art: Add small divider"
-			],
-			[
-				"prefere",
-				"Preferences: Settings"
-			],
-			[
-				"prefe",
-				"Preferences: Settings"
-			],
-			[
-				"keybindin",
-				"Preferences: Key Bindings"
-			],
-			[
-				"sy",
-				"Set Syntax: C"
-			],
-			[
-				"syn Cmon",
-				"Set Syntax: CMonokaiYAML"
-			],
-			[
-				"syn",
-				"Set Syntax: CTest"
-			],
-			[
-				"syntax C",
-				"Set Syntax: C"
-			],
-			[
-				"theme colo",
-				"UI: Select Color Scheme"
-			],
-			[
-				"cMon",
-				"Set Syntax: CMonokaiYAML"
-			],
-			[
-				"fileDiff",
-				"FileDiffs: Menu"
-			],
-			[
-				"diff",
-				"FileDiffs: Menu"
-			],
-			[
-				"SYntax CMOn",
-				"Set Syntax: CMonokaiYAML"
-			],
-			[
-				"syntax Cmo",
-				"Set Syntax: CMonokai"
 			]
 		],
 		"width": 0.0
@@ -1103,25 +1253,71 @@
 	[
 		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers",
 		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src"
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/iodata",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/nbscripts",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/tests"
 	],
 	"file_history":
 	[
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/Makefile",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/nbscripts/visualise.gpi",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/simulations.c",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/main.c",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/derivatives.c",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/ODESolvers.h",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/initial-conditions.json",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/README.md",
+		"/home/manoj/Masters/Code_Projects/code/github/pywebscraper/README.md",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/.gitattributes",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/LICENSE",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/iodata/DPP-System1/RK4SYS_step=2.50e-01.dat",
+		"/home/manoj/Masters/Code_Projects/code/numerics/scripts/math_utils.c",
+		"/home/manoj/Masters/Code_Projects/code/numerics/scripts/newtonRaphson.c",
+		"/home/manoj/Masters/Code_Projects/code/ccpp/C_conventions.txt",
+		"/home/manoj/Masters/Code_Projects/code/ccpp/projects/C_conventions.txt",
+		"/home/manoj/Masters/Code_Projects/code/ccpp/projects/sublProject1/createOwnPlugins.txt",
+		"/home/manoj/Masters/Code_Projects/code/ccpp/projects/DSA/NRsqrt.c",
+		"/home/manoj/Masters/Code_Projects/code/ccpp/files/utils/critical_mach_no.c",
+		"/home/manoj/Software/hopsan/control",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/derivatives.h",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/ODESolvers.c",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/parson.c",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/parson.h",
+		"/home/manoj/.config/sublime-text-3/Packages/User/LineDivider.sublime-snippet",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/tests/test.c",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/simulations.h",
+		"/home/manoj/Masters/Code_Projects/libraries/ccpp/SDL2-2.0.12/README.txt",
+		"/home/manoj/Masters/Code_Projects/libraries/ccpp/parson/parson.h",
+		"/home/manoj/Masters/Code_Projects/libraries/ccpp/parson/parson.c",
 		"/home/manoj/Masters/Code_Projects/code/bash/MakeCPPProject.sh",
 		"/home/manoj/Masters/Code_Projects/code/bash/MakeCProject.sh",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/main.c",
+		"/home/manoj/Masters/Code_Projects/libraries/ccpp/parson/Makefile",
+		"/home/manoj/Masters/Code_Projects/libraries/ccpp/nativejson-benchmark/README.md",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/SUBLIME.sublime-project",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/Makefile",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/.clang_complete",
+		"/home/manoj/Masters/Code_Projects/code/bash/temp/.clang_complete",
+		"/home/manoj/Masters/Code_Projects/code/bash/temp/Makefile",
+		"/home/manoj/Masters/Code_Projects/libraries/ccpp/vcpkg-local/installed/x64-linux/include/jsmn.h",
+		"/home/manoj/Masters/Code_Projects/libraries/ccpp/jsmn/Makefile",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/initial-conditions.META",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/initial-conditions.txt",
+		"/usr/share/doc/libjson-c-doc/copyright",
+		"/usr/include/jsoncpp/json/json.h",
+		"/home/manoj/Masters/Code_Projects/libraries/ccpp/jsmn/example/jsondump.c",
+		"/home/manoj/Masters/Code_Projects/libraries/ccpp/jsmn/example/simple.c",
+		"/usr/include/json-c/json_object.h",
+		"/usr/include/json-c/json.h",
+		"/usr/include/json-c/arraylist.h",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/tests/file_input.c",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/initial_conditions.ini",
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/tests/file_input",
 		"/home/manoj/Masters/Code_Projects/code/bash/MakeProject.sh",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/ODESolvers.c",
 		"/home/manoj/Masters/Code_Projects/libraries/ccpp/vcpkg-master/docs/users/integration.md",
 		"/usr/src/linux-headers-4.4.0-176/include/media/v4l2-dev.h",
 		"/home/manoj/Masters/Code_Projects/libraries/ccpp/vcpkg-master/README.md",
 		"/home/manoj/Masters/Code_Projects/code/bash/bashrc",
 		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/algorithms.c",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/derivatives.h",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/derivatives.c",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/ODESolvers.h",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/simulations.c",
 		"/home/manoj/Masters/Code_Projects/numerics/backup/ODELib/ODElib_31-03-20_02_50_PM/src/ODESolvers.c",
 		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/src/ODESolvers.c",
 		"/home/manoj/Masters/Code_Projects/bash/clickRepeat.sh",
@@ -1191,54 +1387,11 @@
 		"/home/manoj/Masters/Code_Projects/bash/createNewSublimeCppProject.sh",
 		"/home/manoj/Masters/Code_Projects/bash/make-project.sh",
 		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/build",
-		"/home/manoj/Masters/Code_Projects/ccpp/files/test/gnuplot_i.c",
-		"/home/manoj/Masters/Code_Projects/ccpp/files/test/gnuplot_i.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/include/gnuplot_i.h",
-		"/home/manoj/Masters/Code_Projects/ccpp/files/test/gnuplotrc",
-		"/home/manoj/.config/sublime-text-3/Packages/User/Origami.sublime-settings",
-		"/home/manoj/.config/sublime-text-3/Packages/Colorcoder/readme.md",
-		"/home/manoj/.config/sublime-text-3/Packages/Origami/Origami.sublime-settings",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/gnuplot_i/src/gnuplot_i.c",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/gnuplot_i/doc/top",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/iodata/model1-FWE_step=1.00e-04.dat",
-		"/usr/include/regex.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/iodata/model1-FWE_step=5.00e-03.dat",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/assignment1/src/ODESolvers.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/assignment1/src/problems.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/assignment1/src/main.c",
-		"/home/manoj/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/manoj/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/manoj/.config/sublime-text-3/Installed Packages/Theme - Gravity.sublime-package/Gravity/Gravity.sublime-theme",
-		"/home/manoj/.config/sublime-text-3/Installed Packages/FileIcons.sublime-package/theme/Adaptive.sublime-theme",
-		"/home/manoj/.config/sublime-text-3/Packages/Colorsublime - Themes/cache/Colorsublime-Themes-master/themes/GitHub_Light.tmTheme",
-		"/home/manoj/.config/sublime-text-3/Installed Packages/Theme - Soda.sublime-package/Soda Dark 3.sublime-theme",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/assignment1/.clang_complete",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/files/trueLTE1.m",
-		"/etc/sudoers.tmp",
-		"/home/manoj/Software/matlab/R2019b/MathWorks-MATLAB-R2019b-9.7.0-Linux64_ShareAppsCrack.com.z07",
-		"/home/manoj/.jupyter/jupyter_notebook_config.py",
-		"/home/manoj/Documents/Code/cuda/main.cu",
-		"/usr/include/cudnn.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/files/script1.m",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/files/test.py",
-		"/home/manoj/Desktop/Masters/Code_Projects/project_template/test/make-project.sh",
-		"/home/manoj/Desktop/Masters/Code_Projects/numerics/DS289/make-project.sh",
-		"/home/manoj/Desktop/Masters/Code_Projects/project_template/PROJECT-STRUCTURE.txt",
-		"/home/manoj/Desktop/Masters/Code_Projects/project_template/make-project.sh",
-		"/home/manoj/Desktop/Masters/Subjects.txt",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/utils/replaceWord.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/assignment1/iodata/FWE_GP_10000.dat",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/libgd-2.2.5/docs/README.JPN",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/ build/gnuplot_i_2.1.1/test/example.c",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/ build/gnuplot_i_2.1.1/src/gnuplot_i.c",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/gnuplot_i-2.11/gnuplot_i/README",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/gnuplot_i-2.11/gnuplot_i/src/gnuplot_i.h",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/gnuplot_i-2.11/gnuplot_i/src/gnuplot_i.c",
-		"/home/manoj/.config/sublime-text-3/Packages/C++/Snippets/030-for-int-loop-(fori).sublime-snippet"
+		"/home/manoj/Masters/Code_Projects/ccpp/files/test/gnuplot_i.c"
 	],
 	"find":
 	{
-		"height": 33.0
+		"height": 46.0
 	},
 	"find_in_files":
 	{
@@ -1252,6 +1405,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"constptr -> ",
+			"consts",
+			"dele",
+			"conditions",
+			"-----------------------------------------------------------",
+			"parson_malloc",
+			"json_value_init_object()",
+			"parse_object_value",
+			"parse_value",
+			"json_parse_string",
+			"conditions_json",
+			"JSON_Array",
+			"array",
+			"Array",
+			"stepsize",
+			"JSON_Array",
+			"free",
+			"json_value_get_type",
+			"json_object",
+			"JSON_Object",
+			"buffer",
+			"[\\[\\]{}]",
+			"[",
+			".*: (.*),",
 			"dy",
 			"index",
 			"printResult",
@@ -1264,9 +1441,14 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"g_const",
+			"g_consts",
+			"===========================================================",
+			"",
+			"$1",
 			"void (*derivative)(const double *t, const double y[], double ydot[])"
 		],
 		"reverse": false,
@@ -1278,196 +1460,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/simulations.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1063,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								238,
-								238
-							]
-						],
-						"settings":
-						{
-							"SL.17.region_keys":
-							[
-							],
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								228,
-								4,
-								3,
-								22,
-								4,
-								19,
-								11,
-								213,
-								0,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"color_helper.box_height": 22,
-							"color_helper.color_scheme": "Packages/Monokai++/themes/Monokai++.tmTheme",
-							"color_helper.file_palette":
-							[
-							],
-							"color_helper.preview_meta":
-							{
-							},
-							"color_helper.scan":
-							{
-								"current_ext": ".c",
-								"current_syntax": "C++/C",
-								"enabled": false,
-								"last_updated": 1585985350.34
-							},
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 97.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "include/initial_conditions.ini",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 320,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								320,
-								320
-							]
-						],
-						"settings":
-						{
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								228,
-								4,
-								3,
-								23,
-								7,
-								54,
-								13,
-								6,
-								3,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"color_helper.box_height": 22,
-							"color_helper.color_scheme": "Packages/Monokai++/themes/Monokai++.tmTheme",
-							"color_helper.file_palette":
-							[
-							],
-							"color_helper.preview_meta":
-							{
-							},
-							"color_helper.scan":
-							{
-								"current_ext": ".ini",
-								"current_syntax": "INI/INI",
-								"enabled": false,
-								"last_updated": 1585985350.34
-							},
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/INI/INI.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1518,7 +1512,7 @@
 	"project": "SUBLIME.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 83.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1528,6 +1522,34 @@
 		"selected_items":
 		[
 			[
+				"pars",
+				"include/parson.h"
+			],
+			[
+				"par",
+				"include/parson.h"
+			],
+			[
+				"sub",
+				"SUBLIME.sublime-project"
+			],
+			[
+				"mak",
+				"Makefile"
+			],
+			[
+				"make",
+				"Makefile"
+			],
+			[
+				"sim",
+				"include/simulations.h"
+			],
+			[
+				"main",
+				"src/main.c"
+			],
+			[
 				"",
 				"src/ODESolvers.c"
 			],
@@ -1536,16 +1558,8 @@
 				"src/ODESolvers.c"
 			],
 			[
-				"sim",
-				"src/simulations.c"
-			],
-			[
 				"der",
 				"include/derivatives.h"
-			],
-			[
-				"main",
-				"src/main.c"
 			],
 			[
 				"ODE",
@@ -1554,10 +1568,6 @@
 			[
 				"Sub",
 				"SUBLIME.sublime-project"
-			],
-			[
-				"make",
-				"Makefile"
 			],
 			[
 				"vis",
@@ -1589,22 +1599,22 @@
 	},
 	"select_symbol":
 	{
-		"height": 375.0,
+		"height": 392.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 578.0
+		"width": 592.0
 	},
 	"selected_group": 0,
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 145.0,
+	"side_bar_width": 186.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
