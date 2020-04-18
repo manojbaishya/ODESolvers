@@ -1,5 +1,5 @@
 CC        := gcc
-CFLAGS  := -std=gnu99 -Wall -g -fstack-protector
+CFLAGS  := -std=c99 -Wall -g -fstack-protector
 
 BIN     := bin
 SRC     := src
