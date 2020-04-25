@@ -22,7 +22,7 @@
 			"variants": [
 				{
 					"name": "Silent Build & Run in New Tab",
-					"shell_cmd": "make -s && make run"
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make -s && make run"
 				},
 				{
 					"name": "Build in New Tab",
@@ -34,7 +34,7 @@
 				},
 				{
 					"name": "Run in New Tab",
-					"shell_cmd": "make run"
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make run"
 				},
 				{
 					"name": "Clean in New Tab",
@@ -42,57 +42,57 @@
 				},
 				{
 					"name": "Debug in New Tab",
-					"shell_cmd": "make debug"
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make debug"
 				},
 				{
 					"name": "Clean, Build & Run in Split Tab",
 					"pre_window_hooks": [["set_layout", {"cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]}], ["focus_group", {"group": 1}]],
-					"shell_cmd": "make clean && make && make run",
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make clean && make && make run",
 				},
 				{
 					"name": "Build & Run in Split Tab",
 					"pre_window_hooks": [["set_layout", {"cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]}], ["focus_group", {"group": 1}]],
-					"shell_cmd": "make && make run"
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make && make run"
 				},
 				{
 					"name": "Run in Split Tab",
 					"pre_window_hooks": [["set_layout", {"cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]}], ["focus_group", {"group": 1}]],
-					"shell_cmd": "make run"
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make run"
 				},
 				{
 					"name": "Clean in Split Tab",
 					"pre_window_hooks": [["set_layout", {"cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]}], ["focus_group", {"group": 1}]],
-					"shell_cmd": "make clean"
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make clean"
 				},
 				{
 					"name": "Debug in Split Tab",
 					"pre_window_hooks": [["set_layout", {"cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]}], ["focus_group", {"group": 1}]],
-					"shell_cmd": "make debug"
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make debug"
 				},
 				{
 					"name": "Clean, Build & Run in Panel",
 					"panel_name": "Bash",
-					"shell_cmd": "make clean && make && make run",
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make clean && make && make run",
 				},
 				{
 					"name": "Build & Run in Panel",
 					"panel_name": "Bash",
-					"shell_cmd": "make && make run"
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make && make run"
 				},
 				{
 					"name": "Run in Panel",
 					"panel_name": "Bash",
-					"shell_cmd": "make run"
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make run"
 				},
 				{
 					"name": "Clean in Panel",
 					"panel_name": "Bash",
-					"shell_cmd": "make clean"
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make clean"
 				},
 				{
 					"name": "Debug in Panel",
 					"panel_name": "Bash",
-					"shell_cmd": "make debug"
+					"shell_cmd": "source /usr/local/apps/intel/bin/compilervars.sh intel64 && make debug"
 				}
 			]
 
