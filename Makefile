@@ -1,5 +1,7 @@
-CC        := gcc
-CFLAGS  := -std=c99 -Wall -g -fstack-protector
+SHELL := /bin/bash
+
+CC        := icc
+CFLAGS  := -std=gnu99 -Wall -g -fstack-protector
 
 BIN     := bin
 SRC     := src
@@ -24,7 +26,6 @@ CLIBS       := $(patsubst %,-L%, $(LIBDIRS:%/=%))
 SOURCES     := $(wildcard $(patsubst %, %/*.c, $(SOURCEDIRS)))
 OBJECTS     := $(patsubst $(SOURCEDIRS)/%.c, $(OBJDIRS)/%.o, $(SOURCES))
 IODATA      := $(wildcard $(patsubst %, %/*, $(IODIR:%/=%)))
-
 
 all: $(BIN)/$(EXECUTABLE)
 

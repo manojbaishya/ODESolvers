@@ -704,17 +704,109 @@
 			],
 			[
 				"Build Project",
-				""
+				"Build & Run in New Tab"
+			]
+		],
+		[
+			[
+				[
+					"Build Project",
+					""
+				],
+				[
+					"Build Project",
+					"Silent Build & Run in New Tab"
+				],
+				[
+					"Build Project",
+					"Build in New Tab"
+				],
+				[
+					"Build Project",
+					"Build & Run in New Tab"
+				],
+				[
+					"Build Project",
+					"Run in New Tab"
+				],
+				[
+					"Build Project",
+					"Clean in New Tab"
+				],
+				[
+					"Build Project",
+					"Debug in New Tab"
+				],
+				[
+					"Build Project",
+					"Clean, Build & Run in Split Tab"
+				],
+				[
+					"Build Project",
+					"Build & Run in Split Tab"
+				],
+				[
+					"Build Project",
+					"Run in Split Tab"
+				],
+				[
+					"Build Project",
+					"Clean in Split Tab"
+				],
+				[
+					"Build Project",
+					"Debug in Split Tab"
+				],
+				[
+					"Build Project",
+					"Clean, Build & Run in Panel"
+				],
+				[
+					"Build Project",
+					"Build & Run in Panel"
+				],
+				[
+					"Build Project",
+					"Run in Panel"
+				],
+				[
+					"Build Project",
+					"Clean in Panel"
+				],
+				[
+					"Build Project",
+					"Debug in Panel"
+				]
+			],
+			[
+				"Build Project",
+				"Build & Run in New Tab"
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Build & Run in New Tab",
 	"command_palette":
 	{
 		"height": 0.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"prettify",
+				"HTMLPrettify"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"keybin",
+				"Preferences: Key Bindings"
+			],
+			[
+				"keyb",
+				"Preferences: Key Bindings"
+			],
 			[
 				"Git",
 				"Git: Status"
@@ -778,10 +870,6 @@
 			[
 				"mini",
 				"View: Toggle Minimap"
-			],
-			[
-				"pi",
-				"Package Control: Install Package"
 			],
 			[
 				"ini",
@@ -900,10 +988,6 @@
 				"Browse Mode: Outline (Left)"
 			],
 			[
-				"keybin",
-				"Preferences: Key Bindings"
-			],
-			[
 				"ori d p l",
 				"Origami: Destroy Pane on the Left"
 			],
@@ -922,10 +1006,6 @@
 			[
 				"HTm",
 				"HTMLPrettify"
-			],
-			[
-				"keyb",
-				"Preferences: Key Bindings"
 			],
 			[
 				"keyv",
@@ -1222,10 +1302,6 @@
 			[
 				"orig cpr",
 				"Origami: Create Pane on the Right"
-			],
-			[
-				"divi",
-				"ASCII Art: Add small divider"
 			]
 		],
 		"width": 0.0
@@ -1251,15 +1327,19 @@
 	},
 	"expanded_folders":
 	[
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/iodata",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/nbscripts",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/tests"
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src"
 	],
 	"file_history":
 	[
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/Makefile",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/SUBLIME.sublime-project",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/gnuplot_i.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/README.md",
+		"/home/manoj/.cache/.fr-gYAz09/Read Me.txt",
+		"/home/manoj/.cache/.fr-d20MGj/Sublime Merge 1.0.0.1 Build 1114-SadeemPC.com/Your Files Is Here/Instructions !!!.txt",
+		"/home/manoj/.cache/.fr-YP6nZg/Sublime Merge 1.0.0.1 Build 1114-SadeemPC.com/Your Files Is Here/Instructions !!!.txt",
+		"/home/manoj/Masters/Projects/libraries/ccpp/flang-20190329-x86-70/README.md",
 		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/nbscripts/visualise.gpi",
 		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/simulations.c",
 		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/main.c",
@@ -1379,15 +1459,7 @@
 		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/src/problems.c",
 		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/src/visualise.gpi",
 		"/home/manoj/.config/sublime-text-3/Packages/Gnuplot/gnuplot.tmLanguage",
-		"/home/manoj/.config/sublime-text-3/Packages/User/AdvancedNewFile.sublime-settings",
-		"/home/manoj/.config/sublime-text-3/Packages/AdvancedNewFile/Default (Linux).sublime-keymap",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/Makefile",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/src/derivative.c",
-		"/home/manoj/Masters/Code_Projects/project_template/createNewSublimeCProject.sh",
-		"/home/manoj/Masters/Code_Projects/bash/createNewSublimeCppProject.sh",
-		"/home/manoj/Masters/Code_Projects/bash/make-project.sh",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/build",
-		"/home/manoj/Masters/Code_Projects/ccpp/files/test/gnuplot_i.c"
+		"/home/manoj/.config/sublime-text-3/Packages/User/AdvancedNewFile.sublime-settings"
 	],
 	"find":
 	{
@@ -1505,6 +1577,10 @@
 		"height": 0.0
 	},
 	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.project_environment_log":
 	{
 		"height": 0.0
 	},
