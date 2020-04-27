@@ -1,22 +1,25 @@
 /*{
-	"domain": [0.0, 24.0],
-	"NSYS": 6,
-	"yInitCond": [10000.0, 0.785398163, 0.0, 0.0, 7071.067812, 7071.067812], // NSYS initial conditions required
+	"domain": [0.0, 25],
+	"yInitCond": [10000.0, 0.785398163, 0.0, 0.0, 7071.067812, 7071.067812], // NSYS initial conditions required, check derivatives.c file for states
 	"stepsize": 0.25,
 	"outputInterval": 0.5,
 	"relative_errorPC": 0.05,
-	"adaptive_switch": 0, // either 0 or 1
-	"modelname": "DPP-System1"
+	"adaptive_switch": 1, // either 0 or 1: use fixed stepsize or adaptive algorithm
+	"plotTimeSeries": 0, // plot all solution components over independent variable
+	"printResult": 0, // display solution on screen
+	"modelname": "DPP-System1" // do not insert trailing comma
 }
 */
 
 {
 	"domain": [0.0, 10],
-	"NSYS": 1,
-	"yInitCond": [0.5], // NSYS initial conditions required
-	"stepsize": 0.05,
-	"outputInterval": 0.05,
+	"yInitCond": [0.5],
+	"stepsize": 0.2,
+	"outputInterval": 0.4,
 	"relative_errorPC": 0.0005,
 	"adaptive_switch": 1, // either 0 or 1
+	"plotTimeSeries": 0,
+	"printResult": 0,
 	"modelname": "gaussian-spike"
 }
+

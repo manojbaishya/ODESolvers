@@ -18,12 +18,13 @@ void specifySolverMethodInit(odeOptions *);
 
 solution * ODESolver(void (*)(const double *, const double [], double []), odeOptions *);
 void ODEIntegrate(void (*)(const double *, const double [], double []), solution *, odeOptions *, largeInt, double);
-void adaptiveODEIntegrate(void (*)(const double *, const double [], double []), solution *, odeOptions *, largeInt, double);
+int adaptiveODEIntegrate(void (*)(const double *, const double [], double []), solution *, odeOptions *, largeInt);
 
 void OneDimAlgorithm(void (*)(const double *, const double [], double []), double *, double *, double, odeOptions *);
 
 // -- Utility Functions -------------------------------------------------------
 
+void realloc_gsl_containers(solution *, odeOptions *);
 void printResult(solution *, odeOptions *);
 void writefile(solution *, odeOptions *);
 void plotData(solution *, odeOptions *);

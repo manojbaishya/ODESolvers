@@ -2,13 +2,16 @@
 * @Author: manoj
 * @Date:   2020-04-01 14:04:10
 * @Last Modified by:   Manoj Baishya
-* @Last Modified time: 2020-04-13 04:07:28
+* @Last Modified time: 2020-04-27 20:06:14
 */
 
 #include "ODESolvers.h"
 #include "algorithms.h"
+#include "derivatives.h"
 #include "gnuplot_i.h"
 #include "parson.h"
+#include <gsl/gsl_vector.h>
+#include <gsl/gsl_matrix_long_double.h>
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -26,17 +29,20 @@
 // -- Data Structures ---------------------------------------------------------
 
 struct _solution {
-    double *dom;
-    long double **func;
+    gsl_vector *dom;
+    gsl_matrix_long_double *func;
 };
 
 struct _odeOptions {
     double step;
     largeInt GRIDPOINTS;
+    largeInt lastIndex;
     double outInterval; // in terms of steps
     double relErr; // error tolerance
     bool adaptive; // adaptive algorithm switch
     int NSYS;
+    int printResult;
+    int plotTimeSeries;
     char *model;
     char *method;
     char *outputFilePath;
@@ -54,31 +60,25 @@ struct _odeOptions {
 
 void callODESolver(void (*derivative)(const double *t, const double y[], double ydot[]), const char *inputfile, int NSYS){
 
-    printf("\nSolving system of ODEs...\n");
+    puts("\n---------------------- Starting the program! ----------------------\n");
+
+    printf("\t- Solving system of ODEs...\n");
 
     odeOptions *options = readInput(inputfile, NSYS);
 
-    char flag = 'Y';
-    while(flag == 'Y' || flag == 'y') {
+    ODEinit(options);
 
-        ODEinit(options);
+    solution *result = ODESolver(derivative, options);
 
-        solution *result = ODESolver(derivative, options);
+    writefile(result, options);
 
-        printResult(result, options);
+    printResult(result, options);
 
-        writefile(result, options);
+    plotData(result, options);
 
-        plotData(result, options);
+    delete(result, options);
 
-        delete(result, options);
-
-        printf("\nGenerate another dataset? [Y] or [y] = Yes, [other key] = No\nAnswer: ");
-        scanf("%c", &flag);
-
-    }
-
-    printf("\nAll data have been written to ./iodata/ directory. Please use the gnuplot script ./nbscripts/visualise.gpi to plot.\n\n");
+    printf("\n---------------------- EXITING PROGRAM ----------------------\n");
 }
 
 
@@ -103,6 +103,10 @@ odeOptions * readInput(const char *inputjson, int NSYS){
     options -> relErr = json_object_get_number(data, "relative_errorPC") / 100;
     options -> NSYS = NSYS;
     options -> adaptive = (bool) json_object_get_number(data, "adaptive_switch");
+
+    options -> printResult = json_object_get_number(data, "printResult");
+    options -> plotTimeSeries = json_object_get_number(data, "plotTimeSeries");
+
     options -> model = (char *) malloc(sizeof(char) * (strlen(json_object_get_string(data, "modelname")) + 1));
     strcpy(options -> model, json_object_get_string(data, "modelname"));
 
@@ -147,6 +151,195 @@ void ODEinit(odeOptions *options){
 
 }
 
+// ----------------------------------------------------------------------------
+//
+//                             Interface Functions
+//
+// ----------------------------------------------------------------------------
+
+// -- Templated Solvers --------------------------------------------------------
+
+solution * ODESolver(void (*derivative)(const double *t, const double y[], double ydot[]), odeOptions *options){
+
+    printf("\n\t- Using %s algorithm!\n\t- Solution in progress...\n\n", options -> method);
+
+    // allocate memory for storing results
+    solution *result = (solution *) malloc(sizeof(solution));
+
+    result -> dom = gsl_vector_alloc(options -> GRIDPOINTS);
+    result -> func = gsl_matrix_long_double_alloc(options -> NSYS, options -> GRIDPOINTS);
+
+    // assign initial conditions
+    gsl_vector_set(result -> dom, 0, options -> domain[0]);
+    for (int var = 0; var < options -> NSYS; ++var) {
+        gsl_matrix_long_double_set(result -> func, var, 0, options -> yInitCond[var]);
+    }
+
+    double tEnd = 0.0;
+    largeInt point;
+    int eventflag = 0;
+
+    for (point = 0; gsl_vector_get(result -> dom, point) < options -> domain[1]; ++point) {
+
+        if(options -> adaptive == 1) {
+
+            // Realloc memory if array bounds exceeded
+
+            if(point + 1 == options -> GRIDPOINTS) {
+                realloc_gsl_containers(result, options);
+            }
+
+            eventflag = adaptiveODEIntegrate(derivative, result, options, point);
+
+            if(eventflag == 1) {
+                point = point - 1;
+                break;
+            }
+
+        } else if(options -> adaptive == 0) {
+
+            tEnd = gsl_vector_get(result -> dom, point) + options -> outInterval;
+
+            if(tEnd > options -> domain[1]) {
+                tEnd = options -> domain[1];
+            }
+
+            ODEIntegrate(derivative, result, options, point, tEnd);
+        }
+    }
+
+    options -> lastIndex = point;
+
+    puts("---------------------- ODE solved successfully! ----------------------\n");
+
+    return result;
+
+}
+
+// -- Single Step Integrator --------------------------------------------------
+
+
+int adaptiveODEIntegrate(void (*derivative)(const double *t, const double y[], double ydot[]), solution *result, odeOptions *options, largeInt point) {
+
+    // extract solution to temporary containers
+    double step = options -> step;
+    double indep_t = gsl_vector_get(result -> dom, point);
+    double func_y[options -> NSYS];
+    for (int var = 0; var < options -> NSYS; ++var) {
+        func_y[var] = gsl_matrix_long_double_get(result -> func, var, point);
+    }
+
+    // specify algorithm parameters
+    // {'nonZeroScaffold': this parameter guards against driving step size to zero (infinitesimal)! }
+    static double safety = 0.9, errorMinBound = 5.7665e-4, nonZeroScaffold = 1.0e-30;
+    double errorMax;
+    double ytemp[options -> NSYS], errorSpectrum[options -> NSYS];
+    double dydt[options -> NSYS], yscal[options -> NSYS];
+
+    derivative(&indep_t, func_y, dydt);
+    for (int var = 0; var < options -> NSYS; ++var) {
+        // around y[i] == 0, h * dydt = finite and nonZeroScaffold > 0 implies yscal[i] doesn't go to zero!
+        // for high values of y[i], h * dydt and nonZeroScaffold are negligible
+        yscal[var] = fabs(func_y[var]) + fabs(step * dydt[var]) + nonZeroScaffold;
+    }
+
+    if(indep_t + step > options -> domain[1]) {
+        step = options -> domain[1] - indep_t;
+    }
+
+    while(true) {
+
+        // trial solution
+        CashKarp_RKF45(derivative, &indep_t, func_y, ytemp, step, errorSpectrum, options -> NSYS);
+
+        // determine error signal from trial solution
+        errorMax = 0.0;
+        for (int var = 0; var < options -> NSYS; ++var){
+            errorMax = FMAX(errorMax, fabs(errorSpectrum[var]/yscal[var]));
+        }
+        errorMax /= options -> relErr;
+
+        // step modification based on error feedback
+        if(errorMax > 1.0) {
+
+            // scale down stepsize by a maximum factor of 4
+            step = FMAX(fabs(safety * step * pow(errorMax, -0.25)), 0.25 * fabs(step));
+
+            if(indep_t + step == indep_t) {
+                fprintf(stderr, "\nstepsize underflow in adaptive stepper algorithm..now exiting to system\n");
+                exit(1);
+            }
+
+            // continue inner loop (repeat trial solution)
+        } else {
+
+            // errorMax driven to less than 1
+
+            indep_t = indep_t + step; // advance time step
+            for (int var = 0; var < options -> NSYS; ++var) {
+                func_y[var] = ytemp[var]; // advance solution by finer time step
+            }
+
+            // scale up stepsize by a maximum factor of 4 only
+            step = (errorMax > errorMinBound) ? safety * step * pow(errorMax, -0.20) : (4.0 * step); // valid stepsize for next step
+
+            break; // out of inner loop, solution for this step successful based on specified error
+        }
+    } // end inner while loop
+
+    // ===================== Check Event =========================
+    int eventflag = 0;
+    double eventTime, eventSol[options -> NSYS];
+
+    eventTime = gsl_vector_get(result -> dom, point);
+
+    for (int var = 0; var < options -> NSYS; ++var) {
+        eventSol[var] = (double) gsl_matrix_long_double_get(result -> func, var, point);
+    }
+
+    eventflag = events(&eventTime, eventSol);
+
+    if(eventflag == 0) {
+        options -> step = step; // valid stepsize for next outer coarse loop step
+        gsl_vector_set(result -> dom, point + 1, indep_t);
+
+        for (int var = 0; var < options -> NSYS; ++var) {
+            gsl_matrix_long_double_set(result -> func, var, point + 1, func_y[var]);
+        }
+    }
+
+    return eventflag;
+
+}
+
+
+void ODEIntegrate(void (*derivative)(const double *t, const double y[], double ydot[]), solution *result, odeOptions *options, largeInt point, double tEnd){
+
+    double step = options -> step;
+    double indep_t = gsl_vector_get(result -> dom, point);
+
+    double func_y[options -> NSYS];
+    for (int var = 0; var < options -> NSYS; ++var) {
+        func_y[var] = gsl_matrix_long_double_get(result -> func, var, point);
+    }
+
+    do {
+
+        if(tEnd - indep_t < step) {
+            step = tEnd - indep_t;
+        }
+
+        (options -> NSYS == 1) ? OneDimAlgorithm(derivative, &indep_t, func_y, step, options): RK4SYS(derivative, &indep_t, func_y, step, options -> NSYS);
+
+    } while (indep_t < tEnd);
+
+    gsl_vector_set(result -> dom, point + 1, indep_t);
+
+    for (int var = 0; var < options -> NSYS; ++var) {
+        gsl_matrix_long_double_set(result -> func, var, point + 1, func_y[var]);
+
+    }
+}
 
 // -- Solver Selectors ---------------------------------------------------------
 
@@ -190,163 +383,6 @@ void OneDimAlgorithm(void (*derivative)(const double *t, const double y[], doubl
     }
 }
 
-// ----------------------------------------------------------------------------
-//
-//                             Interface Functions
-//
-// ----------------------------------------------------------------------------
-
-// -- Templated Solvers --------------------------------------------------------
-
-solution * ODESolver(void (*derivative)(const double *t, const double y[], double ydot[]), odeOptions *options){
-
-    printf("\nSolving differential equations with %s algorithm.\n\n", options -> method);
-
-    // allocate memory for storing results
-    solution *result = (solution *) malloc(sizeof(solution));
-    int padding = 5;
-
-    result -> dom = (double *) malloc(sizeof(double) * (options -> GRIDPOINTS + padding));
-    result -> func = (long double **) malloc(sizeof(long double *) * options -> NSYS);
-    for (int var = 0; var < options -> NSYS; ++var) {
-        result -> func[var] = malloc(sizeof(long double) * (options -> GRIDPOINTS + padding));
-    }
-
-    // assign initial conditions
-    result -> dom[0] = options -> domain[0];
-    for (int var = 0; var < options -> NSYS; ++var) {
-        result -> func[var][0] = options -> yInitCond[var];
-    }
-
-    double tEnd = 0.0;
-
-    for (largeInt point = 0; result -> dom[point] < options -> domain[1]; ++point) {
-
-        tEnd = result -> dom[point] + options -> outInterval;
-
-        if(tEnd > options -> domain[1]) {
-            tEnd = options -> domain[1];
-        }
-
-        (options -> adaptive == 1) ?
-        adaptiveODEIntegrate(derivative, result, options, point, tEnd):
-        ODEIntegrate(derivative, result, options, point, tEnd);
-
-    }
-
-    puts("---------------------- ODE solved successfully! ----------------------\n");
-
-    return result;
-
-}
-
-// -- Single Step Integrator --------------------------------------------------
-
-void ODEIntegrate(void (*derivative)(const double *t, const double y[], double ydot[]), solution *result, odeOptions *options, largeInt point, double tEnd){
-
-    double step = options -> step;
-    double indep_t = result -> dom[point];
-    double func_y[options -> NSYS];
-    for (int var = 0; var < options -> NSYS; ++var) {
-        func_y[var] = result -> func[var][point];
-    }
-
-    do {
-
-        if(tEnd - indep_t < step) {
-            step = tEnd - indep_t;
-        }
-
-        (options -> NSYS == 1) ? OneDimAlgorithm(derivative, &indep_t, func_y, step, options): RK4SYS(derivative, &indep_t, func_y, step, options -> NSYS);
-
-    } while (indep_t < tEnd);
-
-    result -> dom[point + 1] = indep_t;
-    for (int var = 0; var < options -> NSYS; ++var) {
-        result -> func[var][point + 1] = func_y[var];
-    }
-}
-
-void adaptiveODEIntegrate(void (*derivative)(const double *t, const double y[], double ydot[]), solution *result, odeOptions *options, largeInt point, double tEnd) {
-
-    // extract solution to temporary containers
-    double step = options -> step;
-    double indep_t = result -> dom[point];
-    double func_y[options -> NSYS];
-    for (int var = 0; var < options -> NSYS; ++var) {
-        func_y[var] = result -> func[var][point];
-    }
-
-    // specify algorithm parameters
-    // {'nonZeroScaffold': this parameter guards against driving step size to zero (infinitesimal)! }
-    static double safety = 0.9, errorMinBound = 5.7665e-4, nonZeroScaffold = 1.0e-30, errorMax;
-    double ytemp[options -> NSYS], errorSpectrum[options -> NSYS],
-    dydt[options -> NSYS], yscal[options -> NSYS];
-
-
-    do {
-
-        derivative(&indep_t, func_y, dydt);
-        for (int var = 0; var < options -> NSYS; ++var) {
-            // around y[i] == 0, h * dydt = finite and nonZeroScaffold > 0 implies yscal[i] doesn't go to zero!
-            // for high values of y[i], h * dydt and nonZeroScaffold are negligible
-            yscal[var] = fabs(func_y[var]) + fabs(step * dydt[var]) + nonZeroScaffold;
-        }
-
-        // step overshoot guard at specified output points, only decreases size (safe)!
-        if(tEnd - indep_t < step) {
-            step = tEnd - indep_t;
-        }
-
-        while(true) {
-
-            // trial solution
-            CashKarp_RKF45(derivative, &indep_t, func_y, ytemp, step, errorSpectrum, options -> NSYS);
-
-            // determine error signal from trial solution
-            errorMax = 0.0;
-            for (int var = 0; var < options -> NSYS; ++var){
-                errorMax = FMAX(errorMax, fabs(errorSpectrum[var]/yscal[var]));
-            }
-            errorMax /= options -> relErr;
-
-            // step modification based on error feedback
-            if(errorMax > 1.0) {
-
-                // scale down stepsize by a maximum factor of 4
-                step = FMAX(fabs(safety * step * pow(errorMax, -0.25)), 0.25 * fabs(step));
-
-                if(indep_t + step == indep_t) {
-                    fprintf(stderr, "\nstepsize underflow in adaptive stepper algorithm..now exiting to system\n");
-                    exit(1);
-                }
-
-                // continue inner loop (repeat trial solution)
-            } else {
-
-                // errorMax driven to less than 1
-
-                indep_t = indep_t + step; // advance finer time step
-                for (int var = 0; var < options -> NSYS; ++var) {
-                    func_y[var] = ytemp[var]; // advance solution by finer time step
-                }
-
-                // scale up stepsize by a maximum factor of 4 only
-                step = (errorMax > errorMinBound) ? safety * step * pow(errorMax, -0.20) : (4.0 * step); // valid stepsize for next finer step
-
-                break; // out of inner loop, solution for this step successful based on specified error
-            }
-        } // end inner while loop for finer step progression
-
-    } while (indep_t < tEnd); // end outer do-while loop for coarser step progression
-
-
-    options -> step = step; // valid stepsize for next outer coarse loop step
-    result -> dom[point + 1] = indep_t; // advance coarser time step
-    for (int var = 0; var < options -> NSYS; ++var) {
-        result -> func[var][point + 1] = func_y[var]; // advance solution by coarser time step
-    }
-}
 
 // ----------------------------------------------------------------------------
 //
@@ -354,18 +390,38 @@ void adaptiveODEIntegrate(void (*derivative)(const double *t, const double y[], 
 //
 // ----------------------------------------------------------------------------
 
+
+void realloc_gsl_containers(solution *result, odeOptions *options){
+
+    largeInt GRIDPOINTS = options -> GRIDPOINTS + 50;
+
+    gsl_vector *temp_domain = gsl_vector_alloc(GRIDPOINTS);
+    gsl_matrix_long_double *temp_func = gsl_matrix_long_double_alloc(options -> NSYS, GRIDPOINTS);
+
+    for(largeInt point = 0; point < options -> GRIDPOINTS; ++point){
+        gsl_vector_set(temp_domain, point, gsl_vector_get(result -> dom, point));
+        for (int var = 0; var < options -> NSYS; ++var) {
+            gsl_matrix_long_double_set(temp_func, var, point, gsl_matrix_long_double_get(result -> func, var, point));
+        }
+    }
+
+    gsl_vector_free(result -> dom); gsl_matrix_long_double_free(result -> func);
+
+    result -> dom = temp_domain;
+    result -> func = temp_func;
+
+    options -> GRIDPOINTS = GRIDPOINTS;
+}
+
+
 // -- Clear Memory -----------------------------------------------------------
 
 void delete(solution *result, odeOptions *options){
 
     printf("\n----- MEMORY DEALLOCATION START ->");
 
-    free(result -> dom);
-
-    for (int var = 0; var < options -> NSYS; ++var) {
-        free(result -> func[var]);
-    }
-    free(result -> func);
+    gsl_vector_free(result -> dom);
+    gsl_matrix_long_double_free(result -> func);
     free(result);
 
     free(options -> model);
@@ -386,13 +442,13 @@ void writefile(solution *result, odeOptions *options){
         exit(EXIT_FAILURE);
     }
 
-    fprintf(outputfile, "# - Domain ------- Functions -- \n");
+    fprintf(outputfile, "# - Domain ------- Functions --\n");
 
-    for(largeInt point = 0; point < options -> GRIDPOINTS; ++point){
-        fprintf(outputfile, "%12.9lf", result -> dom[point]);
+    for(largeInt point = 0; point < options -> lastIndex; ++point){
+        fprintf(outputfile, "%12.9lf", gsl_vector_get(result -> dom, point));
 
         for (int var = 0; var < options -> NSYS; ++var) {
-            fprintf(outputfile, "\t%12.9Lf", result -> func[var][point]);
+            fprintf(outputfile, "\t%12.9Lf", gsl_matrix_long_double_get(result -> func, var, point));
         }
 
         fprintf(outputfile, "\n");
@@ -400,25 +456,21 @@ void writefile(solution *result, odeOptions *options){
 
     fclose(outputfile);
 
-    printf("\nData written to %s successfully.\n", options -> outputFilePath);
+    printf("\t- Data written to %s successfully.\n\t- Please use the gnuplot scripts in ./nbscripts/ to plot.\n", options -> outputFilePath);
 }
 
 // -- Data Display Functions --------------------------------------------------
 
 void printResult(solution *result, odeOptions *options){
 
-    char print_response = 'y';
-    printf("Print results? Answer [(y)es or (n)o]: ");
-    scanf("%c", &print_response); getchar();
-
-    if(print_response == 'Y' || print_response == 'y') {
+    if(options -> printResult == 1) {
 
         printf("\n");
 
-        for (largeInt point = 0; point < options -> GRIDPOINTS; ++point) {
-            printf("%12.9lf", result -> dom[point]);
+        for (largeInt point = 0; point < options -> lastIndex; ++point) {
+            printf("%12.9lf", gsl_vector_get(result -> dom, point));
             for (int var = 0; var < options -> NSYS; ++var) {
-                printf("\t%12.9Lf", result -> func[var][point]);
+                printf("\t%12.9Lf", gsl_matrix_long_double_get(result -> func, var, point));
             }
             printf("\n");
         }
@@ -427,16 +479,14 @@ void printResult(solution *result, odeOptions *options){
 
     } else {
 
-        printf("\nSkipping printing..\n");
+        printf("\n\t- Skipping printing..\n");
     }
 }
 
 void plotData(solution *result, odeOptions *options){
-    char plot_response = 'y';
-    printf("\nPlot results? Answer [(y)es or (n)o]: ");
-    scanf("%c", &plot_response); getchar();
 
-    if(plot_response == 'Y' || plot_response == 'y') {
+    if(options -> plotTimeSeries == 1) {
+
         FILE *gnuplotrc = fopen ("./include/gnuplotrc", "rb");
 
         if (gnuplotrc != NULL) {
@@ -479,6 +529,6 @@ void plotData(solution *result, odeOptions *options){
             }
         }
     } else {
-        printf("\nSkipping plotting..\n");
+        printf("\n\t- Skipping plotting..\n");
     }
 }

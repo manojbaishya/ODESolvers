@@ -4,6 +4,122 @@
 		"selected_items":
 		[
 			[
+				"even",
+				"event_checks\tabc"
+			],
+			[
+				"for",
+				"for_\tFor Loop"
+			],
+			[
+				"plot",
+				"plotTimeSeries\tint plotTimeSeries"
+			],
+			[
+				"pri",
+				"printResult\tabc"
+			],
+			[
+				"eve",
+				"eventflag\tint eventflag"
+			],
+			[
+				"gsl_matrix_long_double_",
+				"gsl_matrix_long_double_get\tabc"
+			],
+			[
+				"gsl_vector_",
+				"gsl_vector_get\tabc"
+			],
+			[
+				"de",
+				"debug\tabc"
+			],
+			[
+				"if",
+				"if_\tif(…)"
+			],
+			[
+				"con",
+				"continue\tabc"
+			],
+			[
+				"gsl_matrix_c",
+				"gsl_matrix_long_double_column\t_gsl_vector_long_double_view gsl_matrix_long_double_column(gsl_matrix_long_double *m, const size_t j)"
+			],
+			[
+				"gsl_vector_lo",
+				"gsl_vector_long_double_view\tabc"
+			],
+			[
+				"inclu",
+				"include\tinclude <header>"
+			],
+			[
+				"res",
+				"result\tabc"
+			],
+			[
+				"dom",
+				"dom\tgsl_vector * dom"
+			],
+			[
+				"gsl_vector",
+				"gsl_vector_get\tabc"
+			],
+			[
+				"temp",
+				"temp_func\tgsl_matrix_long_double * temp_func"
+			],
+			[
+				"do",
+				"dom\tabc"
+			],
+			[
+				"tem",
+				"temp_func\tgsl_matrix_long_double * temp_func"
+			],
+			[
+				"gsl_ma",
+				"gsl_matrix_long_double_set\tabc"
+			],
+			[
+				"gsl_matr",
+				"gsl_matrix_long_double\tabc"
+			],
+			[
+				"inde",
+				"indep_t\tdouble indep_t"
+			],
+			[
+				"Solu",
+				"Solution\t🕮"
+			],
+			[
+				"out",
+				"outInterval\tdouble outInterval"
+			],
+			[
+				"step",
+				"step\tdouble step"
+			],
+			[
+				"gsl_vec",
+				"gsl_vector\tabc"
+			],
+			[
+				"includ",
+				"include\tinclude <header>"
+			],
+			[
+				"gsl_vector_long_double_se",
+				"gsl_vector_long_double_set_zero\tvoid gsl_vector_long_double_set_zero(gsl_vector_long_double *v)"
+			],
+			[
+				"inc",
+				"inc\t#include <…>"
+			],
+			[
 				"illus",
 				"illustration\t🕮"
 			],
@@ -68,10 +184,6 @@
 				"inputfile\tabc"
 			],
 			[
-				"con",
-				"conditions\tabc"
-			],
-			[
 				"nc",
 				"include/"
 			],
@@ -82,10 +194,6 @@
 			[
 				"Istdi",
 				"I-stdio\tinc"
-			],
-			[
-				"for",
-				"for\tFor Loop"
 			],
 			[
 				"json_object_get",
@@ -112,10 +220,6 @@
 				"JSON_Value\tJSON_Value"
 			],
 			[
-				"inc",
-				"inc\t#include \"…\""
-			],
-			[
 				"yIn",
 				"yInitCond\tabc"
 			],
@@ -134,14 +238,6 @@
 			[
 				"json_object_arr",
 				"json_object_array_length\tint json_object_array_length(struct json_object *obj)"
-			],
-			[
-				"out",
-				"outputInterval\tabc"
-			],
-			[
-				"step",
-				"stepsize\tabc"
 			],
 			[
 				"json_object_obj",
@@ -352,18 +448,6 @@
 				"lrand48\tlong lrand48()"
 			],
 			[
-				"dom",
-				"domain\tabc"
-			],
-			[
-				"do",
-				"do_\tDo While Loop"
-			],
-			[
-				"plot",
-				"plotData\tabc"
-			],
-			[
 				"l",
 				"length\tabc"
 			],
@@ -428,97 +512,94 @@
 				"variable\t🕮"
 			],
 			[
-				"res",
-				"result\tsolution * result"
-			],
-			[
 				"ini",
 				"initialise_solvers\t(ODESolvers.c)"
-			],
-			[
-				"st",
-				"step\tabc"
-			],
-			[
-				"rea",
-				"readOptions\tabc"
-			],
-			[
-				"ke",
-				"keyword.operator.dereference.java\tabc"
-			],
-			[
-				"keyw",
-				"keyword.other.rust\tabc"
-			],
-			[
-				"reu",
-				"return\tabc"
-			],
-			[
-				"pa",
-				"parameters\tabc"
-			],
-			[
-				"pow",
-				"pow\tdouble pow(double __x, double __y)"
-			],
-			[
-				"la",
-				"largeInt\tabc"
-			],
-			[
-				"Fow",
-				"ForwardEuler\tabc"
-			],
-			[
-				"if",
-				"if_\tif(…)"
-			],
-			[
-				"Isd",
-				"I-stdio\tinc"
-			],
-			[
-				"str",
-				"struct\tabc"
-			],
-			[
-				"ifnd",
-				"ifndef\tifndef macro"
-			],
-			[
-				"I-s",
-				"I-stdio\t(Cheader.sublime-completions)"
-			],
-			[
-				"Rt",
-				"Rtdot\tabc"
-			],
-			[
-				"Alp",
-				"AlphT0\tabc"
-			],
-			[
-				"Theta",
-				"ThetaTdot\tabc"
-			],
-			[
-				"Thet",
-				"ThetaTdot\tabc"
-			],
-			[
-				"Alph",
-				"AlphaM0\tabc"
-			],
-			[
-				"Alpha",
-				"AlphaM\tabc"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "src/algorithms.c",
+			"settings":
+			{
+				"buffer_size": 8792,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/ODESolvers.h",
+			"settings":
+			{
+				"buffer_size": 1245,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/ODESolvers.c",
+			"settings":
+			{
+				"buffer_size": 18028,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n***************** Erasing Residual Files ******************\n\nrm -f bin/main\nrm -f  objs/gnuplot_i.o  objs/simulations.o  objs/ODESolvers.o  objs/derivatives.o  objs/parson.o  objs/ma​‌​\nin.o  objs/algorithms.o\nrm -rf iodata/gaussian-spike\n\n************************ Success **************************\n\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/gnuplot_i.o src/gnuplot_i.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/simulations.o src/simulations.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/ODESolvers.o src/ODESolvers.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/derivatives.o src/derivatives.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/parson.o src/parson.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/main.o src/main.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/algorithms.o src/algorithms.c\nicc -o bin/main objs/gnuplot_i.o objs/simulations.o objs/ODESolvers.o objs/derivatives.o objs/parson.o obj​‌​\ns/main.o objs/algorithms.o -Llib -L/usr/lib/x86_64-linux-gnu -L/home/manoj/.local/include/vcpkg/installed/​‌​\nx64-linux/lib -lgsl -lgslcblas -lm\n\n================= Built All Executables ===================\n\n---------------------- Running File -----------------------\n./bin/main\n\n---------------------- Starting the program! ----------------------\n\n        - Solving system of ODEs...\n\n        - Using CashKarpRKF45 algorithm!\n        - Solution in progress...\n\n---------------------- ODE solved successfully! ----------------------\n\n        - Data written to ./iodata/gaussian-spike/CashKarpRKF45_step=2.00e-01.dat successfully.\n        - Please use the gnuplot scripts in ./nbscripts/ to plot.\n\n        - Skipping printing..\n\n        - Skipping plotting..\n\n----- MEMORY DEALLOCATION START -> MEMORY DEALLOCATION COMPLETE ------\n\n---------------------- EXITING PROGRAM ----------------------\n[Finished in 0.97s]",
+			"settings":
+			{
+				"buffer_size": 2586,
+				"line_ending": "Unix",
+				"name": "Terminus Build Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "src/simulations.c",
+			"settings":
+			{
+				"buffer_size": 477,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main.c",
+			"settings":
+			{
+				"buffer_size": 257,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/derivatives.c",
+			"settings":
+			{
+				"buffer_size": 5610,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/initial-conditions.json",
+			"settings":
+			{
+				"buffer_size": 751,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "nbscripts/visualise.gpi",
+			"settings":
+			{
+				"buffer_size": 487,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Build Project",
 	"build_system_choices":
@@ -780,11 +861,11 @@
 			],
 			[
 				"Build Project",
-				"Build & Run in New Tab"
+				""
 			]
 		]
 	],
-	"build_varint": "Build & Run in New Tab",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 0.0,
@@ -792,16 +873,340 @@
 		"selected_items":
 		[
 			[
-				"prettify",
-				"HTMLPrettify"
+				"keybindings terminal",
+				"Preferences: Terminal Key Bindings – Default"
+			],
+			[
+				"keybin",
+				"Preferences: Key Bindings"
+			],
+			[
+				"terminal ",
+				"Preferences: Terminal Settings – User"
+			],
+			[
+				"terminal se",
+				"Preferences: Terminal Settings – Default"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
 			],
 			[
 				"pi",
 				"Package Control: Install Package"
 			],
 			[
-				"keybin",
-				"Preferences: Key Bindings"
+				"HTM",
+				"HTMLPrettify"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"DEbug",
+				"Debugger: Quit"
+			],
+			[
+				"Debu",
+				"Debugger: Start"
+			],
+			[
+				"Debgger",
+				"Debugger: Install Adapters"
+			],
+			[
+				"debugger",
+				"Debugger: Install Adapters"
+			],
+			[
+				"DEbu",
+				"Debugger: Quit"
+			],
+			[
+				"debug",
+				"Debugger: Install Adapters"
+			],
+			[
+				"terminus",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"Syntax CSV",
+				"Set Syntax: Rainbow CSV tab Standard"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"tinc",
+				"RainbowBrackets: tinct view"
+			],
+			[
+				"ecc in",
+				"ECC: Show popup info"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"ECC inf",
+				"ECC: Show popup info"
+			],
+			[
+				"sublimeL",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"Rain",
+				"RainbowBrackets: tinct view"
+			],
+			[
+				"ics",
+				"Insert to Column: Spaces"
+			],
+			[
+				"min",
+				"View: Toggle Minimap"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"ECC in",
+				"ECC: Show popup info"
+			],
+			[
+				"settin",
+				"Preferences: Settings"
+			],
+			[
+				"Sublime linter sett",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"ECC info",
+				"ECC: Show popup info"
+			],
+			[
+				"ECC",
+				"ECC: Settings"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"AutoSet",
+				"AutoFileName: Default Settings"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ECC S",
+				"ECC: Settings"
+			],
+			[
+				"sett",
+				"Preferences: Settings"
+			],
+			[
+				"Syntax C++",
+				"Set Syntax: C++"
+			],
+			[
+				"ECC Sett",
+				"ECC: Settings"
+			],
+			[
+				"ECC se",
+				"ECC: Settings"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"outline",
+				"Browse Mode: Outline (Right)"
+			],
+			[
+				"ECC Set",
+				"ECC: Settings"
+			],
+			[
+				"syntax C",
+				"Set Syntax: C"
+			],
+			[
+				"setings",
+				"ECC: Settings"
+			],
+			[
+				"refres",
+				"Project: Refresh Folders"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"di",
+				"Package Control: Disable Package"
+			],
+			[
+				"Gitgu",
+				"GitGutter: Compare Against Branch"
+			],
+			[
+				"ECC sett",
+				"ECC: Settings"
+			],
+			[
+				"the",
+				"UI: Select Theme"
+			],
+			[
+				"syn C",
+				"Set Syntax: C"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"ecc",
+				"ECC: Settings"
+			],
+			[
+				"status ba",
+				"View: Toggle Status Bar"
+			],
+			[
+				"toggle mi",
+				"View: Toggle Minimap"
+			],
+			[
+				"tog min",
+				"View: Toggle Minimap"
+			],
+			[
+				"ui",
+				"UI: Select Theme"
+			],
+			[
+				"pI",
+				"Package Control: Install Package"
+			],
+			[
+				"Syn C",
+				"Set Syntax: C"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"HTML",
+				"HTMLPrettify"
+			],
+			[
+				"prettify",
+				"HTMLPrettify"
+			],
+			[
+				"list opa",
+				"Package Control: List Packages"
+			],
+			[
+				"list",
+				"Terminus: List Shells"
+			],
+			[
+				"sublimeLinter Settings",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"syntax TO",
+				"Set Syntax: ToDone"
+			],
+			[
+				"ic",
+				"Insert to Column: Spaces"
+			],
+			[
+				"insert",
+				"Insert Nums"
+			],
+			[
+				"Pi",
+				"Package Control: Install Package"
+			],
+			[
+				"en",
+				"Package Control: Enable Package"
+			],
+			[
+				"browse packages",
+				"Preferences: Browse Packages"
+			],
+			[
+				"syntax",
+				"Set Syntax: C"
+			],
+			[
+				"",
+				"ASCII Art: Add text with 'isometric1' (Isometric Variant 1) font"
+			],
+			[
+				"disba",
+				"Package Control: Disable Package"
+			],
+			[
+				"vintage",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"sidebar",
+				"View: Toggle Side Bar"
+			],
+			[
+				"out",
+				"Browse Mode: Outline (Right)"
+			],
+			[
+				"Terminus View",
+				"Terminus: Open Default Shell in Tab (View)"
 			],
 			[
 				"keyb",
@@ -868,10 +1273,6 @@
 				"Origami: Create Pane on the Right"
 			],
 			[
-				"mini",
-				"View: Toggle Minimap"
-			],
-			[
 				"ini",
 				"Set Syntax: INI"
 			],
@@ -884,20 +1285,8 @@
 				"Set Syntax: Bourne Again Shell (bash)"
 			],
 			[
-				"color",
-				"UI: Select Color Scheme"
-			],
-			[
-				"the",
-				"UI: Select Theme"
-			],
-			[
 				"rainbow",
 				"Preferences: RainbowBrackets Settings"
-			],
-			[
-				"ena",
-				"Package Control: Enable Package"
 			],
 			[
 				"rain",
@@ -936,10 +1325,6 @@
 				"Origami: Create Pane on the Right"
 			],
 			[
-				"sett",
-				"Preferences: Settings"
-			],
-			[
 				"large ",
 				"ASCII Art: Add large divider"
 			],
@@ -960,31 +1345,11 @@
 				"Bookmarks: Clear All"
 			],
 			[
-				"disba",
-				"Package Control: Disable Package"
-			],
-			[
 				"minima",
 				"View: Toggle Minimap"
 			],
 			[
-				"outline",
-				"Browse Mode: Outline (Left)"
-			],
-			[
-				"setting",
-				"Preferences: Settings"
-			],
-			[
-				"dis",
-				"Package Control: Disable Package"
-			],
-			[
 				"outl",
-				"Browse Mode: Outline (Left)"
-			],
-			[
-				"out",
 				"Browse Mode: Outline (Left)"
 			],
 			[
@@ -994,10 +1359,6 @@
 			[
 				"save",
 				"File: Save All"
-			],
-			[
-				"prv",
-				"PackageResourceViewer: Open Resource"
 			],
 			[
 				"GNUplt",
@@ -1020,288 +1381,8 @@
 				"Preferences: Color Highlight Settings"
 			],
 			[
-				"ui",
-				"UI: Select Theme"
-			],
-			[
 				"terminus tab",
 				"Terminus: Open Default Shell in Tab (View)"
-			],
-			[
-				"terminus op",
-				"Terminus: Open Default Shell in Tab (View)"
-			],
-			[
-				"remo",
-				"Package Control: Remove Package"
-			],
-			[
-				"Syn Gnu",
-				"Set Syntax: gnuplot"
-			],
-			[
-				"o d",
-				"Origami: Destroy Current Pane"
-			],
-			[
-				"od",
-				"Origami: Destroy Current Pane"
-			],
-			[
-				"colorcode",
-				"Toggle Colorcode on this view"
-			],
-			[
-				"reade",
-				"ReadmePlease"
-			],
-			[
-				"p",
-				"Preferences: A File Icon Settings"
-			],
-			[
-				"or",
-				"Origami: Destroy Current Pane"
-			],
-			[
-				"ou",
-				"Browse Mode: Outline (Left)"
-			],
-			[
-				"or de",
-				"Origami: Destroy Current Pane"
-			],
-			[
-				"orig des",
-				"Origami: Destroy Current Pane"
-			],
-			[
-				"PI",
-				"Package Control: Install Package"
-			],
-			[
-				"Guna",
-				"Guna : Tweak Theme"
-			],
-			[
-				"UI ",
-				"UI: Select Theme"
-			],
-			[
-				"pre",
-				"Preferences: Settings"
-			],
-			[
-				"Outline",
-				"Browse Mode: Outline (Left)"
-			],
-			[
-				"Themr",
-				"Theme Tweaker: Toggle Tweak Mode"
-			],
-			[
-				"T",
-				"Themr: List themes"
-			],
-			[
-				"syn C",
-				"Set Syntax: C"
-			],
-			[
-				"Rainbow",
-				"RainbowBrackets: tinct view"
-			],
-			[
-				"lis",
-				"Package Control: List Packages"
-			],
-			[
-				"color sc",
-				"UI: Select Color Scheme"
-			],
-			[
-				"colo",
-				"UI: Select Color Scheme"
-			],
-			[
-				"material Theme",
-				"Material Theme: Activate theme"
-			],
-			[
-				"Material Theme",
-				"Material Theme: Configuration"
-			],
-			[
-				"mather",
-				"Material Theme: Extras"
-			],
-			[
-				"Material",
-				"Material Theme: Activate theme"
-			],
-			[
-				"remov",
-				"Package Control: Remove Package"
-			],
-			[
-				"Syntax C",
-				"Set Syntax: C"
-			],
-			[
-				"settings",
-				"Preferences: Settings"
-			],
-			[
-				"edit p",
-				"Edit Preference: Theme"
-			],
-			[
-				"them",
-				"UI: Select Theme"
-			],
-			[
-				"The",
-				"UI: Select Theme"
-			],
-			[
-				"Them",
-				"UI: Select Theme"
-			],
-			[
-				"Ui",
-				"UI: Select Theme"
-			],
-			[
-				"insta",
-				"Colorsublime: Install Theme"
-			],
-			[
-				"Pi",
-				"Package Control: Install Package"
-			],
-			[
-				"theme",
-				"UI: Select Color Scheme"
-			],
-			[
-				"colorsub",
-				"Colorsublime: Install Theme"
-			],
-			[
-				"UI The",
-				"UI: Select Theme"
-			],
-			[
-				"scheme",
-				"UI: Select Color Scheme"
-			],
-			[
-				"Theme",
-				"Edit Preference: Theme"
-			],
-			[
-				"Ui The",
-				"UI: Select Theme"
-			],
-			[
-				"mono",
-				"Monokai Pro: select theme"
-			],
-			[
-				"skin",
-				"UI: Select Skin"
-			],
-			[
-				"Skin",
-				"UI: Select Skin"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"ayu",
-				"ayu: Activate theme"
-			],
-			[
-				"lint",
-				"SublimeLinter: Toggle Highlights"
-			],
-			[
-				"syntax",
-				"Set Syntax: C"
-			],
-			[
-				"Clang For",
-				"Clang Format: Format Selection"
-			],
-			[
-				"syn make",
-				"Set Syntax: Makefile Improved"
-			],
-			[
-				"C++",
-				"Set Syntax: C++"
-			],
-			[
-				"settin",
-				"Preferences: Settings"
-			],
-			[
-				"sublimelinter",
-				"Preferences: SublimeLinter Settings"
-			],
-			[
-				"easy cla",
-				"EasyClangComplete: Settings"
-			],
-			[
-				"c sy",
-				"Set Syntax: C"
-			],
-			[
-				"syn Make",
-				"Set Syntax: Makefile Improved"
-			],
-			[
-				"makefile",
-				"Set Syntax: Makefile Improved"
-			],
-			[
-				"terminus",
-				"Preferences: Terminus Settings"
-			],
-			[
-				"terminus sett",
-				"Preferences: Terminus Settings"
-			],
-			[
-				"terminus ke",
-				"Preferences: Terminus Key Bindings"
-			],
-			[
-				"terminus se",
-				"Preferences: Terminus Settings"
-			],
-			[
-				"terminal",
-				"Terminality: Browse Commands..."
-			],
-			[
-				"colorpic",
-				"Color Picker"
-			],
-			[
-				"disla",
-				"Package Control: Disable Package"
-			],
-			[
-				"destr",
-				"Origami: Destroy Current Pane"
-			],
-			[
-				"orig cpr",
-				"Origami: Create Pane on the Right"
 			]
 		],
 		"width": 0.0
@@ -1311,6 +1392,51 @@
 		"height": 347.0,
 		"history":
 		[
+			"help(view)",
+			"help",
+			"view.settings().get('syntax')",
+			"sublime.message_dialog(\"test\")",
+			"view(sublime.View)",
+			"view(Sublime.view)",
+			"EasyClangComplete.settings_manager",
+			"EasyClangComplete",
+			"view.run_command(EasyClangComplete.settings_manager.settings_for_view(view))",
+			"minimap_toggler",
+			"EasyClangComplete.settings_manager",
+			"view",
+			"EasyClangComplete",
+			"pprint.pprint(view.__dict__)",
+			"view.__dict__",
+			"view",
+			"view().settings_for_view",
+			"view().settings_for_view()",
+			"view.window().settings_for_view()",
+			"view.settings_for_view",
+			"view",
+			"window.view",
+			"sublime.view.settings_for_view",
+			"view",
+			"EasyClangComplete.settings_manager.settings_for_view(view)",
+			"plugin_loaded",
+			"view",
+			"window.run_command(\"minimap_toggler\")",
+			"view.run_command(\"minimap_toggler\")",
+			"view.run_command(print(\"Hello World\"))",
+			"window.run_command(print(\"Hello World\"))",
+			"window()",
+			"window",
+			"sublime.version()",
+			"window.run_command(\"minimap_toggler.py\")",
+			"window.run_command(\"display_project_tree\")",
+			"view.run_command(\"display_project_tree\")",
+			"view.run_command(help(minimap_toggler.py))",
+			"help(minimap_toggler.py)",
+			"help",
+			"view.run_command(\"minimap_toggler.py\")",
+			"view.run_command(\"minimap_toggler\")",
+			"print($project_path)",
+			"minimap_toggler.py",
+			"minimap_toggler",
 			"display_project_tree.py",
 			"print($project_path)",
 			"$project_path"
@@ -1328,12 +1454,86 @@
 	"expanded_folders":
 	[
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/gaussian-spike",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/nbscripts",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src"
 	],
 	"file_history":
 	[
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/Makefile",
+		"/home/manoj/.config/sublime-text-3/Packages/Code Runner/coderunner.sublime-settings",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/gaussian-spike/CashKarpRKF45_step=2.00e-01.dat",
+		"/home/manoj/.config/sublime-text-3/Packages/Terminal/Default (Linux).sublime-keymap",
+		"/home/manoj/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/manoj/.config/sublime-text-3/Packages/User/Terminal.sublime-settings",
+		"/home/manoj/.config/sublime-text-3/Packages/Terminal/Terminal.sublime-settings",
+		"/home/manoj/.config/sublime-text-3/Packages/User/DoxyDoc.sublime-settings",
+		"/home/manoj/.config/sublime-text-3/Packages/DoxyDoc/DoxyDoc.sublime-settings",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/DPP-System1/CashKarpRKF45_step=2.50e-01.dat",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/simulations.c",
+		"/home/manoj/.config/sublime-text-3/Packages/Code Runner/coderunner.py",
+		"/home/manoj/.config/sublime-text-3/Packages/Code Runner/Default (Linux).sublime-keymap",
+		"/home/manoj/.config/sublime-text-3/Packages/Code Runner/README.md",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/simulations.h",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/initial-conditions.json",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/nbscripts/visualise.gpi",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/derivatives.h",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/ODESolvers.h",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/tests/test.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/derivatives.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/ODESolvers.c",
+		"/home/manoj/Software/peautils-portable-1.2.LINUX.x86_64.GTK2/readme_peautils.txt",
+		"/home/manoj/Software/peautils-portable-1.2.LINUX.x86_64.GTK2/copying.txt",
+		"/home/manoj/Masters/Projects/libraries/aerospace/numerics/odepack/opkda2.f",
+		"/home/manoj/Masters/Projects/libraries/aerospace/numerics/odepack/dlsode.f",
+		"/home/manoj/Masters/Computer Science/Languages/Fortran/Learn Fortran [Fortran Tutorial] by TutorialsPoint (z-lib.org).pdf",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/SUBLIME.sublime-project",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/Makefile",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/main.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/algorithms.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/.clang_complete",
+		"/home/manoj/.config/sublime-text-3/Packages/Deviot (Arduino IDE)/deviot.sublime-syntax",
+		"/home/manoj/.config/sublime-text-3/Packages/Deviot (Arduino IDE)/messages/install.md",
+		"/home/manoj/.config/sublime-text-3/Packages/AutoFileName/autofilename.sublime-settings",
+		"/home/manoj/.config/sublime-text-3/Packages/Deviot (Arduino IDE)/Main.sublime-menu",
+		"/home/manoj/.config/sublime-text-3/Packages/Deviot (Arduino IDE)/deviot.sublime-completions",
+		"/home/manoj/.config/sublime-text-3/Packages/Deviot (Arduino IDE)/Default.sublime-commands",
+		"/home/manoj/.config/sublime-text-3/Packages/Deviot (Arduino IDE)/deviot.sublime-settings",
+		"/home/manoj/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings",
+		"/home/manoj/.config/sublime-text-3/Packages/Deviot (Arduino IDE)/README.md",
+		"/home/manoj/.config/sublime-text-3/Packages/Deviot (Arduino IDE)/Context.sublime-menu",
+		"/home/manoj/.config/sublime-text-3/Packages/Deviot (Arduino IDE)/Console.tmLanguage",
+		"/home/manoj/.config/sublime-text-3/Packages/User/Default-Status-Bar.sublime-theme",
+		"/home/manoj/.config/sublime-text-3/Packages/Theme - Default/Default.sublime-theme",
+		"/home/manoj/.config/sublime-text-3/Packages/Inspired GitHub Color Scheme/InspiredGitHub.tmTheme",
+		"/home/manoj/.config/sublime-text-3/Packages/Github Color Theme/GitHub.tmTheme",
+		"/home/manoj/.config/sublime-text-3/Packages/User/Compile C(++).sublime-build",
+		"/home/manoj/.config/sublime-text-3/Packages/User/Fortran-Build.sublime-build",
+		"/home/manoj/.config/sublime-text-3/Packages/User/C++.sublime-settings",
+		"/home/manoj/.config/sublime-text-3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
+		"/home/manoj/.config/sublime-text-3/Packages/ToDone/readme.todo",
+		"/home/manoj/.config/sublime-text-3/Packages/User/ToDone.sublime-settings",
+		"/home/manoj/.config/sublime-text-3/Packages/ToDone/Settings/ToDone.sublime-settings",
+		"/home/manoj/.config/sublime-text-3/Packages/Vintageous/vi/settings.py",
+		"/home/manoj/.config/sublime-text-3/Packages/Vintage/Default (Linux).sublime-keymap",
+		"/home/manoj/.config/sublime-text-3/Packages/Vintage/Vintage.sublime-commands",
+		"/home/manoj/.config/sublime-text-3/Packages/Vintage/Preferences.sublime-settings",
+		"/home/manoj/.config/sublime-text-3/Packages/User/.vintageousrc",
+		"/home/manoj/Masters/Computer Science/Tools/sublime_text/createOwnPlugins.txt",
+		"/home/manoj/Masters/Projects/libraries/ccpp/SUNDIALS/sundials-5.2.0/src/cvode/cvode_bandpre.c",
+		"/home/manoj/Masters/Projects/libraries/julia/DifferentialEquations.jl/README.md",
+		"/home/manoj/Masters/Projects/libraries/aerospace/numerics/lapackpp/README.md",
+		"/home/manoj/Masters/Projects/libraries/julia/DifferentialEquations.jl/README-html.html",
+		"/home/manoj/.julia/packages/ControlSystems/QFZs5/docs/src/index.md",
+		"/home/manoj/Masters/Projects/libraries/julia/julia-resources/README.md",
+		"/home/manoj/Masters/Projects/libraries/julia/local-install/LICENSE.md",
+		"/home/manoj/Masters/Projects/libraries/aerospace/numerics/OpenBLAS.wiki/User-Manual.md",
+		"/home/manoj/Masters/Projects/libraries/aerospace/numerics/OpenBLAS.wiki/Faq.md",
+		"/home/manoj/Masters/Projects/libraries/aerospace/numerics/OpenBLAS.wiki/Home.md",
+		"/usr/share/doc/libblas3/copyright",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/_config.yml",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/.gitattributes",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/gnuplot_i.c",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/README.md",
 		"/home/manoj/.cache/.fr-gYAz09/Read Me.txt",
@@ -1389,81 +1589,11 @@
 		"/usr/include/json-c/json_object.h",
 		"/usr/include/json-c/json.h",
 		"/usr/include/json-c/arraylist.h",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/tests/file_input.c",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/initial_conditions.ini",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/tests/file_input",
-		"/home/manoj/Masters/Code_Projects/code/bash/MakeProject.sh",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/vcpkg-master/docs/users/integration.md",
-		"/usr/src/linux-headers-4.4.0-176/include/media/v4l2-dev.h",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/vcpkg-master/README.md",
-		"/home/manoj/Masters/Code_Projects/code/bash/bashrc",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/src/algorithms.c",
-		"/home/manoj/Masters/Code_Projects/numerics/backup/ODELib/ODElib_31-03-20_02_50_PM/src/ODESolvers.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/src/ODESolvers.c",
-		"/home/manoj/Masters/Code_Projects/bash/clickRepeat.sh",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/include/gnuplot_i.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/include/ODESolvers.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/include/trycatch.h",
-		"/home/manoj/.local/share/desktop-directories/xfce-other.directory",
-		"/home/manoj/.local/share/desktop-directories/menulibre-chrome-apps.directory",
-		"/home/manoj/.local/share/icons/Arc-X-Icons/README.md",
-		"/usr/include/stdio.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/src/simulations.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/include/derivatives.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/createNewSublimeCProject.sh",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/src/main.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODElib/src/ODESolvers.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/SUBLIME.sublime-project",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/include/simulations.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/src/derivatives.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/src/visualise.gpi",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODESolvers/.clang_complete",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODElib/iodata/ODESystem1/_step=5.00e-01.dat",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODElib/src/testpad.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODElib/include/ODESolvers.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODElib/include/derivatives.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODElib/include/problems.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODElib/src/visualise.gpi",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODElib/src/main.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODElib/Makefile",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODElib/SUBLIME.sublime-project",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/docs/C/C_conventions.txt",
-		"/home/manoj/Masters/Code_Projects/project_template/C_conventions.txt",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/ODElib/src/problems.c",
-		"/home/manoj/Masters/Code_Projects/bash/createNewSublimeCProject.sh",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/iodata/model1-RK5Butcher_step=2.50e-02.dat",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/iodata/model1-RK4Classic_step=2.50e-02.dat",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/iodata/model1-RK3Optim_step=2.50e-02.dat",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/iodata/model1-RK3Classic_step=2.50e-02.dat",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/iodata/model1-RK2Ralston_step=2.50e-02.dat",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/src/main.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/src/derivatives.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/src/gnuplot_i.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/include/problems.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/include/ODESolvers.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/include/derivatives.h",
-		"/home/manoj/.config/powerline/config.json",
-		"/home/manoj/.config/powerline/themes/powerline.json",
-		"/home/manoj/.config/powerline/themes/ipython/in.json",
-		"/home/manoj/.config/powerline/themes/ipython/in2.json",
-		"/home/manoj/.config/powerline/themes/shell/default.json",
-		"/home/manoj/.config/powerline/colors.json",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/src/ODESolvers.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/include/gnuplotrc",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/SUBLIME.sublime-project",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/iodata/model1-FWE_step=2.50e-02.dat",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/iodata/model1-Midpoint_step=2.50e-02.dat",
-		"/home/manoj/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/manoj/Masters/Code_Projects/bash/downloadURL.sh",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/include/derivative.h",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/src/problems.c",
-		"/home/manoj/Masters/Code_Projects/numerics/DS289/implementations/src/visualise.gpi",
-		"/home/manoj/.config/sublime-text-3/Packages/Gnuplot/gnuplot.tmLanguage",
-		"/home/manoj/.config/sublime-text-3/Packages/User/AdvancedNewFile.sublime-settings"
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/tests/file_input.c"
 	],
 	"find":
 	{
-		"height": 46.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -1477,6 +1607,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Data",
+			"Skipp",
+			"writefile",
+			"//debug",
+			"realloc",
+			"iter",
+			"//debug",
+			"// debug",
+			"source.c",
+			"status_bar",
+			"exit_insert",
 			"constptr -> ",
 			"consts",
 			"dele",
@@ -1532,14 +1673,2407 @@
 	"groups":
 	[
 		{
+			"selected": 8,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/algorithms.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8792,
+						"regions":
+						{
+							"gutter_color_763":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										763,
+										812
+									]
+								],
+								"scope": "gutter_color"
+							}
+						},
+						"selection":
+						[
+							[
+								1741,
+								1741
+							]
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+								"guessing"
+							],
+							"SL.13.region_keys":
+							[
+							],
+							"SL.36.region_keys":
+							[
+							],
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 676,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1917,
+										1918
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1678,
+										1679
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								228,
+								4,
+								26,
+								17,
+								6,
+								44,
+								11,
+								20,
+								22,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"color_helper.box_height": 22,
+							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.scan":
+							{
+								"current_ext": ".c",
+								"current_syntax": "C++/C",
+								"enabled": false,
+								"last_updated": 1587995136.03
+							},
+							"color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"git_gutter_is_enabled": true,
+							"rainbow_inited": true,
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "include/ODESolvers.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1245,
+						"regions":
+						{
+							"gutter_color_22":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#def.png",
+								"regions":
+								[
+									[
+										22,
+										43
+									]
+								],
+								"scope": "gutter_color"
+							}
+						},
+						"selection":
+						[
+							[
+								1245,
+								1245
+							]
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+							],
+							"SL.14.region_keys":
+							[
+							],
+							"SL.16.region_keys":
+							[
+							],
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 82,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								228,
+								4,
+								27,
+								0,
+								26,
+								30,
+								1,
+								191,
+								240,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"color_helper.box_height": 22,
+							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"current_ext": ".h",
+								"current_syntax": "C++/C",
+								"enabled": false,
+								"last_updated": 1587995136.03
+							},
+							"git_gutter_is_enabled": true,
+							"rainbow_inited": true,
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 367.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/ODESolvers.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18028,
+						"regions":
+						{
+							"gutter_color_11597":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11619":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11625":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11634":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11649":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11654":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11673":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11681":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11683":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11752":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11753":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11832":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11833":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11834":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11835":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11870":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11871":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11873":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11874":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_11877":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										11634,
+										11862
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12346":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12352":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12360":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12361":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12376":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12381":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12400":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12405":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12408":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12410":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12479":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12559":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12560":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12561":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12562":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12598":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12600":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12601":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_12604":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										12361,
+										12453
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_591":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#def.png",
+								"regions":
+								[
+									[
+										591,
+										627
+									]
+								],
+								"scope": "gutter_color"
+							}
+						},
+						"selection":
+						[
+							[
+								5966,
+								5966
+							]
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+								"guessing"
+							],
+							"SL.15.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.18.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"WordCount":
+							{
+								"changes": 252,
+								"count": 1066,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										6034,
+										6035
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										5954,
+										5955
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								228,
+								4,
+								27,
+								4,
+								4,
+								55,
+								8,
+								232,
+								92,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"color_helper.box_height": 20,
+							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"current_ext": ".c",
+								"current_syntax": "C++/C",
+								"enabled": false,
+								"last_updated": 1587995136.03
+							},
+							"git_gutter_is_enabled": true,
+							"rainbow_inited": true,
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"wrap_width": 0
+						},
+						"translation.x": 0.0,
+						"translation.y": 3903.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2586,
+						"regions":
+						{
+						},
+						"selection":
+						[
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": false,
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"__vi_external_disable": true,
+							"auto_complete": false,
+							"auto_complete_commit_on_tab": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone_locations":
+							{
+							},
+							"bracket_highlighter.ignore": true,
+							"color_helper.box_height": 20,
+							"color_helper.color_scheme": "Terminus.hidden-color-scheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"current_ext": null,
+								"current_syntax": "Text/Plain text",
+								"enabled": false,
+								"last_updated": 1587995136.03
+							},
+							"color_scheme": "Terminus.hidden-color-scheme",
+							"default_dir": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src",
+							"draw_centered": false,
+							"draw_indent_guides": false,
+							"draw_unicode_white_space": false,
+							"draw_white_space": "none",
+							"git_gutter_is_enabled": false,
+							"gutter": false,
+							"highlight_line": false,
+							"is_widget": true,
+							"rainbow_inited": true,
+							"result_base_dir": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+							"result_file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+							"result_line_regex": null,
+							"scroll_past_end": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"terminus_view": true,
+							"terminus_view.args":
+							{
+								"auto_close": false,
+								"cancellable": false,
+								"cmd":
+								[
+									"/usr/bin/env",
+									"bash",
+									"-c",
+									"source /usr/local/apps/intel/bin/compilervars.sh intel64 && make clean && make && make run"
+								],
+								"config_name": "Bash",
+								"cwd": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+								"env":
+								{
+									"LANG": "en_GB.UTF-8",
+									"TERM": "xterm-256color",
+									"TERMINUS_SUBLIME": "1",
+									"TERM_PROGRAM": "Terminus-Sublime"
+								},
+								"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+								"line_regex": null,
+								"panel_name": null,
+								"tag": null,
+								"timeit": true,
+								"title": "Terminus Build Results"
+							},
+							"terminus_view.cancellable": false,
+							"terminus_view.closed": true,
+							"terminus_view.key.ctrl+k": true,
+							"terminus_view.key.ctrl+p": true,
+							"terminus_view.natural_keyboard": true,
+							"terminus_view.panel_name": null,
+							"terminus_view.tag": null,
+							"terminus_view.viewport_y": 529.0,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 529.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/simulations.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 477,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+							],
+							"SL.61.region_keys":
+							[
+							],
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 18,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								228,
+								4,
+								27,
+								2,
+								21,
+								41,
+								10,
+								1,
+								141,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"color_helper.box_height": 20,
+							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"current_ext": ".c",
+								"current_syntax": "C++/C",
+								"enabled": false,
+								"last_updated": 1587995136.03
+							},
+							"git_gutter_is_enabled": true,
+							"rainbow_inited": true,
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 98.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/main.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 257,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								218,
+								218
+							]
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+							],
+							"SL.62.region_keys":
+							[
+							],
+							"WordCount":
+							{
+								"changes": 4,
+								"count": 21,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										255,
+										256
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										199,
+										200
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								228,
+								4,
+								4,
+								22,
+								50,
+								15,
+								4,
+								54,
+								137,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"color_helper.box_height": 20,
+							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"current_ext": ".c",
+								"current_syntax": "C++/C",
+								"enabled": false,
+								"last_updated": 1587995136.03
+							},
+							"git_gutter_is_enabled": true,
+							"rainbow_inited": true,
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/derivatives.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5610,
+						"regions":
+						{
+							"gutter_color_1877":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										1923,
+										2022
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_1923":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										1923,
+										2022
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2855":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										2903,
+										2964
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2901":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										2903,
+										2964
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2903":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										2903,
+										2964
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_299":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#def.png",
+								"regions":
+								[
+									[
+										299,
+										350
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_3329":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										3377,
+										3476
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_3373":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										3377,
+										3476
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_3375":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										3377,
+										3476
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_3377":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										3377,
+										3476
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_351":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#def.png",
+								"regions":
+								[
+									[
+										351,
+										402
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_487":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/red.png",
+								"regions":
+								[
+									[
+										487,
+										543
+									]
+								],
+								"scope": "gutter_color"
+							}
+						},
+						"selection":
+						[
+							[
+								5564,
+								5564
+							]
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+								"guessing"
+							],
+							"SL.16.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.18.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.20.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"WordCount":
+							{
+								"changes": 310,
+								"count": 387,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										5605,
+										5606
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										5412,
+										5413
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								228,
+								4,
+								27,
+								4,
+								2,
+								45,
+								6,
+								11,
+								147,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"color_helper.box_height": 20,
+							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"current_ext": ".c",
+								"current_syntax": "C++/C",
+								"enabled": false,
+								"last_updated": 1587995136.03
+							},
+							"color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"git_gutter_is_enabled": true,
+							"rainbow_inited": true,
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4362.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "include/initial-conditions.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								605,
+								605
+							]
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+								"guessing"
+							],
+							"SL.17.region_keys":
+							[
+							],
+							"SL.31.region_keys":
+							[
+							],
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "json"
+							},
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										748,
+										749
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										520,
+										521
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								228,
+								4,
+								27,
+								3,
+								44,
+								8,
+								4,
+								207,
+								9,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"color_helper.box_height": 20,
+							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"current_ext": ".json",
+								"current_syntax": "JavaScript/JSON",
+								"enabled": false,
+								"last_updated": 1587995136.03
+							},
+							"git_gutter_is_enabled": true,
+							"rainbow_inited": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 9.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "nbscripts/visualise.gpi",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 487,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								487,
+								487
+							]
+						],
+						"settings":
+						{
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+							],
+							"SL.16.region_keys":
+							[
+							],
+							"SL.18.region_keys":
+							[
+							],
+							"SL.20.region_keys":
+							[
+							],
+							"SL.26.region_keys":
+							[
+							],
+							"WordCount":
+							{
+								"changes": 63,
+								"count": 31,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"c_time":
+							[
+								128,
+								3,
+								99,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								100,
+								97,
+								116,
+								101,
+								116,
+								105,
+								109,
+								101,
+								10,
+								113,
+								0,
+								67,
+								10,
+								7,
+								228,
+								4,
+								26,
+								23,
+								9,
+								55,
+								7,
+								9,
+								252,
+								113,
+								1,
+								133,
+								113,
+								2,
+								82,
+								113,
+								3,
+								46
+							],
+							"color_helper.box_height": 20,
+							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"current_ext": ".gpi",
+								"current_syntax": "Gnuplot/gnuplot",
+								"enabled": false,
+								"last_updated": 1587995136.03
+							},
+							"color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"git_gutter_is_enabled": true,
+							"rainbow_inited": true,
+							"syntax": "Packages/Gnuplot/gnuplot.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 33.0
+		"height": 31.0
 	},
 	"input":
 	{
@@ -1552,25 +4086,39 @@
 			[
 				0,
 				0,
-				1,
-				1
+				2,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.2,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.5,
 			1.0
 		]
 	},
 	"menu_visible": true,
+	"output.Debugger":
+	{
+		"height": 162.0
+	},
 	"output.SublimeLinter":
 	{
 		"height": 236.0
+	},
+	"output.Terminus":
+	{
+		"height": 273.0
+	},
+	"output.deviot":
+	{
+		"height": 162.0
 	},
 	"output.find_results":
 	{
@@ -1584,11 +4132,15 @@
 	{
 		"height": 0.0
 	},
+	"output.run_result":
+	{
+		"height": 217.0
+	},
 	"pinned_build_system": "Build Project",
 	"project": "SUBLIME.sublime-project",
 	"replace":
 	{
-		"height": 83.0
+		"height": 58.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1597,6 +4149,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"src/ODESolvers.c"
+			],
+			[
+				"sim",
+				"src/simulations.c"
+			],
+			[
+				"ini",
+				"include/initial-conditions.json"
+			],
+			[
+				"ODE",
+				"include/ODESolvers.h"
+			],
 			[
 				"pars",
 				"include/parson.h"
@@ -1618,16 +4186,8 @@
 				"Makefile"
 			],
 			[
-				"sim",
-				"include/simulations.h"
-			],
-			[
 				"main",
 				"src/main.c"
-			],
-			[
-				"",
-				"src/ODESolvers.c"
 			],
 			[
 				"ode",
@@ -1636,10 +4196,6 @@
 			[
 				"der",
 				"include/derivatives.h"
-			],
-			[
-				"ODE",
-				"include/ODESolvers.h"
 			],
 			[
 				"Sub",
@@ -1685,12 +4241,17 @@
 	"selected_group": 0,
 	"settings":
 	{
+		"_vintageous_reset_during_init": true,
+		"vintage":
+		{
+			"_cmdline_cd": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src"
+		}
 	},
-	"show_minimap": false,
+	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 186.0,
+	"side_bar_width": 169.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

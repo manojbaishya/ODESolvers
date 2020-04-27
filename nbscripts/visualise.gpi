@@ -1,1 +1,7 @@
-plot "./iodata/DPP-System1/RK4SYS_step=2.50e-01.dat" using 4:5 with linespoints ls 2, "./iodata/DPP-System1/RK4SYS_step=2.50e-01.dat" using 6:7 with linespoints ls 4
+# plot "./iodata/DPP-System1/RK4SYS_step=2.50e-01.dat" using 4:5 with linespoints ls 1, "./iodata/DPP-System1/RK4SYS_step=2.50e-01.dat" using 6:7 with linespoints ls 5
+
+# plot "./iodata/DPP-System1/CashKarpRKF45_step=2.50e-01.dat" using 4:5 with linespoints ls 1, "./iodata/DPP-System1/CashKarpRKF45_step=2.50e-01.dat" using 6:7 with linespoints ls 5
+
+set xlabel "time"
+set ylabel "solution"
+plot "./iodata/gaussian-spike/CashKarpRKF45_step=2.00e-01.dat" using 1:2 with linespoints ls 1

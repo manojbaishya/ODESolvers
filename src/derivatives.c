@@ -1,8 +1,8 @@
 /*
 * @Author: manoj
 * @Date:   2020-03-22 19:03:32
-* @Last Modified by:   manoj
-* @Last Modified time: 2020-04-05 14:26:55
+* @Last Modified by:   Manoj Baishya
+* @Last Modified time: 2020-04-27 19:41:56
 */
 
 #include "derivatives.h"
@@ -17,9 +17,14 @@
 
 // ----------------------------------------------------------------------------
 //
-//                      Required definitions in derivative.c:
+//                 Required definitions in derivative.c:
 //
-//                g_NSYS, params, derivative, derivative_internal
+//  1) g_NSYS
+//  2) params
+//  3) set_parameters()
+//  4) derivative()
+//  5) derivative_internal()
+//  6) events()
 //
 // ----------------------------------------------------------------------------
 
@@ -108,7 +113,7 @@ void derivative_internal(const double *t, const double y[], double ydot[], struc
 // ----------------------------------------------------------------------------
 
 /*
-int g_NSYS = 6; // Order of the system of equations
+int g_NSYS = 6; // Order of the system of equations !Required
 
 struct params {
     double Vt, Vm, AlphaT, del;
@@ -117,7 +122,7 @@ struct params {
 void set_parameters(struct params *constptr){
 
     int choice = 0;
-    printf("Enter a value for K: [1] 0.83, [2] 1.11, [3] 1.67, [4] 5: \n");
+    printf("\nEnter a value for K: [1] 0.83, [2] 1.11, [3] 1.67, [4] 5: ");
     scanf("%d", &choice); getchar();
 
     float K = 0.0;
@@ -152,8 +157,26 @@ void derivative_internal(const double *t, const double y[], double ydot[], struc
     ydot[4] = consts.Vt * cos(consts.AlphaT);
     ydot[5] = consts.Vt * sin(consts.AlphaT);
 }
-*/
 
+int events(const double *t, const double y[]) {
+
+    int numEvents = 1;
+    double event_checks[] = {y[0] - 0.001}; // count of values in initialiser must equal numEvents
+
+    int flag = 0;
+
+    for(unsigned i = 0; i < numEvents; ++i) {
+        if( event_checks[i] < 0 ) {
+            flag = 1;
+            break;
+        } else {
+            flag = 0;
+        }
+    }
+
+    return flag;
+}
+*/
 // ----------------------------------------------------------------------------
 //
 //
@@ -185,3 +208,18 @@ void derivative(const double *t, const double y[], double ydot[]){
 void derivative_internal(const double *t, const double y[], double ydot[], struct params consts){
     ydot[0] = - consts.k * y[0] + 10 * exp(- (pow((*t - consts.mu), 2)/(2 * pow(consts.sig, 2))));
 }
+
+int events(const double *t, const double y[]) {
+/**
+ * @brief Returns event information
+ * @details set all flag returns to 0 if there is no event
+ *
+ * @param t time
+ * @param y[] solution at time t
+ * @return eventflag
+ */
+    return 0;
+}
+
+
+

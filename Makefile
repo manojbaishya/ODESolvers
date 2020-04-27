@@ -1,16 +1,16 @@
 SHELL := /bin/bash
 
 CC        := icc
-CFLAGS  := -std=gnu99 -Wall -g -fstack-protector
+CFLAGS  := -std=gnu99 -static -Wall -g -fstack-protector
 
 BIN     := bin
 SRC     := src
-INCLUDE := include ~/.local/include/vcpkg/installed/x64-linux/include
-LIB     := lib ~/.local/include/vcpkg/installed/x64-linux/lib
+INCLUDE := include /usr/include ~/.local/include/vcpkg/installed/x64-linux/include
+LIB     := lib /usr/lib/x86_64-linux-gnu ~/.local/include/vcpkg/installed/x64-linux/lib
 OBJ     := objs
 IO      := iodata
 
-LIBRARIES   := -lm -lgslcblas -lgsl
+LIBRARIES   := -lgsl -lgslcblas -lm
 
 EXECUTABLE  := main
 
