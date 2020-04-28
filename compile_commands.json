@@ -1,0 +1,805 @@
+[
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c -o objs/gnuplot_i.o src/gnuplot_i.c",
+  "file": "src/gnuplot_i.c"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c -o objs/simulations.o src/simulations.c",
+  "file": "src/simulations.c"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c -o objs/ODESolvers.o src/ODESolvers.c",
+  "file": "src/ODESolvers.c"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c -o objs/derivatives.o src/derivatives.c",
+  "file": "src/derivatives.c"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c -o objs/parson.o src/parson.c",
+  "file": "src/parson.c"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c -o objs/main.o src/main.c",
+  "file": "src/main.c"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c -o objs/algorithms.o src/algorithms.c",
+  "file": "src/algorithms.c"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c include/gnuplot_i.h",
+  "file": "include/gnuplot_i.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/stdio.h",
+  "file": "../../../../../../../../usr/include/stdio.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/features.h",
+  "file": "../../../../../../../../usr/include/features.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/stdc-predef.h",
+  "file": "../../../../../../../../usr/include/stdc-predef.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/sys/cdefs.h",
+  "file": "../../../../../../../../usr/include/sys/cdefs.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/wordsize.h",
+  "file": "../../../../../../../../usr/include/bits/wordsize.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gnu/stubs.h",
+  "file": "../../../../../../../../usr/include/gnu/stubs.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gnu/stubs-32.h",
+  "file": "../../../../../../../../usr/include/gnu/stubs-32.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gnu/stubs-64.h",
+  "file": "../../../../../../../../usr/include/gnu/stubs-64.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gnu/stubs-x32.h",
+  "file": "../../../../../../../../usr/include/gnu/stubs-x32.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/types.h",
+  "file": "../../../../../../../../usr/include/bits/types.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/typesizes.h",
+  "file": "../../../../../../../../usr/include/bits/typesizes.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/libio.h",
+  "file": "../../../../../../../../usr/include/libio.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/_G_config.h",
+  "file": "../../../../../../../../usr/include/_G_config.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/wchar.h",
+  "file": "../../../../../../../../usr/include/wchar.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/wchar.h",
+  "file": "../../../../../../../../usr/include/bits/wchar.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/wctype.h",
+  "file": "../../../../../../../../usr/include/wctype.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/endian.h",
+  "file": "../../../../../../../../usr/include/endian.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/endian.h",
+  "file": "../../../../../../../../usr/include/bits/endian.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/byteswap.h",
+  "file": "../../../../../../../../usr/include/bits/byteswap.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/byteswap-16.h",
+  "file": "../../../../../../../../usr/include/bits/byteswap-16.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/xlocale.h",
+  "file": "../../../../../../../../usr/include/xlocale.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/wchar2.h",
+  "file": "../../../../../../../../usr/include/bits/wchar2.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/wchar-ldbl.h",
+  "file": "../../../../../../../../usr/include/bits/wchar-ldbl.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gconv.h",
+  "file": "../../../../../../../../usr/include/gconv.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/libio-ldbl.h",
+  "file": "../../../../../../../../usr/include/bits/libio-ldbl.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/stdio_lim.h",
+  "file": "../../../../../../../../usr/include/bits/stdio_lim.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/sys_errlist.h",
+  "file": "../../../../../../../../usr/include/bits/sys_errlist.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/getopt.h",
+  "file": "../../../../../../../../usr/include/getopt.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/ctype.h",
+  "file": "../../../../../../../../usr/include/ctype.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/stdio.h",
+  "file": "../../../../../../../../usr/include/bits/stdio.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/stdio2.h",
+  "file": "../../../../../../../../usr/include/bits/stdio2.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/stdio-ldbl.h",
+  "file": "../../../../../../../../usr/include/bits/stdio-ldbl.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/stdlib.h",
+  "file": "../../../../../../../../usr/include/stdlib.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/waitflags.h",
+  "file": "../../../../../../../../usr/include/bits/waitflags.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/waitstatus.h",
+  "file": "../../../../../../../../usr/include/bits/waitstatus.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/sys/types.h",
+  "file": "../../../../../../../../usr/include/sys/types.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/time.h",
+  "file": "../../../../../../../../usr/include/time.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/time.h",
+  "file": "../../../../../../../../usr/include/bits/time.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/timex.h",
+  "file": "../../../../../../../../usr/include/bits/timex.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/sys/select.h",
+  "file": "../../../../../../../../usr/include/sys/select.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/select.h",
+  "file": "../../../../../../../../usr/include/bits/select.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/sigset.h",
+  "file": "../../../../../../../../usr/include/bits/sigset.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/select2.h",
+  "file": "../../../../../../../../usr/include/bits/select2.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/sys/sysmacros.h",
+  "file": "../../../../../../../../usr/include/sys/sysmacros.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/pthreadtypes.h",
+  "file": "../../../../../../../../usr/include/bits/pthreadtypes.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/alloca.h",
+  "file": "../../../../../../../../usr/include/alloca.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/stdlib-bsearch.h",
+  "file": "../../../../../../../../usr/include/bits/stdlib-bsearch.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/stdlib-float.h",
+  "file": "../../../../../../../../usr/include/bits/stdlib-float.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/stdlib.h",
+  "file": "../../../../../../../../usr/include/bits/stdlib.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/stdlib-ldbl.h",
+  "file": "../../../../../../../../usr/include/bits/stdlib-ldbl.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/string.h",
+  "file": "../../../../../../../../usr/include/string.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/string.h",
+  "file": "../../../../../../../../usr/include/bits/string.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/string2.h",
+  "file": "../../../../../../../../usr/include/bits/string2.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/string3.h",
+  "file": "../../../../../../../../usr/include/bits/string3.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/assert.h",
+  "file": "../../../../../../../../usr/include/assert.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/fcntl.h",
+  "file": "../../../../../../../../usr/include/fcntl.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/fcntl.h",
+  "file": "../../../../../../../../usr/include/bits/fcntl.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/fcntl-linux.h",
+  "file": "../../../../../../../../usr/include/bits/fcntl-linux.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/uio.h",
+  "file": "../../../../../../../../usr/include/bits/uio.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/stat.h",
+  "file": "../../../../../../../../usr/include/bits/stat.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/fcntl2.h",
+  "file": "../../../../../../../../usr/include/bits/fcntl2.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/unistd.h",
+  "file": "../../../../../../../../usr/include/unistd.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/posix_opt.h",
+  "file": "../../../../../../../../usr/include/bits/posix_opt.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/environments.h",
+  "file": "../../../../../../../../usr/include/bits/environments.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/confname.h",
+  "file": "../../../../../../../../usr/include/bits/confname.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/unistd.h",
+  "file": "../../../../../../../../usr/include/bits/unistd.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c include/simulations.h",
+  "file": "include/simulations.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c include/ODESolvers.h",
+  "file": "include/ODESolvers.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c include/derivatives.h",
+  "file": "include/derivatives.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c include/algorithms.h",
+  "file": "include/algorithms.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c include/parson.h",
+  "file": "include/parson.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_complex_long_double.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_complex_long_double.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_types.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_types.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_errno.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_errno.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/errno.h",
+  "file": "../../../../../../../../usr/include/errno.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/errno.h",
+  "file": "../../../../../../../../usr/include/bits/errno.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/linux/errno.h",
+  "file": "../../../../../../../../usr/include/linux/errno.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/asm/errno.h",
+  "file": "../../../../../../../../usr/include/asm/errno.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/asm-generic/errno.h",
+  "file": "../../../../../../../../usr/include/asm-generic/errno.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/asm-generic/errno-base.h",
+  "file": "../../../../../../../../usr/include/asm-generic/errno-base.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_complex.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_complex.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_check_range.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_check_range.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_long_double.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_long_double.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_inline.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_inline.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_long_double.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_long_double.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_complex.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_complex.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_complex_long_double.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_complex_long_double.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_complex_double.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_complex_double.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_double.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_double.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_double.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_double.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_complex_double.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_complex_double.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_complex_float.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_complex_float.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_float.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_float.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_float.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_float.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_complex_float.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_complex_float.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_ulong.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_ulong.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_ulong.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_ulong.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_long.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_long.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_long.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_long.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_uint.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_uint.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_uint.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_uint.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_int.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_int.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_int.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_int.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_ushort.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_ushort.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_ushort.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_ushort.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_short.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_short.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_short.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_short.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_uchar.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_uchar.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_uchar.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_uchar.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_vector_char.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_vector_char.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_block_char.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_block_char.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/gsl/gsl_matrix_long_double.h",
+  "file": "../../../../../../../../usr/include/gsl/gsl_matrix_long_double.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/math.h",
+  "file": "../../../../../../../../usr/include/math.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/math-vector.h",
+  "file": "../../../../../../../../usr/include/bits/math-vector.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/libm-simd-decl-stubs.h",
+  "file": "../../../../../../../../usr/include/bits/libm-simd-decl-stubs.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/huge_val.h",
+  "file": "../../../../../../../../usr/include/bits/huge_val.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/huge_valf.h",
+  "file": "../../../../../../../../usr/include/bits/huge_valf.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/huge_vall.h",
+  "file": "../../../../../../../../usr/include/bits/huge_vall.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/inf.h",
+  "file": "../../../../../../../../usr/include/bits/inf.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/nan.h",
+  "file": "../../../../../../../../usr/include/bits/nan.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/mathdef.h",
+  "file": "../../../../../../../../usr/include/bits/mathdef.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/mathcalls.h",
+  "file": "../../../../../../../../usr/include/bits/mathcalls.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/mathinline.h",
+  "file": "../../../../../../../../usr/include/bits/mathinline.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/bits/math-finite.h",
+  "file": "../../../../../../../../usr/include/bits/math-finite.h"
+},
+
+{
+  "directory": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+  "command": "gcc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vcpkg/installed/x64-linux/include -c ../../../../../../../../usr/include/sys/stat.h",
+  "file": "../../../../../../../../usr/include/sys/stat.h"
+}
+]

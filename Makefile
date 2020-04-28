@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-CC        := icc
+CC        := gcc
 CFLAGS  := -std=gnu99 -static -Wall -g -fstack-protector
 
 BIN     := bin
