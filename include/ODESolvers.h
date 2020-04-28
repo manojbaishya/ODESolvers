@@ -10,9 +10,9 @@ typedef struct _odeOptions odeOptions;
 typedef struct _solution solution;
 
 
-void callODESolver(void (*)(const double *, const double [], double []), const char *, int);
+void callODESolver(void (*)(const double *, const double [], double []), int (*)(const double *, const double []), const char *, int);
 odeOptions * readInput(const char *, int);
-void ODEinit(odeOptions *);
+void ODEinit(odeOptions *, int (*)(const double *, const double []));
 void specifySolverMethodInit(odeOptions *);
 
 

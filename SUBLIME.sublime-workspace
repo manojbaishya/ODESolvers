@@ -520,24 +520,6 @@
 	"buffers":
 	[
 		{
-			"file": "src/algorithms.c",
-			"settings":
-			{
-				"buffer_size": 8792,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "include/ODESolvers.h",
-			"settings":
-			{
-				"buffer_size": 1245,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "src/ODESolvers.c",
 			"settings":
 			{
@@ -547,57 +529,14 @@
 			}
 		},
 		{
-			"contents": "\n***************** Erasing Residual Files ******************\n\nrm -f bin/main\nrm -f  objs/gnuplot_i.o  objs/simulations.o  objs/ODESolvers.o  objs/derivatives.o  objs/parson.o  objs/ma​‌​\nin.o  objs/algorithms.o\nrm -rf iodata/gaussian-spike\n\n************************ Success **************************\n\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/gnuplot_i.o src/gnuplot_i.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/simulations.o src/simulations.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/ODESolvers.o src/ODESolvers.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/derivatives.o src/derivatives.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/parson.o src/parson.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/main.o src/main.c\nicc -std=gnu99 -static -Wall -g -fstack-protector -Iinclude -I/usr/include -I/home/manoj/.local/include/vc​‌​\npkg/installed/x64-linux/include -c -o objs/algorithms.o src/algorithms.c\nicc -o bin/main objs/gnuplot_i.o objs/simulations.o objs/ODESolvers.o objs/derivatives.o objs/parson.o obj​‌​\ns/main.o objs/algorithms.o -Llib -L/usr/lib/x86_64-linux-gnu -L/home/manoj/.local/include/vcpkg/installed/​‌​\nx64-linux/lib -lgsl -lgslcblas -lm\n\n================= Built All Executables ===================\n\n---------------------- Running File -----------------------\n./bin/main\n\n---------------------- Starting the program! ----------------------\n\n        - Solving system of ODEs...\n\n        - Using CashKarpRKF45 algorithm!\n        - Solution in progress...\n\n---------------------- ODE solved successfully! ----------------------\n\n        - Data written to ./iodata/gaussian-spike/CashKarpRKF45_step=2.00e-01.dat successfully.\n        - Please use the gnuplot scripts in ./nbscripts/ to plot.\n\n        - Skipping printing..\n\n        - Skipping plotting..\n\n----- MEMORY DEALLOCATION START -> MEMORY DEALLOCATION COMPLETE ------\n\n---------------------- EXITING PROGRAM ----------------------\n[Finished in 0.97s]",
+			"contents": "Package Control Messages\n========================\n\nTheme - Coffee\n--------------\n\n  # Install\n  ---------------\n  \n  Active the theme by modifying your user preferences file. From the Sublime Text menu: `Preferences -> Settings - User`.\n  \n  ```\n  {\n      \"theme\": \"Coffee Dark Roast.sublime-theme\",\n      \"color_scheme\": \"Packages/Theme - Coffee/Coffee Dark Roast.tmTheme\"\n  }\n  ```\n  \n  See the readme for more information.\n",
 			"settings":
 			{
-				"buffer_size": 2586,
+				"buffer_size": 426,
 				"line_ending": "Unix",
-				"name": "Terminus Build Results",
+				"name": "Package Control Messages",
+				"read_only": true,
 				"scratch": true
-			}
-		},
-		{
-			"file": "src/simulations.c",
-			"settings":
-			{
-				"buffer_size": 477,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/main.c",
-			"settings":
-			{
-				"buffer_size": 257,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/derivatives.c",
-			"settings":
-			{
-				"buffer_size": 5610,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "include/initial-conditions.json",
-			"settings":
-			{
-				"buffer_size": 751,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "nbscripts/visualise.gpi",
-			"settings":
-			{
-				"buffer_size": 487,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -873,6 +812,62 @@
 		"selected_items":
 		[
 			[
+				"UI Colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"Colo",
+				"Color Picker"
+			],
+			[
+				"UI",
+				"UI: Select Theme"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"UI COl",
+				"UI: Select Color Scheme"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"li",
+				"Package Control: List Packages"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"ui",
+				"UI: Select Theme"
+			],
+			[
+				"UI Col",
+				"UI: Select Color Scheme"
+			],
+			[
+				"PI",
+				"Package Control: Install Package"
+			],
+			[
 				"keybindings terminal",
 				"Preferences: Terminal Key Bindings – Default"
 			],
@@ -887,18 +882,6 @@
 			[
 				"terminal se",
 				"Preferences: Terminal Settings – Default"
-			],
-			[
-				"lis",
-				"Package Control: List Packages"
-			],
-			[
-				"remov",
-				"Package Control: Remove Package"
-			],
-			[
-				"pi",
-				"Package Control: Install Package"
 			],
 			[
 				"HTM",
@@ -951,14 +934,6 @@
 			[
 				"ecc in",
 				"ECC: Show popup info"
-			],
-			[
-				"dis",
-				"Package Control: Disable Package"
-			],
-			[
-				"ena",
-				"Package Control: Enable Package"
 			],
 			[
 				"ECC inf",
@@ -1077,10 +1052,6 @@
 				"Project: Refresh Folders"
 			],
 			[
-				"remo",
-				"Package Control: Remove Package"
-			],
-			[
 				"di",
 				"Package Control: Disable Package"
 			],
@@ -1119,10 +1090,6 @@
 			[
 				"tog min",
 				"View: Toggle Minimap"
-			],
-			[
-				"ui",
-				"UI: Select Theme"
 			],
 			[
 				"pI",
@@ -1235,10 +1202,6 @@
 			[
 				"Keyb",
 				"Preferences: Key Bindings"
-			],
-			[
-				"UI",
-				"UI: Select Theme"
 			],
 			[
 				"thuna",
@@ -1359,30 +1322,6 @@
 			[
 				"save",
 				"File: Save All"
-			],
-			[
-				"GNUplt",
-				"Set Syntax: gnuplot"
-			],
-			[
-				"HTm",
-				"HTMLPrettify"
-			],
-			[
-				"keyv",
-				"PackageDev: Convert (YAML, JSON, PList) to…"
-			],
-			[
-				"keybi",
-				"Preferences: Key Bindings"
-			],
-			[
-				"color high",
-				"Preferences: Color Highlight Settings"
-			],
-			[
-				"terminus tab",
-				"Terminus: Open Default Shell in Tab (View)"
 			]
 		],
 		"width": 0.0
@@ -1457,13 +1396,28 @@
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/gaussian-spike",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/lib",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/nbscripts",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src"
 	],
 	"file_history":
 	[
-		"/home/manoj/.config/sublime-text-3/Packages/Code Runner/coderunner.sublime-settings",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/ODESolvers.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/main.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/initial-conditions.json",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/simulations.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/derivatives.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/nbscripts/visualise.gpi",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/README.md",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/gaussian-spike/CashKarpRKF45_step=2.00e-01.dat",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/initial-conditions.json",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/random",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/Makefile",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/derivatives.h",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/algorithms.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/ODESolvers.h",
+		"/usr/local/share/gnuplot/5.2/gnuplotrc",
+		"/home/manoj/.config/sublime-text-3/Packages/Code Runner/coderunner.sublime-settings",
 		"/home/manoj/.config/sublime-text-3/Packages/Terminal/Default (Linux).sublime-keymap",
 		"/home/manoj/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/home/manoj/.config/sublime-text-3/Packages/User/Terminal.sublime-settings",
@@ -1471,27 +1425,17 @@
 		"/home/manoj/.config/sublime-text-3/Packages/User/DoxyDoc.sublime-settings",
 		"/home/manoj/.config/sublime-text-3/Packages/DoxyDoc/DoxyDoc.sublime-settings",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/DPP-System1/CashKarpRKF45_step=2.50e-01.dat",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/simulations.c",
 		"/home/manoj/.config/sublime-text-3/Packages/Code Runner/coderunner.py",
 		"/home/manoj/.config/sublime-text-3/Packages/Code Runner/Default (Linux).sublime-keymap",
 		"/home/manoj/.config/sublime-text-3/Packages/Code Runner/README.md",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/simulations.h",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/initial-conditions.json",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/nbscripts/visualise.gpi",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/derivatives.h",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/ODESolvers.h",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/tests/test.c",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/derivatives.c",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/ODESolvers.c",
 		"/home/manoj/Software/peautils-portable-1.2.LINUX.x86_64.GTK2/readme_peautils.txt",
 		"/home/manoj/Software/peautils-portable-1.2.LINUX.x86_64.GTK2/copying.txt",
 		"/home/manoj/Masters/Projects/libraries/aerospace/numerics/odepack/opkda2.f",
 		"/home/manoj/Masters/Projects/libraries/aerospace/numerics/odepack/dlsode.f",
 		"/home/manoj/Masters/Computer Science/Languages/Fortran/Learn Fortran [Fortran Tutorial] by TutorialsPoint (z-lib.org).pdf",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/SUBLIME.sublime-project",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/Makefile",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/main.c",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/algorithms.c",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/.clang_complete",
 		"/home/manoj/.config/sublime-text-3/Packages/Deviot (Arduino IDE)/deviot.sublime-syntax",
 		"/home/manoj/.config/sublime-text-3/Packages/Deviot (Arduino IDE)/messages/install.md",
@@ -1535,7 +1479,6 @@
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/_config.yml",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/.gitattributes",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/gnuplot_i.c",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/README.md",
 		"/home/manoj/.cache/.fr-gYAz09/Read Me.txt",
 		"/home/manoj/.cache/.fr-d20MGj/Sublime Merge 1.0.0.1 Build 1114-SadeemPC.com/Your Files Is Here/Instructions !!!.txt",
 		"/home/manoj/.cache/.fr-YP6nZg/Sublime Merge 1.0.0.1 Build 1114-SadeemPC.com/Your Files Is Here/Instructions !!!.txt",
@@ -1586,10 +1529,7 @@
 		"/usr/include/jsoncpp/json/json.h",
 		"/home/manoj/Masters/Code_Projects/libraries/ccpp/jsmn/example/jsondump.c",
 		"/home/manoj/Masters/Code_Projects/libraries/ccpp/jsmn/example/simple.c",
-		"/usr/include/json-c/json_object.h",
-		"/usr/include/json-c/json.h",
-		"/usr/include/json-c/arraylist.h",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/tests/file_input.c"
+		"/usr/include/json-c/json_object.h"
 	],
 	"find":
 	{
@@ -1607,6 +1547,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"include",
 			"Data",
 			"Skipp",
 			"writefile",
@@ -1673,425 +1614,11 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/algorithms.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8792,
-						"regions":
-						{
-							"gutter_color_763":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										763,
-										812
-									]
-								],
-								"scope": "gutter_color"
-							}
-						},
-						"selection":
-						[
-							[
-								1741,
-								1741
-							]
-						],
-						"settings":
-						{
-							"ASI_is_indentation_detected": true,
-							"ASI_result_sources":
-							[
-								"guessing"
-							],
-							"SL.13.region_keys":
-							[
-							],
-							"SL.36.region_keys":
-							[
-							],
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 676,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										1917,
-										1918
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										1678,
-										1679
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								228,
-								4,
-								26,
-								17,
-								6,
-								44,
-								11,
-								20,
-								22,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"color_helper.box_height": 22,
-							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
-							"color_helper.file_palette":
-							[
-							],
-							"color_helper.scan":
-							{
-								"current_ext": ".c",
-								"current_syntax": "C++/C",
-								"enabled": false,
-								"last_updated": 1587995136.03
-							},
-							"color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
-							"git_gutter_is_enabled": true,
-							"rainbow_inited": true,
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "include/ODESolvers.h",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1245,
-						"regions":
-						{
-							"gutter_color_22":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#def.png",
-								"regions":
-								[
-									[
-										22,
-										43
-									]
-								],
-								"scope": "gutter_color"
-							}
-						},
-						"selection":
-						[
-							[
-								1245,
-								1245
-							]
-						],
-						"settings":
-						{
-							"ASI_is_indentation_detected": true,
-							"ASI_result_sources":
-							[
-							],
-							"SL.14.region_keys":
-							[
-							],
-							"SL.16.region_keys":
-							[
-							],
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 82,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								228,
-								4,
-								27,
-								0,
-								26,
-								30,
-								1,
-								191,
-								240,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"color_helper.box_height": 22,
-							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
-							"color_helper.file_palette":
-							[
-							],
-							"color_helper.preview_meta":
-							{
-							},
-							"color_helper.scan":
-							{
-								"current_ext": ".h",
-								"current_syntax": "C++/C",
-								"enabled": false,
-								"last_updated": 1587995136.03
-							},
-							"git_gutter_is_enabled": true,
-							"rainbow_inited": true,
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 367.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "src/ODESolvers.c",
 					"semi_transient": false,
 					"settings":
@@ -2099,45 +1626,6 @@
 						"buffer_size": 18028,
 						"regions":
 						{
-							"gutter_color_11597":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11619":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11625":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
 							"gutter_color_11634":
 							{
 								"flags": 144,
@@ -2151,449 +1639,7 @@
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_11649":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11654":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11673":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11681":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11683":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11752":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11753":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11832":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11833":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11834":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11835":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11870":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11871":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11873":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11874":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_11877":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										11634,
-										11862
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12346":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12352":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12360":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
 							"gutter_color_12361":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12376":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12381":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12400":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12405":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12408":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12410":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12479":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12559":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12560":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12561":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12562":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12598":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12600":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12601":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										12361,
-										12453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_12604":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/red.png",
@@ -2623,8 +1669,8 @@
 						"selection":
 						[
 							[
-								5966,
-								5966
+								6259,
+								6259
 							]
 						],
 						"settings":
@@ -2634,17 +1680,15 @@
 							[
 								"guessing"
 							],
-							"SL.15.region_keys":
+							"SL.13.region_keys":
 							[
-								"sublime_linter.protected_regions"
 							],
-							"SL.18.region_keys":
+							"SL.17.region_keys":
 							[
-								"sublime_linter.protected_regions"
 							],
 							"WordCount":
 							{
-								"changes": 252,
+								"changes": 0,
 								"count": 1066,
 								"modified": false,
 								"selection": false,
@@ -2658,24 +1702,24 @@
 								{
 									"1":
 									[
-										6034,
-										6035
+										6457,
+										6458
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
 									]
 								},
 								"open":
 								{
 									"1":
 									[
-										5954,
-										5955
+										6076,
+										6077
 									]
 								},
 								"unmatched":
@@ -2684,61 +1728,61 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
 							"c_time":
 							[
@@ -2771,12 +1815,12 @@
 								228,
 								4,
 								27,
+								21,
+								28,
+								43,
 								4,
-								4,
-								55,
-								8,
-								232,
-								92,
+								40,
+								68,
 								113,
 								1,
 								133,
@@ -2788,1284 +1832,164 @@
 								46
 							],
 							"color_helper.box_height": 20,
-							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
+							"color_helper.color_scheme": "Packages/User/Color Highlighter/themes/GitHub.tmTheme",
 							"color_helper.file_palette":
 							[
 							],
-							"color_helper.preview_meta":
-							{
-							},
 							"color_helper.scan":
 							{
 								"current_ext": ".c",
 								"current_syntax": "C++/C",
 								"enabled": false,
-								"last_updated": 1587995136.03
+								"last_updated": 1588061503.93
 							},
+							"color_scheme": "Packages/Github Color Theme/GitHub.tmTheme",
 							"git_gutter_is_enabled": true,
 							"rainbow_inited": true,
 							"syntax": "Packages/C++/C.sublime-syntax",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"wrap_width": 0
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3903.0,
+						"translation.y": 4043.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 1,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2586,
+						"buffer_size": 426,
 						"regions":
 						{
 						},
 						"selection":
 						[
+							[
+								426,
+								426
+							]
 						],
 						"settings":
 						{
-							"ASI_is_indentation_detected": false,
+							"ASI_is_indentation_detected": true,
+							"ASI_result_sources":
+							[
+								"guessing"
+							],
 							"WordCount":
 							{
-								"changes": -1,
-								"modified": true,
-								"selection": true,
+								"changes": 0,
+								"count": 35,
+								"modified": false,
+								"selection": false,
 								"status": -1,
 								"syntax": "plain text"
 							},
-							"__vi_external_disable": true,
-							"auto_complete": false,
-							"auto_complete_commit_on_tab": false,
+							"auto_indent": false,
 							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone_locations":
+							"bracket_highlighter.locations":
 							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
 							},
-							"bracket_highlighter.ignore": true,
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
 							"color_helper.box_height": 20,
-							"color_helper.color_scheme": "Terminus.hidden-color-scheme",
+							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
 							"color_helper.file_palette":
 							[
 							],
-							"color_helper.preview_meta":
-							{
-							},
 							"color_helper.scan":
 							{
 								"current_ext": null,
 								"current_syntax": "Text/Plain text",
 								"enabled": false,
-								"last_updated": 1587995136.03
+								"last_updated": 1588061503.93
 							},
-							"color_scheme": "Terminus.hidden-color-scheme",
 							"default_dir": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src",
-							"draw_centered": false,
-							"draw_indent_guides": false,
-							"draw_unicode_white_space": false,
-							"draw_white_space": "none",
 							"git_gutter_is_enabled": false,
-							"gutter": false,
-							"highlight_line": false,
-							"is_widget": true,
 							"rainbow_inited": true,
-							"result_base_dir": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
-							"result_file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
-							"result_line_regex": null,
-							"scroll_past_end": true,
 							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"terminus_view": true,
-							"terminus_view.args":
-							{
-								"auto_close": false,
-								"cancellable": false,
-								"cmd":
-								[
-									"/usr/bin/env",
-									"bash",
-									"-c",
-									"source /usr/local/apps/intel/bin/compilervars.sh intel64 && make clean && make && make run"
-								],
-								"config_name": "Bash",
-								"cwd": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
-								"env":
-								{
-									"LANG": "en_GB.UTF-8",
-									"TERM": "xterm-256color",
-									"TERMINUS_SUBLIME": "1",
-									"TERM_PROGRAM": "Terminus-Sublime"
-								},
-								"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
-								"line_regex": null,
-								"panel_name": null,
-								"tag": null,
-								"timeit": true,
-								"title": "Terminus Build Results"
-							},
-							"terminus_view.cancellable": false,
-							"terminus_view.closed": true,
-							"terminus_view.key.ctrl+k": true,
-							"terminus_view.key.ctrl+p": true,
-							"terminus_view.natural_keyboard": true,
-							"terminus_view.panel_name": null,
-							"terminus_view.tag": null,
-							"terminus_view.viewport_y": 529.0,
-							"word_wrap": false
+							"tab_size": 4,
+							"tab_width": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 529.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/simulations.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 477,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"ASI_is_indentation_detected": true,
-							"ASI_result_sources":
-							[
-							],
-							"SL.61.region_keys":
-							[
-							],
-							"WordCount":
-							{
-								"changes": 0,
-								"count": 18,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								228,
-								4,
-								27,
-								2,
-								21,
-								41,
-								10,
-								1,
-								141,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"color_helper.box_height": 20,
-							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
-							"color_helper.file_palette":
-							[
-							],
-							"color_helper.preview_meta":
-							{
-							},
-							"color_helper.scan":
-							{
-								"current_ext": ".c",
-								"current_syntax": "C++/C",
-								"enabled": false,
-								"last_updated": 1587995136.03
-							},
-							"git_gutter_is_enabled": true,
-							"rainbow_inited": true,
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 98.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/main.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 257,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								218,
-								218
-							]
-						],
-						"settings":
-						{
-							"ASI_is_indentation_detected": true,
-							"ASI_result_sources":
-							[
-							],
-							"SL.62.region_keys":
-							[
-							],
-							"WordCount":
-							{
-								"changes": 4,
-								"count": 21,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										255,
-										256
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										199,
-										200
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								228,
-								4,
-								4,
-								22,
-								50,
-								15,
-								4,
-								54,
-								137,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"color_helper.box_height": 20,
-							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
-							"color_helper.file_palette":
-							[
-							],
-							"color_helper.preview_meta":
-							{
-							},
-							"color_helper.scan":
-							{
-								"current_ext": ".c",
-								"current_syntax": "C++/C",
-								"enabled": false,
-								"last_updated": 1587995136.03
-							},
-							"git_gutter_is_enabled": true,
-							"rainbow_inited": true,
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/derivatives.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5610,
-						"regions":
-						{
-							"gutter_color_1877":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										1923,
-										2022
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1923":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										1923,
-										2022
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_2855":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										2903,
-										2964
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_2901":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										2903,
-										2964
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_2903":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										2903,
-										2964
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_299":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#def.png",
-								"regions":
-								[
-									[
-										299,
-										350
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_3329":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										3377,
-										3476
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_3373":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										3377,
-										3476
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_3375":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										3377,
-										3476
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_3377":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										3377,
-										3476
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_351":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#def.png",
-								"regions":
-								[
-									[
-										351,
-										402
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_487":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										487,
-										543
-									]
-								],
-								"scope": "gutter_color"
-							}
-						},
-						"selection":
-						[
-							[
-								5564,
-								5564
-							]
-						],
-						"settings":
-						{
-							"ASI_is_indentation_detected": true,
-							"ASI_result_sources":
-							[
-								"guessing"
-							],
-							"SL.16.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.18.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"SL.20.region_keys":
-							[
-								"sublime_linter.protected_regions"
-							],
-							"WordCount":
-							{
-								"changes": 310,
-								"count": 387,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										5605,
-										5606
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										5412,
-										5413
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								228,
-								4,
-								27,
-								4,
-								2,
-								45,
-								6,
-								11,
-								147,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"color_helper.box_height": 20,
-							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
-							"color_helper.file_palette":
-							[
-							],
-							"color_helper.preview_meta":
-							{
-							},
-							"color_helper.scan":
-							{
-								"current_ext": ".c",
-								"current_syntax": "C++/C",
-								"enabled": false,
-								"last_updated": 1587995136.03
-							},
-							"color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
-							"git_gutter_is_enabled": true,
-							"rainbow_inited": true,
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4362.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "include/initial-conditions.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 751,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								605,
-								605
-							]
-						],
-						"settings":
-						{
-							"ASI_is_indentation_detected": true,
-							"ASI_result_sources":
-							[
-								"guessing"
-							],
-							"SL.17.region_keys":
-							[
-							],
-							"SL.31.region_keys":
-							[
-							],
-							"WordCount":
-							{
-								"changes": -1,
-								"modified": true,
-								"selection": true,
-								"status": -1,
-								"syntax": "json"
-							},
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										748,
-										749
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										520,
-										521
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								228,
-								4,
-								27,
-								3,
-								44,
-								8,
-								4,
-								207,
-								9,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"color_helper.box_height": 20,
-							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
-							"color_helper.file_palette":
-							[
-							],
-							"color_helper.preview_meta":
-							{
-							},
-							"color_helper.scan":
-							{
-								"current_ext": ".json",
-								"current_syntax": "JavaScript/JSON",
-								"enabled": false,
-								"last_updated": 1587995136.03
-							},
-							"git_gutter_is_enabled": true,
-							"rainbow_inited": true,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 9.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "nbscripts/visualise.gpi",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 487,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								487,
-								487
-							]
-						],
-						"settings":
-						{
-							"ASI_is_indentation_detected": true,
-							"ASI_result_sources":
-							[
-							],
-							"SL.16.region_keys":
-							[
-							],
-							"SL.18.region_keys":
-							[
-							],
-							"SL.20.region_keys":
-							[
-							],
-							"SL.26.region_keys":
-							[
-							],
-							"WordCount":
-							{
-								"changes": 63,
-								"count": 31,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"c_time":
-							[
-								128,
-								3,
-								99,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								100,
-								97,
-								116,
-								101,
-								116,
-								105,
-								109,
-								101,
-								10,
-								113,
-								0,
-								67,
-								10,
-								7,
-								228,
-								4,
-								26,
-								23,
-								9,
-								55,
-								7,
-								9,
-								252,
-								113,
-								1,
-								133,
-								113,
-								2,
-								82,
-								113,
-								3,
-								46
-							],
-							"color_helper.box_height": 20,
-							"color_helper.color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
-							"color_helper.file_palette":
-							[
-							],
-							"color_helper.preview_meta":
-							{
-							},
-							"color_helper.scan":
-							{
-								"current_ext": ".gpi",
-								"current_syntax": "Gnuplot/gnuplot",
-								"enabled": false,
-								"last_updated": 1587995136.03
-							},
-							"color_scheme": "Packages/User/GitHub (SublimePythonIDE).tmTheme",
-							"git_gutter_is_enabled": true,
-							"rainbow_inited": true,
-							"syntax": "Packages/Gnuplot/gnuplot.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]

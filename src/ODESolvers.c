@@ -2,12 +2,11 @@
 * @Author: manoj
 * @Date:   2020-04-01 14:04:10
 * @Last Modified by:   Manoj Baishya
-* @Last Modified time: 2020-04-27 20:06:14
+* @Last Modified time: 2020-04-28 14:07:54
 */
 
 #include "ODESolvers.h"
 #include "algorithms.h"
-#include "derivatives.h"
 #include "gnuplot_i.h"
 #include "parson.h"
 #include <gsl/gsl_vector.h>
@@ -46,6 +45,7 @@ struct _odeOptions {
     char *model;
     char *method;
     char *outputFilePath;
+    int (*events)(const double *t, const double y[]);
     double domain[2];
     long double yInitCond[];
 };
@@ -58,7 +58,7 @@ struct _odeOptions {
 
 // -- Caller Function ---------------------------------------------------------
 
-void callODESolver(void (*derivative)(const double *t, const double y[], double ydot[]), const char *inputfile, int NSYS){
+void callODESolver(void (*derivative)(const double *t, const double y[], double ydot[]), int (*events)(const double *, const double []), const char *inputfile, int NSYS){
 
     puts("\n---------------------- Starting the program! ----------------------\n");
 
@@ -66,7 +66,7 @@ void callODESolver(void (*derivative)(const double *t, const double y[], double 
 
     odeOptions *options = readInput(inputfile, NSYS);
 
-    ODEinit(options);
+    ODEinit(options, events);
 
     solution *result = ODESolver(derivative, options);
 
@@ -126,7 +126,7 @@ odeOptions * readInput(const char *inputjson, int NSYS){
 
 // -- Initialisation Function -------------------------------------------------
 
-void ODEinit(odeOptions *options){
+void ODEinit(odeOptions *options, int (*events)(const double *, const double [])){
 
     // select solver method
     (options -> adaptive == 1) ? (options -> method = "CashKarpRKF45") : (options -> NSYS == 1) ? specifySolverMethodInit(options) : (options -> method = "RK4SYS");
@@ -148,6 +148,9 @@ void ODEinit(odeOptions *options){
 
     options -> outputFilePath = (char *) malloc(sizeof(char) * (strlen(filepath) + 1));
     strcpy(options -> outputFilePath, filepath);
+
+    // Assign events function pointer
+    options -> events = events;
 
 }
 
@@ -297,7 +300,7 @@ int adaptiveODEIntegrate(void (*derivative)(const double *t, const double y[], d
         eventSol[var] = (double) gsl_matrix_long_double_get(result -> func, var, point);
     }
 
-    eventflag = events(&eventTime, eventSol);
+    eventflag = options -> events(&eventTime, eventSol);
 
     if(eventflag == 0) {
         options -> step = step; // valid stepsize for next outer coarse loop step
