@@ -20,7 +20,7 @@ solution * ODESolver(void (*)(const double *, const double [], double []), odeOp
 void ODEIntegrate(void (*)(const double *, const double [], double []), solution *, odeOptions *, largeInt, double);
 int adaptiveODEIntegrate(void (*)(const double *, const double [], double []), solution *, odeOptions *, largeInt);
 
-void OneDimAlgorithm(void (*)(const double *, const double [], double []), double *, double *, double, odeOptions *);
+void genericSolver(void (*)(const double *, const double [], double []), double *, double *, double, odeOptions *);
 
 // -- Utility Functions -------------------------------------------------------
 

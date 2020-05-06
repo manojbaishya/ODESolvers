@@ -2,143 +2,188 @@
 * @Author: manoj
 * @Date:   2020-04-03 17:24:45
 * @Last Modified by:   Manoj Baishya
-* @Last Modified time: 2020-04-26 16:58:03
+* @Last Modified time: 2020-05-06 16:32:22
 */
 
 #include "algorithms.h"
+#include <stdio.h>
 #include <math.h>
 
-// -- Algorithms for first order -------------------------------------------
+// -- Macro/Inline Functions ---------------------------------------------------------
 
-void FWEuler(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step){
-    double slope; derivative(t, y, &slope);
-    *y = *y + slope * step;
+#define FMAX(x, y) ( x > y ? x : y )
+
+// ----------------------------------------------------------------------------
+//
+//                            Non Adaptive systems algorithms
+//
+// ----------------------------------------------------------------------------
+
+// Method ID = 1
+void FWEuler(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double y[], double step, int NSYS){
+    double slope[NSYS]; derivative(t, y, slope);
+    for (int index = 0; index < NSYS; ++index) {
+        y[index] = y[index] + slope[index] * step;
+    }
     *t = *t + step;
 }
 
-void Heun(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step){
+// Method ID = 2
+void Heun(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double y[], double step, int NSYS){
 
-    double yi = *y; double y_old = 0.0;
-    // double phi_avg = 0.0; // = (phi_i + phi_i+1)/2
+    double yi[NSYS];
+    double y_old[NSYS];
 
-    double phi_i, phi_ip1;
-    derivative(t, y, &phi_i); // slope at i-th point
+    for (int index = 0; index < NSYS; ++index) {
+        yi[index] = y[index];
+    }
 
-    *y = yi + phi_i * step; // predictor, y_i+1_0
+
+    double phi_i[NSYS], phi_ip1[NSYS];
+    derivative(t, y, phi_i); // slope at i-th point
+
+    for (int index = 0; index < NSYS; ++index) {
+        y[index] = yi[index] + phi_i[index] * step; // predictor, y_i+1_0
+    }
     *t = *t + step; // t_i+1
 
-    double error = 0.0; double errorBound = 0.5; // in percent, 0.5%
-    int iter = 1; int max_iter = 100;
+    double error[NSYS];
+    double errorNorm, errorBound = 0.01; // in percent, 0.5%
+    int iter = 1, max_iter = 200;
 
     do {
+        for (int index = 0; index < NSYS; ++index) {
+            y_old[index] = y[index];
+        }
 
-        y_old = *y;
-        derivative(t, y, &phi_ip1);
-        *y = yi + ((phi_i + phi_ip1) * step)/2;
-        error = fabs((*y - y_old)/(*y)) * 100;
-        ++iter;
+        derivative(t, y, phi_ip1);
 
-    } while (error >= errorBound || iter <= max_iter);
+        for (int index = 0; index < NSYS; ++index) {
+            y[index] = yi[index] + ((phi_i[index] + phi_ip1[index]) * step)/2;
+            error[index] = fabs((y[index] - y_old[index])/y[index]) * 100;
+        }
+
+        // L-inf Norm
+        errorNorm = 0.0;
+        for (int ind = 0; ind < NSYS; ++ind) {
+            errorNorm = FMAX(errorNorm, error[ind]);
+        }
+
+        iter++;
+
+    } while(iter <= max_iter && errorNorm >= errorBound);
+
 
 }
 
-void Midpoint(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step){
+// Method ID = 3
+void Midpoint(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step, int NSYS){
 
-    double slope_st, slope_mid;
+    double slope_st[NSYS], slope_mid[NSYS];
+    double t_half, y_half[NSYS];
 
-    derivative(t, y, &slope_st);
+    derivative(t, y, slope_st);
 
-    double t_half = *t + step/2;
-    double y_half = *y + slope_st * (step/2);
-    derivative(&t_half, &y_half, &slope_mid);
+    t_half = *t + step/2;
+    for (int index = 0; index < NSYS; ++index) {
+        y_half[index] = y[index] + slope_st[index] * (step/2);
+    }
 
-    *y = *y + slope_mid * step;
+    derivative(&t_half, y_half, slope_mid);
+
+    for (int index = 0; index < NSYS; ++index) {
+        y[index] = y[index] + slope_mid[index] * step;
+    }
+
+    *t = *t + step;
+
+}
+
+// Method ID = 4
+void RK2Ralston(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step, int NSYS){
+
+    double k1[NSYS], k2[NSYS], t_tmp, y_tmp[NSYS];
+
+    derivative(t, y, k1);
+
+    t_tmp = *t + 0.75 * step;
+
+    for (int index = 0; index < NSYS; ++index) {
+        y_tmp[index] = y[index] + 0.75 * k1[index] * step;
+    }
+
+    derivative(&t_tmp, y_tmp, k2);
+
+    for (int index = 0; index < NSYS; ++index) {
+        y[index] = y[index] + ((1.0/3.0) * k1[index] + (2.0/3.0) * k2[index]) * step;
+    }
+
+    *t = *t + step;
+}
+
+// Method ID = 5
+void RK3Classic(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step, int NSYS){
+
+    double k1[NSYS], k2[NSYS], k3[NSYS], t_tmp, y_tmp[NSYS];
+    derivative(t, y, k1);
+
+    t_tmp = *t + 0.5 * step;
+
+    for (int index = 0; index < NSYS; ++index) {
+        y_tmp[index] = y[index] + 0.5 * k1[index] * step;
+    }
+    derivative(&t_tmp, y_tmp, k2);
+
+    t_tmp = *t + step;
+    for (int index = 0; index < NSYS; ++index) {
+        y_tmp[index] = y[index] + (-k1[index] + 2.0 * k2[index]) * step;
+    }
+
+    derivative(&t_tmp, y_tmp, k3);
+
+    for (int index = 0; index < NSYS; ++index) {
+        y[index] = y[index] + ((1.0/6.0) * k1[index] + (2.0/3.0) * k2[index] + (1.0/6.0) * k3[index]) * step;
+    }
+
     *t = *t + step;
 }
 
 
-void RK2Ralston(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step){
-    double k1, k2, t_tmp, y_tmp;
+// Method ID = 6
+void RK3Optim(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step, int NSYS){
 
-    derivative(t, y, &k1);
+    double k1[NSYS], k2[NSYS], k3[NSYS], t_tmp, y_tmp[NSYS];
 
-    t_tmp = *t + 0.75 * step; y_tmp = *y + 0.75 * k1 * step;
-    derivative(&t_tmp, &y_tmp, &k2);
+    derivative(t, y, k1);
 
-    *y = *y + ((1.0/3.0) * k1 + (2.0/3.0) * k2) * step;
+    t_tmp = *t + (1.0/3.0) * step;
+    for (int index = 0; index < NSYS; ++index) {
+        y_tmp[index] = y[index] + (1.0/3.0) * k1[index] * step;
+    }
+    derivative(&t_tmp, y_tmp, k2);
+
+    t_tmp = *t + (2.0/3.0) * step;
+    for (int index = 0; index < NSYS; ++index) {
+        y_tmp[index] = y[index] + (2.0/3.0) * k2[index] * step;
+    }
+
+    derivative(&t_tmp, y_tmp, k3);
+
+    for (int index = 0; index < NSYS; ++index) {
+        y[index] = y[index] + ((1.0/4.0) * k1[index] + (3.0/4.0) * k3[index]) * step;
+    }
     *t = *t + step;
 }
 
-void RK3Classic(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step){
-    double k1, k2, k3, t_tmp, y_tmp;
-    derivative(t, y, &k1);
-    t_tmp = *t + 0.5 * step; y_tmp = *y + 0.5 * k1 * step;
-    derivative(&t_tmp, &y_tmp, &k2);
-    t_tmp = *t + step; y_tmp = *y + (-k1 + 2.0 * k2) * step;
-    derivative(&t_tmp, &y_tmp, &k3);
 
-    *y = *y + ((1.0/6.0) * k1 + (2.0/3.0) * k2 + (1.0/6.0) * k3) * step;
-    *t = *t + step;
-}
-
-void RK3Optim(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step){
-    double k1, k2, k3, t_tmp, y_tmp;
-
-    derivative(t, y, &k1);
-    t_tmp = *t + (1.0/3.0) * step; y_tmp = *y + (1.0/3.0) * k1 * step;
-    derivative(&t_tmp, &y_tmp, &k2);
-    t_tmp = *t + (2.0/3.0) * step; y_tmp = *y + (2.0/3.0) * k2 * step;
-    derivative(&t_tmp, &y_tmp, &k3);
-
-    *y = *y + ((1.0/4.0) * k1 + (3.0/4.0) * k3) * step;
-    *t = *t + step;
-}
-
-void RK4Classic(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step){
-    double k1, k2, k3, k4, t_tmp, y_tmp;
-    derivative(t, y, &k1);
-    t_tmp = *t + 0.5 * step; y_tmp = *y + 0.5 * k1 * step;
-    derivative(&t_tmp, &y_tmp, &k2);
-    y_tmp = *y + 0.5 * k2 * step;
-    derivative(&t_tmp, &y_tmp, &k3);
-    t_tmp = *t + step; y_tmp = *y + k3 * step;
-    derivative(&t_tmp, &y_tmp, &k4);
-
-    *y = *y + (step/6.0) * (k1 + 2.0 * (k2 + k3) + k4);
-    *t = *t + step;
-}
-
-void RK5Butcher(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step){
-    double k1, k2, k3, k4, k5, k6, t_tmp, y_tmp;
-
-    derivative(t, y, &k1);
-    t_tmp = *t + 0.25 * step; y_tmp = *y + 0.25 * k1 * step;
-    derivative(&t_tmp, &y_tmp, &k2);
-    t_tmp = *t + 0.25 * step; y_tmp = *y + (0.125 * k1 + 0.125 * k2) * step;
-    derivative(&t_tmp, &y_tmp, &k3);
-    t_tmp = *t + 0.5 * step; y_tmp = *y + (-0.5 * k2 + k3) * step;
-    derivative(&t_tmp, &y_tmp, &k4);
-    t_tmp = *t + 0.75 * step; y_tmp = *y + ((3.0/16.0) * k1 + (9.0/16.0) * k4) * step;
-    derivative(&t_tmp, &y_tmp, &k5);
-    t_tmp = *t + step; y_tmp = *y + (-(3.0/7.0) * k1 + (2.0/7.0) * k2 + (12.0/7.0) * k3 - (12.0/7.0) * k4 + (8.0/7.0) * k5) * step;
-    derivative(&t_tmp, &y_tmp, &k6);
-
-    *y = *y + (step/90.0) * (7.0 * k1 + 32.0 * k3 + 12.0 * k4 + 32.0 * k5 + 7.0 * k6);
-    *t = *t + step;
-}
-
-// ----------------------------------------------------------------------------
-//
-//
-//
-// ----------------------------------------------------------------------------
-
-void RK4SYS(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double y[], double step, int NSYS){
+// Method ID = 7
+void RK4(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double y[], double step, int NSYS){
 
     double t_int, y_int[NSYS];
 
     // Block 1 Calculations -------------------
     double K1[NSYS]; derivative(t, y, K1);
+
 
     // Block 2 Calculations -------------------
     t_int = *t + (step/2.0);
@@ -148,6 +193,7 @@ void RK4SYS(void (*derivative)(const double *t, const double y[], double ydot[])
 
     double K2[NSYS]; derivative(&t_int, y_int, K2);
 
+
     // Block 3 Calculations -------------------
     t_int = *t + (step/2.0);
     for (int index = 0; index < NSYS; ++index) {
@@ -156,6 +202,7 @@ void RK4SYS(void (*derivative)(const double *t, const double y[], double ydot[])
 
     double K3[NSYS]; derivative(&t_int, y_int, K3);
 
+
     // Block 4 Calculations -------------------
     t_int = *t + step;
     for (int index = 0; index < NSYS; ++index) {
@@ -163,6 +210,7 @@ void RK4SYS(void (*derivative)(const double *t, const double y[], double ydot[])
     }
 
     double K4[NSYS]; derivative(&t_int, y_int, K4);
+
 
     // i+1 Increment Step
     double slope[NSYS];
@@ -175,9 +223,64 @@ void RK4SYS(void (*derivative)(const double *t, const double y[], double ydot[])
     *t = *t + step;
 }
 
+
+// Method ID = 8
+void RK5Butcher(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step, int NSYS){
+
+    double k1[NSYS], k2[NSYS], k3[NSYS], k4[NSYS], k5[NSYS], k6[NSYS], t_tmp, y_tmp[NSYS];
+
+    derivative(t, y, k1);
+
+    t_tmp = *t + 0.25 * step;
+    for (int index = 0; index < NSYS; ++index) {
+        y_tmp[index] = y[index] + 0.25 * k1[index] * step;
+    }
+
+    derivative(&t_tmp, y_tmp, k2);
+
+    t_tmp = *t + 0.25 * step;
+
+    for (int index = 0; index < NSYS; ++index) {
+        y_tmp[index] = y[index] + (0.125 * k1[index] + 0.125 * k2[index]) * step;
+    }
+
+    derivative(&t_tmp, y_tmp, k3);
+
+    t_tmp = *t + 0.5 * step;
+
+    for (int index = 0; index < NSYS; ++index) {
+        y_tmp[index] = y[index] + (-0.5 * k2[index] + k3[index]) * step;
+    }
+
+    derivative(&t_tmp, y_tmp, k4);
+
+    t_tmp = *t + 0.75 * step;
+
+    for (int index = 0; index < NSYS; ++index) {
+        y_tmp[index] = y[index] + ((3.0/16.0) * k1[index] + (9.0/16.0) * k4[index]) * step;
+    }
+
+    derivative(&t_tmp, y_tmp, k5);
+
+    t_tmp = *t + step;
+
+    for (int index = 0; index < NSYS; ++index) {
+
+        y_tmp[index] = y[index] + (-(3.0/7.0) * k1[index] + (2.0/7.0) * k2[index] + (12.0/7.0) * k3[index] - (12.0/7.0) * k4[index] + (8.0/7.0) * k5[index]) * step;
+    }
+
+    derivative(&t_tmp, y_tmp, k6);
+
+    for (int index = 0; index < NSYS; ++index) {
+        y[index] = y[index] + (step/90.0) * (7.0 * k1[index] + 32.0 * k3[index] + 12.0 * k4[index] + 32.0 * k5[index] + 7.0 * k6[index]);
+    }
+    *t = *t + step;
+}
+
+
 // ----------------------------------------------------------------------------
 //
-//
+//                            Adaptive algorithms
 //
 // ----------------------------------------------------------------------------
 
@@ -252,4 +355,42 @@ void CashKarp_RKF45(void (*derivative)(const double *t, const double y[], double
         errorSpectrum[index] = (d1 * K1[index] + d3 * K3[index] + d4 * K4[index] + d5 * K5[index] + d6 * K6[index]) * step;
     }
 
+}
+
+// ----------------------------------------------------------------------------
+//
+//                            Miscellaneous algorithms
+//
+// ----------------------------------------------------------------------------
+
+// -- Single Root Finder ------------------------------------------------------
+
+// Definitions required:
+// double error_func(double abscissa);
+// double error_derivative(double abscissa);
+
+double newton_raphson(double (*error_func)(double), double (*error_derivative)(double), double init_guess, int MAX_ITER){
+
+    int count = 1;
+    double new_guess, error, root;
+
+    do{
+        printf("\nIteration : %d | Root: %3.4f", count, init_guess);
+
+        new_guess = init_guess - error_func(init_guess)/error_derivative(init_guess);
+        error = fabs(new_guess - init_guess);
+
+        if(count > MAX_ITER){
+            printf("%d iteration counts reached. Exiting loop.\n", MAX_ITER);
+            break;
+        } else {
+            init_guess = new_guess;
+            count++;
+        }
+
+    } while(error > pow(10, -8));
+
+    printf("\n\nRoot has converged!\n");
+    root = new_guess;
+    return root;
 }

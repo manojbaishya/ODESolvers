@@ -4,4 +4,10 @@
 
 set xlabel "time"
 set ylabel "solution"
-plot "./iodata/gaussian-spike/CashKarpRKF45_step=2.00e-01.dat" using 1:2 with linespoints ls 1
+# plot "./iodata/gaussian-spike/CashKarpRKF45_step=2.00e-01.dat" using 1:2 with linespoints ls 1
+
+# plot "./iodata/gaussian-spike/RK2Ralston_step=2.00e-01.dat" using 1:2 with linespoints ls 1
+
+# plot "./iodata/gaussian-spike/CashKarpRKF45_step=2.00e-01.dat" using 1:2 with linespoints ls 1
+
+plot "./iodata/gaussian-spike/Heun_step=1.00e-02.dat" using 1:2 with linespoints ls 1

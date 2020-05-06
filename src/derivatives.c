@@ -2,7 +2,7 @@
 * @Author: manoj
 * @Date:   2020-03-22 19:03:32
 * @Last Modified by:   Manoj Baishya
-* @Last Modified time: 2020-04-27 19:41:56
+* @Last Modified time: 2020-05-04 14:24:52
 */
 
 #include "derivatives.h"
@@ -50,7 +50,7 @@ void derivative(const double *t, const double y[], double ydot[]){
     derivative_internal(t, y, ydot, consts);
 }
 
-void derivative_internal(const double *t, const double y[], double ydot[], struct params consts){
+void derivative_internal(const double *t, const double y[], double ydot[], const struct params consts){
     ydot[0] = consts.g - ((consts.c)/(consts.m)) * (y[0] + consts.a * pow(y[0]/consts.vmax, consts.b));
 }
 */
@@ -95,7 +95,7 @@ void derivative(const double *t, const double y[], double ydot[]){
 
 }
 
-void derivative_internal(const double *t, const double y[], double ydot[], struct params consts){
+void derivative_internal(const double *t, const double y[], double ydot[], const struct params consts){
 
     ydot[0] = y[1];
     ydot[1] = consts.g + (consts.k2 * (y[2] - y[0]) - consts.k1 * y[0])/consts.m1;
@@ -146,7 +146,7 @@ void derivative(const double *t, const double y[], double ydot[]){
 
 }
 
-void derivative_internal(const double *t, const double y[], double ydot[], struct params consts){
+void derivative_internal(const double *t, const double y[], double ydot[], const struct params consts){
 
     // y[0] = R, y[1] = Theta, y[2] = Xm, y[3] = Ym, y[4] = Xt, y[5] = Yt
 
@@ -205,7 +205,7 @@ void derivative(const double *t, const double y[], double ydot[]){
     derivative_internal(t, y, ydot, g_consts);
 }
 
-void derivative_internal(const double *t, const double y[], double ydot[], struct params consts){
+void derivative_internal(const double *t, const double y[], double ydot[], const struct params consts){
     ydot[0] = - consts.k * y[0] + 10 * exp(- (pow((*t - consts.mu), 2)/(2 * pow(consts.sig, 2))));
 }
 

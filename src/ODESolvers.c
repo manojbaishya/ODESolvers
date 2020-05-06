@@ -2,7 +2,7 @@
 * @Author: manoj
 * @Date:   2020-04-01 14:04:10
 * @Last Modified by:   Manoj Baishya
-* @Last Modified time: 2020-04-28 20:12:14
+* @Last Modified time: 2020-05-06 16:32:58
 */
 
 #include "ODESolvers.h"
@@ -43,6 +43,7 @@ struct _odeOptions {
     int printResult;
     int plotTimeSeries;
     char *model;
+    int methodId;
     char *method;
     char *outputFilePath;
     int (*events)(const double *t, const double y[]);
@@ -103,6 +104,7 @@ odeOptions * readInput(const char *inputjson, int NSYS){
     options -> relErr = json_object_get_number(data, "relative_errorPC") / 100;
     options -> NSYS = NSYS;
     options -> adaptive = (bool) json_object_get_number(data, "adaptive_switch");
+    options -> methodId = json_object_get_number(data, "methodId");
 
     options -> printResult = json_object_get_number(data, "printResult");
     options -> plotTimeSeries = json_object_get_number(data, "plotTimeSeries");
@@ -129,7 +131,7 @@ odeOptions * readInput(const char *inputjson, int NSYS){
 void ODEinit(odeOptions *options, int (*events)(const double *, const double [])){
 
     // select solver method
-    (options -> adaptive == 1) ? (options -> method = "CashKarpRKF45") : (options -> NSYS == 1) ? specifySolverMethodInit(options) : (options -> method = "RK4SYS");
+    (options -> adaptive == 1) ? (options -> method = "CashKarpRKF45") : specifySolverMethodInit(options);
 
     options -> GRIDPOINTS = (largeInt) ((options -> domain[1] - options -> domain[0])/options -> outInterval) + 1;
 
@@ -200,6 +202,12 @@ solution * ODESolver(void (*derivative)(const double *t, const double y[], doubl
             }
 
         } else if(options -> adaptive == 0) {
+
+            // Realloc memory if array bounds exceeded
+
+            if(point + 1 == options -> GRIDPOINTS) {
+                realloc_gsl_containers(result, options);
+            }
 
             tEnd = gsl_vector_get(result -> dom, point) + options -> outInterval;
 
@@ -332,7 +340,7 @@ void ODEIntegrate(void (*derivative)(const double *t, const double y[], double y
             step = tEnd - indep_t;
         }
 
-        (options -> NSYS == 1) ? OneDimAlgorithm(derivative, &indep_t, func_y, step, options): RK4SYS(derivative, &indep_t, func_y, step, options -> NSYS);
+        genericSolver(derivative, &indep_t, func_y, step, options);
 
     } while (indep_t < tEnd);
 
@@ -344,46 +352,20 @@ void ODEIntegrate(void (*derivative)(const double *t, const double y[], double y
     }
 }
 
-// -- Solver Selectors ---------------------------------------------------------
 
-void specifySolverMethodInit(odeOptions *options){
+void genericSolver(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step, odeOptions *options){
 
-    int choice = 0;
-    printf("\nSelect ODE Solver Method:\n[1] = Explicit Euler Forward\n[2] = Heun Iterative Predictor Corrector\n[3] = Midpoint\n[4] = RK2Ralston\n[5] = RK3Classic\n[6] = RK3Optim\n[7] = RK4Classic\n[8] = RK5Butcher\nAnswer: ");
-    scanf("%d", &choice); getchar();
-
-    switch(choice) {
-        case 1: options -> method = "FWE"; break;
-        case 2: options -> method = "Heun"; break;
-        case 3: options -> method = "Midpoint"; break;
-        case 4: options -> method = "RK2Ralston"; break;
-        case 5: options -> method = "RK3Classic"; break;
-        case 6: options -> method = "RK3Optim"; break;
-        case 7: options -> method = "RK4Classic"; break;
-        case 8: options -> method = "RK5Butcher"; break;
-        default: printf("Incorrect input entered. Exiting program..\n"); exit(EXIT_SUCCESS);
+    switch(options -> methodId) {
+        case 1: FWEuler(derivative, t, y, step, options -> NSYS); break;
+        case 2: Heun(derivative, t, y, step, options -> NSYS); break;
+        case 3: Midpoint(derivative, t, y, step, options -> NSYS); break;
+        case 4: RK2Ralston(derivative, t, y, step, options -> NSYS); break;
+        case 5: RK3Classic(derivative, t, y, step, options -> NSYS); break;
+        case 6: RK3Optim(derivative, t, y, step, options -> NSYS); break;
+        case 7: RK4(derivative, t, y, step, options -> NSYS); break;
+        case 8: RK5Butcher(derivative, t, y, step, options -> NSYS); break;
     }
-}
 
-void OneDimAlgorithm(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step, odeOptions *options){
-
-    if(strcmp(options -> method, "FWE") == 0) {
-        FWEuler(derivative, t, y, step);
-    } else if(strcmp(options -> method, "Heun") == 0) {
-        Heun(derivative, t, y, step);
-    } else if(strcmp(options -> method, "Midpoint") == 0) {
-        Midpoint(derivative, t, y, step);
-    } else if(strcmp(options -> method, "RK2Ralston") == 0) {
-        RK2Ralston(derivative, t, y, step);
-    } else if(strcmp(options -> method, "RK3Classic") == 0) {
-        RK3Classic(derivative, t, y, step);
-    } else if(strcmp(options -> method, "RK3Optim") == 0) {
-        RK3Optim(derivative, t, y, step);
-    } else if(strcmp(options -> method, "RK4Classic") == 0) {
-        RK4Classic(derivative, t, y, step);
-    } else if(strcmp(options -> method, "RK5Butcher") == 0) {
-        RK5Butcher(derivative, t, y, step);
-    }
 }
 
 
@@ -414,6 +396,23 @@ void realloc_gsl_containers(solution *result, odeOptions *options){
     result -> func = temp_func;
 
     options -> GRIDPOINTS = GRIDPOINTS;
+}
+
+// -- Solver Selectors ---------------------------------------------------------
+
+void specifySolverMethodInit(odeOptions *options){
+
+    switch(options -> methodId) {
+        case 1: options -> method = "FWE"; break;
+        case 2: options -> method = "Heun"; break;
+        case 3: options -> method = "Midpoint"; break;
+        case 4: options -> method = "RK2Ralston"; break;
+        case 5: options -> method = "RK3Classic"; break;
+        case 6: options -> method = "RK3Optim"; break;
+        case 7: options -> method = "RK4Classic"; break;
+        case 8: options -> method = "RK5Butcher"; break;
+        default: printf("Incorrect methodId declared. Exiting program..\n"); exit(EXIT_FAILURE);
+    }
 }
 
 
@@ -447,7 +446,7 @@ void writefile(solution *result, odeOptions *options){
 
     fprintf(outputfile, "# - Domain ------- Functions --\n");
 
-    for(largeInt point = 0; point < options -> lastIndex; ++point){
+    for(largeInt point = 0; point <= options -> lastIndex; ++point){
         fprintf(outputfile, "%12.9lf", gsl_vector_get(result -> dom, point));
 
         for (int var = 0; var < options -> NSYS; ++var) {

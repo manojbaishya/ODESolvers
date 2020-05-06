@@ -4,16 +4,60 @@
 		"selected_items":
 		[
 			[
+				"FMAX",
+				"FMAX(x, y)\t  Text"
+			],
+			[
+				"error",
+				"errorNorm\tdouble errorNorm"
+			],
+			[
+				"EXIT",
+				"EXIT_FAILURE\tabc"
+			],
+			[
+				"ada",
+				"adaptive_switch\tabc"
+			],
+			[
+				"methodI",
+				"methodId\tabc"
+			],
+			[
+				"meth",
+				"methodId\tint methodId"
+			],
+			[
+				"erro",
+				"errorNorm\tabc"
+			],
+			[
+				"max",
+				"max_iter\tabc"
+			],
+			[
+				"for",
+				"for\tFor Loop"
+			],
+			[
+				"RK",
+				"RK5Butcher\t(ODESolvers.c)"
+			],
+			[
+				"sys",
+				"system\t🕮"
+			],
+			[
+				"Miscel",
+				"Miscellaneous\t🕮"
+			],
+			[
 				"even",
 				"events\tint (*)(const double *, const double *) events"
 			],
 			[
 				"eve",
 				"events\tint (*)(const double *, const double *) events"
-			],
-			[
-				"for",
-				"for_\tFor Loop"
 			],
 			[
 				"plot",
@@ -248,14 +292,6 @@
 				"fread\tsize_t fread(void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream)"
 			],
 			[
-				"ada",
-				"adaptive_switch\t(initial-conditions.json)"
-			],
-			[
-				"erro",
-				"errorMax\tdouble errorMax"
-			],
-			[
 				"func",
 				"func_y\tabc"
 			],
@@ -270,10 +306,6 @@
 			[
 				"err",
 				"errorControlParameter\tdouble errorControlParameter"
-			],
-			[
-				"error",
-				"errorMax\tdouble errorMax"
 			],
 			[
 				"ste",
@@ -294,10 +326,6 @@
 			[
 				"single",
 				"singleODE\t(simulations.h)"
-			],
-			[
-				"sys",
-				"system\t(derivatives.c)"
 			],
 			[
 				"y_",
@@ -486,39 +514,21 @@
 			[
 				"SOU",
 				"SOURCEDIRS\tabc"
-			],
-			[
-				"OBJ",
-				"OBJDIRS\tabc"
-			],
-			[
-				"OBJE",
-				"OBJECTS\tabc"
-			],
-			[
-				"Success",
-				"Successful\t🕮"
-			],
-			[
-				"Is",
-				"I-stdlib\tinc"
-			],
-			[
-				"swi",
-				"switch(${1\t(switch_case.sublime-snippet)"
-			],
-			[
-				"varia",
-				"variable\t🕮"
-			],
-			[
-				"ini",
-				"initialise_solvers\t(ODESolvers.c)"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"contents": "\n***************** Erasing Residual Files ******************\n\nrm -f bin/main\nrm -f  objs/gnuplot_i.o  objs/simulations.o  objs/ODESolvers.o  objs/derivatives.o  objs/parson.o  objs/main​‌​\n.o  objs/algorithms.o\nrm -rf iodata/gaussian-spike\n\n************************ Success **************************\n[Finished in 0.18s]\n",
+			"settings":
+			{
+				"buffer_size": 321,
+				"line_ending": "Unix",
+				"name": "Terminus Build Results",
+				"scratch": true
+			}
+		}
 	],
 	"build_system": "Build Project",
 	"build_system_choices":
@@ -780,17 +790,61 @@
 			],
 			[
 				"Build Project",
-				""
+				"Clean in New Tab"
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Clean in New Tab",
 	"command_palette":
 	{
 		"height": 0.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"PI",
+				"Color Picker: Insert Color"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"ics",
+				"Insert to Column: Spaces"
+			],
+			[
+				"SublimeLinter",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"UI Color Sc",
+				"UI: Select Color Scheme"
+			],
+			[
+				"UI",
+				"UI: Select Theme"
+			],
+			[
+				"UI Colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"info",
+				"ECC: Show popup info"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
 			[
 				"rainb",
 				"Preferences: RainbowBrackets Settings"
@@ -810,18 +864,6 @@
 			[
 				"remo",
 				"Package Control: Remove Package"
-			],
-			[
-				"UI",
-				"UI: Select Theme"
-			],
-			[
-				"pi",
-				"Package Control: Install Package"
-			],
-			[
-				"lis",
-				"Package Control: List Packages"
 			],
 			[
 				"list pa",
@@ -844,10 +886,6 @@
 				"Preferences: LSP Settings"
 			],
 			[
-				"PI",
-				"Package Control: Install Package"
-			],
-			[
 				"prefer",
 				"Preferences: Settings"
 			],
@@ -858,10 +896,6 @@
 			[
 				"SublimeLinter Setting",
 				"Preferences: SublimeLinter Settings"
-			],
-			[
-				"dis",
-				"Package Control: Disable Package"
 			],
 			[
 				"Disa",
@@ -878,10 +912,6 @@
 			[
 				"LSP Se",
 				"Preferences: LSP Settings"
-			],
-			[
-				"remov",
-				"Package Control: Remove Package"
 			],
 			[
 				"disa",
@@ -914,10 +944,6 @@
 			[
 				"ins",
 				"Package Control: Install Package"
-			],
-			[
-				"UI Colo",
-				"UI: Select Color Scheme"
 			],
 			[
 				"Colo",
@@ -1006,10 +1032,6 @@
 			[
 				"sublimeL",
 				"Preferences: SublimeLinter Settings"
-			],
-			[
-				"ics",
-				"Insert to Column: Spaces"
 			],
 			[
 				"min",
@@ -1290,18 +1312,6 @@
 			[
 				"rain",
 				"RainbowBrackets: tinct view"
-			],
-			[
-				"wr",
-				"Word Wrap: Toggle"
-			],
-			[
-				"or mo le",
-				"Origami: Move File to Pane on the Left"
-			],
-			[
-				"oro move fole ",
-				"Origami: Move File to Pane on the Right"
 			]
 		],
 		"width": 0.0
@@ -1373,29 +1383,41 @@
 	"expanded_folders":
 	[
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/bin",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/nbscripts",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/objs",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src"
 	],
 	"file_history":
 	[
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/initial-conditions.json",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/nbscripts/visualise.gpi",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/ODESolvers.c",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/algorithms.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/gaussian-spike/Heun_step=1.00e-01.dat",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/gaussian-spike/Heun_step=2.00e-01.dat",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/gaussian-spike/CashKarpRKF45_step=2.00e-01.dat",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/derivatives.c",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/gaussian-spike/RK2Ralston_step=2.00e-01.dat",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/gaussian-spike/Midpoint_step=2.00e-01.dat",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/ODESolvers.h",
+		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/algorithms.h",
+		"/home/manoj/.mozilla/firefox/bww59zk1.default-release/chrome/userContent.css",
+		"/home/manoj/Masters/Computer Science/Languages/CCPP/C/GNU C Standard Library/libc/stylech.css",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/parson.c",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/compile_commands.json",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/compile_commands_new.json",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/Makefile",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/SUBLIME.sublime-project",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/.clang_complete",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/nbscripts/visualise.gpi",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/derivatives.c",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/ODESolvers.h",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/simulations.c",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/gaussian-spike/CashKarpRKF45_step=2.00e-01.dat",
 		"/home/manoj/.config/sublime-text-3/Packages/rainbow_csv/RainbowCSV.sublime-color-scheme",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/derivatives.h",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/simulations.h",
 		"/home/manoj/.config/sublime-text-3/Packages/User/insert_date.sublime-settings",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src/main.c",
-		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/include/initial-conditions.json",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/README.md",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/initial-conditions.json",
 		"/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/iodata/random",
@@ -1497,14 +1519,7 @@
 		"/home/manoj/Masters/Code_Projects/libraries/ccpp/parson/Makefile",
 		"/home/manoj/Masters/Code_Projects/libraries/ccpp/nativejson-benchmark/README.md",
 		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/SUBLIME.sublime-project",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/Makefile",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/.clang_complete",
-		"/home/manoj/Masters/Code_Projects/code/bash/temp/.clang_complete",
-		"/home/manoj/Masters/Code_Projects/code/bash/temp/Makefile",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/vcpkg-local/installed/x64-linux/include/jsmn.h",
-		"/home/manoj/Masters/Code_Projects/libraries/ccpp/jsmn/Makefile",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/initial-conditions.META",
-		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/include/initial-conditions.txt"
+		"/home/manoj/Masters/Code_Projects/code/numerics/DS289/ODESolvers/Makefile"
 	],
 	"find":
 	{
@@ -1522,6 +1537,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"(derivative, t, y, step)",
+			"(void (*)(const double *, const double [], double []), double *, double *, double)",
+			"L2NORM",
 			"source /usr/local/apps/intel/bin/compilervars.sh intel64 && ",
 			"events",
 			"derivatives",
@@ -1594,8 +1612,112 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								321,
+								321
+							]
+						],
+						"settings":
+						{
+							"OUIB_is_dirty": true,
+							"OUIB_last_update_timestamp": 1588763233.28,
+							"__vi_external_disable": true,
+							"auto_complete": false,
+							"auto_complete_commit_on_tab": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone_locations":
+							{
+							},
+							"bracket_highlighter.ignore": true,
+							"color_helper.box_height": 20,
+							"color_helper.color_scheme": "Terminus.hidden-color-scheme",
+							"color_helper.file_palette":
+							[
+							],
+							"color_helper.preview_meta":
+							{
+							},
+							"color_helper.scan":
+							{
+								"current_ext": null,
+								"current_syntax": "Text/Plain text",
+								"enabled": false,
+								"last_updated": 1588763167.99
+							},
+							"color_scheme": "Terminus.hidden-color-scheme",
+							"default_dir": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers/src",
+							"draw_centered": false,
+							"draw_indent_guides": false,
+							"draw_unicode_white_space": false,
+							"draw_white_space": "none",
+							"gutter": false,
+							"highlight_line": false,
+							"is_widget": true,
+							"rainbow_inited": true,
+							"result_base_dir": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+							"result_file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+							"result_line_regex": null,
+							"scroll_past_end": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"terminus_view": true,
+							"terminus_view.args":
+							{
+								"auto_close": false,
+								"cancellable": false,
+								"cmd":
+								[
+									"/usr/bin/env",
+									"bash",
+									"-c",
+									"make clean"
+								],
+								"config_name": "Bash",
+								"cwd": "/home/manoj/Masters/Projects/build/numerics/DS289/ODESolvers",
+								"env":
+								{
+									"LANG": "en_GB.UTF-8",
+									"TERM": "xterm-256color",
+									"TERMINUS_SUBLIME": "1",
+									"TERM_PROGRAM": "Terminus-Sublime"
+								},
+								"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+								"line_regex": null,
+								"panel_name": null,
+								"tag": null,
+								"timeit": true,
+								"title": "Terminus Build Results"
+							},
+							"terminus_view.cancellable": false,
+							"terminus_view.closed": true,
+							"terminus_view.key.ctrl+k": true,
+							"terminus_view.key.ctrl+p": true,
+							"terminus_view.natural_keyboard": true,
+							"terminus_view.panel_name": null,
+							"terminus_view.tag": null,
+							"terminus_view.viewport_y": 1.0,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1783,7 +1905,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 169.0,
+	"side_bar_width": 147.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

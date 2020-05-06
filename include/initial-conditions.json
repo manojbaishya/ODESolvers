@@ -1,10 +1,12 @@
 /*{
 	"domain": [0.0, 25],
+	"NSYS": 6, // dimensions of ODE State Space
 	"yInitCond": [10000.0, 0.785398163, 0.0, 0.0, 7071.067812, 7071.067812], // NSYS initial conditions required, check derivatives.c file for states
 	"stepsize": 0.25,
 	"outputInterval": 0.5,
 	"relative_errorPC": 0.05,
 	"adaptive_switch": 1, // either 0 or 1: use fixed stepsize or adaptive algorithm
+	"methodId": 4, // 1: EulerFW, 2: Heun, 3: Midpoint, 4: RK2Ralston, 5: RK3Classic, 6: RK3Optim, 7: RK4Classic, 8: RK5Butcher (not applicable if adaptive_switch == 1)
 	"plotTimeSeries": 0, // plot all solution components over independent variable
 	"printResult": 0, // display solution on screen
 	"modelname": "DPP-System1" // do not insert trailing comma
@@ -13,11 +15,13 @@
 
 {
 	"domain": [0.0, 10],
+	"NSYS": 1, // dimensions of ODE State Space
 	"yInitCond": [0.5],
-	"stepsize": 0.2,
-	"outputInterval": 0.4,
+	"stepsize": 0.01,
+	"outputInterval": 0.2,
 	"relative_errorPC": 0.0005,
-	"adaptive_switch": 1, // either 0 or 1
+	"adaptive_switch": 0, // either 0 or 1
+	"methodId": 2, // 1: EulerFW, 2: Heun, 3: Midpoint, 4: RK2Ralston, 5: RK3Classic, 6: RK3Optim, 7: RK4Classic, 8: RK5Butcher (not applicable if adaptive_switch == 1)
 	"plotTimeSeries": 0,
 	"printResult": 0,
 	"modelname": "gaussian-spike"
