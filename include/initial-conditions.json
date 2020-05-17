@@ -20,8 +20,8 @@
 	"stepsize": 0.01,
 	"outputInterval": 0.2,
 	"relative_errorPC": 0.0005,
-	"adaptive_switch": 0, // either 0 or 1
-	"methodId": 2, // 1: EulerFW, 2: Heun, 3: Midpoint, 4: RK2Ralston, 5: RK3Classic, 6: RK3Optim, 7: RK4Classic, 8: RK5Butcher (not applicable if adaptive_switch == 1)
+	"adaptive_switch": 1, // either 0 or 1
+	"methodId": 8, // (not applicable if adaptive_switch == 1) 1: EulerFW, 2: Heun, 3: Midpoint, 4: RK2Ralston, 5: RK3Classic, 6: RK3Optim, 7: RK4Classic, 8: RK5Butcher
 	"plotTimeSeries": 0,
 	"printResult": 0,
 	"modelname": "gaussian-spike"

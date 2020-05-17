@@ -10,7 +10,7 @@
 #include "gnuplot_i.h"
 #include "parson.h"
 #include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix_long_double.h>
+#include <gsl/gsl_matrix.h>
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -29,7 +29,7 @@
 
 struct _solution {
     gsl_vector *dom;
-    gsl_matrix_long_double *func;
+    gsl_matrix *func;
 };
 
 struct _odeOptions {
@@ -48,7 +48,7 @@ struct _odeOptions {
     char *outputFilePath;
     int (*events)(const double *t, const double y[]);
     double domain[2];
-    long double yInitCond[];
+    double yInitCond[];
 };
 
 // ----------------------------------------------------------------------------
@@ -146,7 +146,7 @@ void ODEinit(odeOptions *options, int (*events)(const double *, const double [])
        mkdir(filepath, S_IRWXU);
     }
 
-    sprintf(&filepath[strlen(filepath)], "/%s_step=%4.2le.dat", options -> method, options -> step);
+    sprintf(&filepath[strlen(filepath)], "/%s_step=%4.2le.csv", options -> method, options -> step);
 
     options -> outputFilePath = (char *) malloc(sizeof(char) * (strlen(filepath) + 1));
     strcpy(options -> outputFilePath, filepath);
@@ -172,12 +172,12 @@ solution * ODESolver(void (*derivative)(const double *t, const double y[], doubl
     solution *result = (solution *) malloc(sizeof(solution));
 
     result -> dom = gsl_vector_alloc(options -> GRIDPOINTS);
-    result -> func = gsl_matrix_long_double_alloc(options -> NSYS, options -> GRIDPOINTS);
+    result -> func = gsl_matrix_alloc(options -> NSYS, options -> GRIDPOINTS);
 
     // assign initial conditions
     gsl_vector_set(result -> dom, 0, options -> domain[0]);
     for (int var = 0; var < options -> NSYS; ++var) {
-        gsl_matrix_long_double_set(result -> func, var, 0, options -> yInitCond[var]);
+        gsl_matrix_set(result -> func, var, 0, options -> yInitCond[var]);
     }
 
     double tEnd = 0.0;
@@ -237,7 +237,7 @@ int adaptiveODEIntegrate(void (*derivative)(const double *t, const double y[], d
     double indep_t = gsl_vector_get(result -> dom, point);
     double func_y[options -> NSYS];
     for (int var = 0; var < options -> NSYS; ++var) {
-        func_y[var] = gsl_matrix_long_double_get(result -> func, var, point);
+        func_y[var] = gsl_matrix_get(result -> func, var, point);
     }
 
     // specify algorithm parameters
@@ -305,7 +305,7 @@ int adaptiveODEIntegrate(void (*derivative)(const double *t, const double y[], d
     eventTime = gsl_vector_get(result -> dom, point);
 
     for (int var = 0; var < options -> NSYS; ++var) {
-        eventSol[var] = (double) gsl_matrix_long_double_get(result -> func, var, point);
+        eventSol[var] = (double) gsl_matrix_get(result -> func, var, point);
     }
 
     eventflag = options -> events(&eventTime, eventSol);
@@ -315,7 +315,7 @@ int adaptiveODEIntegrate(void (*derivative)(const double *t, const double y[], d
         gsl_vector_set(result -> dom, point + 1, indep_t);
 
         for (int var = 0; var < options -> NSYS; ++var) {
-            gsl_matrix_long_double_set(result -> func, var, point + 1, func_y[var]);
+            gsl_matrix_set(result -> func, var, point + 1, func_y[var]);
         }
     }
 
@@ -331,7 +331,7 @@ void ODEIntegrate(void (*derivative)(const double *t, const double y[], double y
 
     double func_y[options -> NSYS];
     for (int var = 0; var < options -> NSYS; ++var) {
-        func_y[var] = gsl_matrix_long_double_get(result -> func, var, point);
+        func_y[var] = gsl_matrix_get(result -> func, var, point);
     }
 
     do {
@@ -347,7 +347,7 @@ void ODEIntegrate(void (*derivative)(const double *t, const double y[], double y
     gsl_vector_set(result -> dom, point + 1, indep_t);
 
     for (int var = 0; var < options -> NSYS; ++var) {
-        gsl_matrix_long_double_set(result -> func, var, point + 1, func_y[var]);
+        gsl_matrix_set(result -> func, var, point + 1, func_y[var]);
 
     }
 }
@@ -381,16 +381,16 @@ void realloc_gsl_containers(solution *result, odeOptions *options){
     largeInt GRIDPOINTS = options -> GRIDPOINTS + 50;
 
     gsl_vector *temp_domain = gsl_vector_alloc(GRIDPOINTS);
-    gsl_matrix_long_double *temp_func = gsl_matrix_long_double_alloc(options -> NSYS, GRIDPOINTS);
+    gsl_matrix *temp_func = gsl_matrix_alloc(options -> NSYS, GRIDPOINTS);
 
     for(largeInt point = 0; point < options -> GRIDPOINTS; ++point){
         gsl_vector_set(temp_domain, point, gsl_vector_get(result -> dom, point));
         for (int var = 0; var < options -> NSYS; ++var) {
-            gsl_matrix_long_double_set(temp_func, var, point, gsl_matrix_long_double_get(result -> func, var, point));
+            gsl_matrix_set(temp_func, var, point, gsl_matrix_get(result -> func, var, point));
         }
     }
 
-    gsl_vector_free(result -> dom); gsl_matrix_long_double_free(result -> func);
+    gsl_vector_free(result -> dom); gsl_matrix_free(result -> func);
 
     result -> dom = temp_domain;
     result -> func = temp_func;
@@ -423,7 +423,7 @@ void delete(solution *result, odeOptions *options){
     printf("\n----- MEMORY DEALLOCATION START ->");
 
     gsl_vector_free(result -> dom);
-    gsl_matrix_long_double_free(result -> func);
+    gsl_matrix_free(result -> func);
     free(result);
 
     free(options -> model);
@@ -444,13 +444,13 @@ void writefile(solution *result, odeOptions *options){
         exit(EXIT_FAILURE);
     }
 
-    fprintf(outputfile, "# - Domain ------- Functions --\n");
+    fprintf(outputfile, "#Domain,Functions\n");
 
     for(largeInt point = 0; point <= options -> lastIndex; ++point){
-        fprintf(outputfile, "%12.9lf", gsl_vector_get(result -> dom, point));
+        fprintf(outputfile, "%012.9lf", gsl_vector_get(result -> dom, point));
 
         for (int var = 0; var < options -> NSYS; ++var) {
-            fprintf(outputfile, "\t%12.9Lf", gsl_matrix_long_double_get(result -> func, var, point));
+            fprintf(outputfile, ",%012.9lf", gsl_matrix_get(result -> func, var, point));
         }
 
         fprintf(outputfile, "\n");
@@ -472,7 +472,7 @@ void printResult(solution *result, odeOptions *options){
         for (largeInt point = 0; point < options -> lastIndex; ++point) {
             printf("%12.9lf", gsl_vector_get(result -> dom, point));
             for (int var = 0; var < options -> NSYS; ++var) {
-                printf("\t%12.9Lf", gsl_matrix_long_double_get(result -> func, var, point));
+                printf("\t%12.9lf", gsl_matrix_get(result -> func, var, point));
             }
             printf("\n");
         }

@@ -15,6 +15,7 @@
 #define deg2rad(ang_deg) ((ang_deg * M_PI) / 180.0)
 #define rad2deg(ang_rad) ((ang_rad * 180.0) / M_PI)
 
+
 // ----------------------------------------------------------------------------
 //
 //                 Required definitions in derivative.c:
