@@ -1,5 +1,5 @@
 # ODESolvers
- Naive ODE Solvers: single step, multistep and boundary value methods from Chapra and Canale.
+ Naive ODE Solvers: single step, multistep and boundary value methods.
 
 ## About
 
@@ -8,6 +8,7 @@
 ## Installation
 
 ## Examples
+
 ### Nonstiff First Order ODE
 
 ### Nonstiff N-dimensional ODE System
