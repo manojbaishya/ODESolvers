@@ -6,60 +6,22 @@
 */
 
 #include "derivatives.h"
+#include "utilities.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-// -- Inline Functions --------------------------------------------------------
-
-#define deg2rad(ang_deg) ((ang_deg * M_PI) / 180.0)
-#define rad2deg(ang_rad) ((ang_rad * 180.0) / M_PI)
 
 
 // ----------------------------------------------------------------------------
 //
 //                 Required definitions in derivative.c:
 //
-//  1) g_NSYS
-//  2) params
-//  3) set_parameters()
-//  4) derivative()
-//  5) derivative_internal()
-//  6) events()
-//
-// ----------------------------------------------------------------------------
-
-
-
-/*
-int g_NSYS = 1;
-
-struct params {
-    double g, m, c, a, b, vmax;
-};
-
-void derivative(const double *t, const double y[], double ydot[]){
-    static struct params consts;
-
-    consts.g = 9.81;
-    consts.m = 68.1;
-    consts.c = 12.5;
-    consts.a = 8.3;
-    consts.b = 2.2;
-    consts.vmax = 46;
-
-    derivative_internal(t, y, ydot, consts);
-}
-
-void derivative_internal(const double *t, const double y[], double ydot[], const struct params consts){
-    ydot[0] = consts.g - ((consts.c)/(consts.m)) * (y[0] + consts.a * pow(y[0]/consts.vmax, consts.b));
-}
-*/
-
-
-// ----------------------------------------------------------------------------
-//
-//
+//  1) g_NSYS - order of system
+//  2) params definition and g_consts declaration
+//  3) set_parameters() to set values of g_consts
+//  4) derivative() - interface function
+//  5) derivative_internal() - actual derivative with parameters
+//  6) events() - events function
 //
 // ----------------------------------------------------------------------------
 

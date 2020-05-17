@@ -4,11 +4,23 @@
 * @Last Modified by:   Manoj Baishya
 * @Last Modified time: 2020-04-28 14:01:22
 */
-#include "simulations.h"
+
 #include "ODESolvers.h"
 #include "derivatives.h"
 
-const char gConfig[] = "./include/initial-conditions.json";
+const char gConfig[] = "./workspace/initial-conditions.json";
+
+void singleODE(void);
+void systemODE(void);
+
+int main(int argc, char const *argv[]){
+
+    singleODE();
+
+    // systemODE();
+
+    return 0;
+}
 
 void singleODE(void){
 

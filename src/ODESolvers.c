@@ -7,55 +7,22 @@
 
 #include "ODESolvers.h"
 #include "algorithms.h"
-#include "gnuplot_i.h"
+#include "utilities.h"
 #include "parson.h"
-#include <gsl/gsl_vector.h>
-#include <gsl/gsl_matrix.h>
+
 #include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+
+#include <math.h>
+#include <gsl/gsl_vector.h>
+#include <gsl/gsl_matrix.h>
+
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
 #include <assert.h>
-
-// -- Macro/Inline Functions ---------------------------------------------------------
-
-#define FMAX(x, y) ( x > y ? x : y )
-
-// -- Data Structures ---------------------------------------------------------
-
-struct _solution {
-    gsl_vector *dom;
-    gsl_matrix *func;
-};
-
-struct _odeOptions {
-    double step;
-    largeInt GRIDPOINTS;
-    largeInt lastIndex;
-    double outInterval; // in terms of steps
-    double relErr; // error tolerance
-    bool adaptive; // adaptive algorithm switch
-    int NSYS;
-    int printResult;
-    int plotTimeSeries;
-    char *model;
-    int methodId;
-    char *method;
-    char *outputFilePath;
-    int (*events)(const double *t, const double y[]);
-    double domain[2];
-    double yInitCond[];
-};
-
-// ----------------------------------------------------------------------------
-//
-//                           Solver Setup Functions
-//
-// ----------------------------------------------------------------------------
 
 // -- Caller Function ---------------------------------------------------------
 
@@ -71,6 +38,8 @@ void callODESolver(void (*derivative)(const double *t, const double y[], double 
 
     solution *result = ODESolver(derivative, options);
 
+    // post-process data
+
     writefile(result, options);
 
     printResult(result, options);
@@ -78,6 +47,8 @@ void callODESolver(void (*derivative)(const double *t, const double y[], double 
     plotData(result, options);
 
     delete(result, options);
+
+    // clear memory
 
     printf("\n---------------------- EXITING PROGRAM ----------------------\n");
 }
@@ -91,13 +62,11 @@ odeOptions * readInput(const char *inputjson, int NSYS){
     JSON_Value *file = json_parse_file_with_comments(inputjson);
     JSON_Object *data = json_object(file);
 
-    // ===========================================================
     JSON_Array *buffer = json_object_get_array(data, "domain");
     size_t count = json_array_get_count(buffer);
     for (size_t index = 0; index < count; ++index) {
         options -> domain[index] = json_array_get_number(buffer, index);
     }
-    // =================================================================
 
     options -> step = json_object_get_number(data, "stepsize");
     options -> outInterval = json_object_get_number(data, "outputInterval");
@@ -112,13 +81,11 @@ odeOptions * readInput(const char *inputjson, int NSYS){
     options -> model = (char *) malloc(sizeof(char) * (strlen(json_object_get_string(data, "modelname")) + 1));
     strcpy(options -> model, json_object_get_string(data, "modelname"));
 
-    // =================================================================
     buffer = json_object_get_array(data, "yInitCond");
     count = json_array_get_count(buffer);
     for (size_t index = 0; index < count; ++index) {
         options -> yInitCond[index] = json_array_get_number(buffer, index);
     }
-    // =================================================================
 
     json_value_free(file);
 
@@ -137,10 +104,10 @@ void ODEinit(odeOptions *options, int (*events)(const double *, const double [])
 
     // specify outputfilepath ----------------
 
-    char filepath[100] = "./iodata/";
+    char filepath[100] = "./workspace/data/";
     strcat(filepath, options -> model);
 
-    // Create subdirectory in ./iodata if None
+    // Create subdirectory in ./data if None
     struct stat st = {0};
     if (stat(filepath, &st) == -1) {
        mkdir(filepath, S_IRWXU);
@@ -155,12 +122,6 @@ void ODEinit(odeOptions *options, int (*events)(const double *, const double [])
     options -> events = events;
 
 }
-
-// ----------------------------------------------------------------------------
-//
-//                             Interface Functions
-//
-// ----------------------------------------------------------------------------
 
 // -- Templated Solvers --------------------------------------------------------
 
@@ -352,7 +313,6 @@ void ODEIntegrate(void (*derivative)(const double *t, const double y[], double y
     }
 }
 
-
 void genericSolver(void (*derivative)(const double *t, const double y[], double ydot[]), double *t, double *y, double step, odeOptions *options){
 
     switch(options -> methodId) {
@@ -367,14 +327,6 @@ void genericSolver(void (*derivative)(const double *t, const double y[], double 
     }
 
 }
-
-
-// ----------------------------------------------------------------------------
-//
-//                              Utility Functions
-//
-// ----------------------------------------------------------------------------
-
 
 void realloc_gsl_containers(solution *result, odeOptions *options){
 
@@ -396,141 +348,4 @@ void realloc_gsl_containers(solution *result, odeOptions *options){
     result -> func = temp_func;
 
     options -> GRIDPOINTS = GRIDPOINTS;
-}
-
-// -- Solver Selectors ---------------------------------------------------------
-
-void specifySolverMethodInit(odeOptions *options){
-
-    switch(options -> methodId) {
-        case 1: options -> method = "FWE"; break;
-        case 2: options -> method = "Heun"; break;
-        case 3: options -> method = "Midpoint"; break;
-        case 4: options -> method = "RK2Ralston"; break;
-        case 5: options -> method = "RK3Classic"; break;
-        case 6: options -> method = "RK3Optim"; break;
-        case 7: options -> method = "RK4Classic"; break;
-        case 8: options -> method = "RK5Butcher"; break;
-        default: printf("Incorrect methodId declared. Exiting program..\n"); exit(EXIT_FAILURE);
-    }
-}
-
-
-// -- Clear Memory -----------------------------------------------------------
-
-void delete(solution *result, odeOptions *options){
-
-    printf("\n----- MEMORY DEALLOCATION START ->");
-
-    gsl_vector_free(result -> dom);
-    gsl_matrix_free(result -> func);
-    free(result);
-
-    free(options -> model);
-    free(options -> outputFilePath);
-    free(options);
-
-    printf(" MEMORY DEALLOCATION COMPLETE ------\n");
-
-}
-
-// -- Output Functions -----------------------------------------------
-
-void writefile(solution *result, odeOptions *options){
-
-    FILE *outputfile = fopen(options -> outputFilePath, "w+");
-    if(outputfile == NULL) {
-        perror("Couldn't open file. Exiting program...");
-        exit(EXIT_FAILURE);
-    }
-
-    fprintf(outputfile, "#Domain,Functions\n");
-
-    for(largeInt point = 0; point <= options -> lastIndex; ++point){
-        fprintf(outputfile, "%012.9lf", gsl_vector_get(result -> dom, point));
-
-        for (int var = 0; var < options -> NSYS; ++var) {
-            fprintf(outputfile, ",%012.9lf", gsl_matrix_get(result -> func, var, point));
-        }
-
-        fprintf(outputfile, "\n");
-    }
-
-    fclose(outputfile);
-
-    printf("\t- Data written to %s successfully.\n\t- Please use the gnuplot scripts in ./nbscripts/ to plot.\n", options -> outputFilePath);
-}
-
-// -- Data Display Functions --------------------------------------------------
-
-void printResult(solution *result, odeOptions *options){
-
-    if(options -> printResult == 1) {
-
-        printf("\n");
-
-        for (largeInt point = 0; point < options -> lastIndex; ++point) {
-            printf("%12.9lf", gsl_vector_get(result -> dom, point));
-            for (int var = 0; var < options -> NSYS; ++var) {
-                printf("\t%12.9lf", gsl_matrix_get(result -> func, var, point));
-            }
-            printf("\n");
-        }
-
-        printf("\n");
-
-    } else {
-
-        printf("\n\t- Skipping printing..\n");
-    }
-}
-
-void plotData(solution *result, odeOptions *options){
-
-    if(options -> plotTimeSeries == 1) {
-
-        FILE *gnuplotrc = fopen ("./include/gnuplotrc", "rb");
-
-        if (gnuplotrc != NULL) {
-
-            fseek(gnuplotrc, 0, SEEK_END);
-            long int length = ftell(gnuplotrc);
-            fseek(gnuplotrc, 0, SEEK_SET);
-
-            char *plotSettings = (char *) malloc(length + 1);
-
-            if (plotSettings != NULL) {
-
-                fread(plotSettings, 1, length, gnuplotrc);
-                plotSettings[length] = '\0';
-                fclose(gnuplotrc);
-
-                printf("\nPlotting data..\t");
-
-                char commands[3000];
-                sprintf(commands, "plot ");
-
-                for (int var = 1; var <= options -> NSYS; ++var) {
-                    (var < options -> NSYS) ?
-                    sprintf(&commands[strlen(commands)],  "\"%s\" using 1:%d with linespoints ls %d, ", options -> outputFilePath, var + 1, var):
-                    sprintf(&commands[strlen(commands)],  "\"%s\" using 1:%d with linespoints ls %d", options -> outputFilePath, var + 1, var);
-                }
-
-                // Begin plotting
-                gnuplot_ctrl *plotAxes = gnuplot_init();
-
-                gnuplot_cmd(plotAxes, "%s", plotSettings);
-                gnuplot_cmd(plotAxes, commands);
-
-                gnuplot_close(plotAxes);
-                // End plotting
-
-                free(plotSettings);
-
-                printf("Done plotting!\n");
-            }
-        }
-    } else {
-        printf("\n\t- Skipping plotting..\n");
-    }
 }

@@ -1,43 +1,29 @@
 SHELL := /bin/bash
 
 CC        := gcc
-CFLAGS  := -std=gnu99 -static -Wall -g -fstack-protector
+CFLAGS    := -std=gnu99 -static -Wall -g
 
 BIN     := bin
-SRC     := src
-INCLUDE := include /usr/include ~/.local/include/vcpkg/installed/x64-linux/include
-LIB     := lib /usr/lib/x86_64-linux-gnu ~/.local/include/vcpkg/installed/x64-linux/lib
-OBJ     := objs
-IO      := iodata
+SRC     := src workspace
+INCLUDE := include
 
 LIBRARIES   := -lgsl -lgslcblas -lm
 
-EXECUTABLE  := main
+EXECUTABLE  := odesolvers
 
 SOURCEDIRS  := $(shell find $(SRC) -maxdepth 0 -type d)
-OBJDIRS     := $(shell find $(OBJ) -maxdepth 0 -type d)
 INCLUDEDIRS := $(shell find $(INCLUDE) -maxdepth 0 -type d)
-LIBDIRS     := $(shell find $(LIB) -maxdepth 0 -type d)
-IODIR       := $(shell find $(IO) -maxdepth 0 -type d)
 
-CINCLUDES   := $(patsubst %,-I%, $(INCLUDEDIRS:%/=%))
-CLIBS       := $(patsubst %,-L%, $(LIBDIRS:%/=%))
-
+CINCLUDES   := $(patsubst %,-I %, $(INCLUDEDIRS:%/=%))
 SOURCES     := $(wildcard $(patsubst %, %/*.c, $(SOURCEDIRS)))
-OBJECTS     := $(patsubst $(SOURCEDIRS)/%.c, $(OBJDIRS)/%.o, $(SOURCES))
-IODATA      := $(wildcard $(patsubst %, %/*, $(IODIR:%/=%)))
+
 
 all: $(BIN)/$(EXECUTABLE)
 
-$(BIN)/$(EXECUTABLE): $(OBJECTS)
-	$(CC) -o $@ $^ $(CLIBS) $(LIBRARIES)
-	@printf "\n================= Built All Executables ===================\n"
-
-$(OBJECTS): $(OBJDIRS)/%.o: $(SOURCEDIRS)/%.c
-	$(CC) $(CFLAGS) $(CINCLUDES) -c -o $@ $<
+$(BIN)/$(EXECUTABLE): $(SOURCES)
+	$(CC) $(CFLAGS) $(CINCLUDES) $^ -o $@ $(LIBRARIES)
 
 run: all
-	@printf "\n---------------------- Running File -----------------------\n"
 	./$(BIN)/$(EXECUTABLE)
 
 debug:
@@ -46,11 +32,4 @@ debug:
 .PHONY: clean
 
 clean:
-	@printf "\n***************** Erasing Residual Files ******************\n\n"
 	-$(RM) $(BIN)/$(EXECUTABLE)
-	-$(RM) $(OBJECTS)
-ifneq ($(IODATA),)
-	rm -rf $(IODATA)
-endif
-	@printf "\n************************ Success **************************\n\n"
-

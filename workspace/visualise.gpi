@@ -1,0 +1,6 @@
+set datafile separator ","
+set xlabel "time"
+set ylabel "solution"
+
+
+plot "./workspace/data/gaussian-spike/CashKarpRKF45_step=1.00e-02.csv" using 1:2 with linespoints ls 1
