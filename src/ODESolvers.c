@@ -141,7 +141,7 @@ solution * ODESolver(void (*derivative)(const double *t, const double y[], doubl
         gsl_matrix_set(result -> func, var, 0, options -> yInitCond[var]);
     }
 
-    double tEnd = 0.0;
+    double endtime = 0.0;
     largeInt point;
     int eventflag = 0;
 
@@ -158,7 +158,6 @@ solution * ODESolver(void (*derivative)(const double *t, const double y[], doubl
             eventflag = adaptiveODEIntegrate(derivative, result, options, point);
 
             if(eventflag == 1) {
-                point = point - 1;
                 break;
             }
 
@@ -170,17 +169,17 @@ solution * ODESolver(void (*derivative)(const double *t, const double y[], doubl
                 realloc_gsl_containers(result, options);
             }
 
-            tEnd = gsl_vector_get(result -> dom, point) + options -> outInterval;
+            endtime = gsl_vector_get(result -> dom, point) + options -> outInterval;
 
-            if(tEnd > options -> domain[1]) {
-                tEnd = options -> domain[1];
+            if(endtime > options -> domain[1]) {
+                endtime = options -> domain[1];
             }
 
-            ODEIntegrate(derivative, result, options, point, tEnd);
+            ODEIntegrate(derivative, result, options, point, endtime);
         }
     }
 
-    options -> lastIndex = point;
+    options -> lastIndex = point - 1;
 
     puts("---------------------- ODE solved successfully! ----------------------\n");
 
@@ -285,7 +284,7 @@ int adaptiveODEIntegrate(void (*derivative)(const double *t, const double y[], d
 }
 
 
-void ODEIntegrate(void (*derivative)(const double *t, const double y[], double ydot[]), solution *result, odeOptions *options, largeInt point, double tEnd){
+void ODEIntegrate(void (*derivative)(const double *t, const double y[], double ydot[]), solution *result, odeOptions *options, largeInt point, double endtime){
 
     double step = options -> step;
     double indep_t = gsl_vector_get(result -> dom, point);
@@ -297,13 +296,13 @@ void ODEIntegrate(void (*derivative)(const double *t, const double y[], double y
 
     do {
 
-        if(tEnd - indep_t < step) {
-            step = tEnd - indep_t;
+        if(endtime - indep_t < step) {
+            step = endtime - indep_t;
         }
 
         genericSolver(derivative, &indep_t, func_y, step, options);
 
-    } while (indep_t < tEnd);
+    } while (indep_t < endtime);
 
     gsl_vector_set(result -> dom, point + 1, indep_t);
 
