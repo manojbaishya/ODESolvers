@@ -1,21 +1,16 @@
-# ODESolvers
- Naive ODE Solvers: single step, multistep and boundary value methods.
+## Available algorithms:
 
-## About
+### Fixed stepsize
+- Euler Forward
+- Heun Predictor-Corrector
+- Midpoint
+- RK2 (Ralston and Rabinowitz)
+- RK3 (Simple and Optimised
+- RK4
+- RK5 (Butcher)
 
-## Features
-
-## Installation
-
-## Examples
-
-### Nonstiff First Order ODE
-
-### Nonstiff N-dimensional ODE System
-
-### Plotting data
-
-### Contributing
+### Variable stepsize
+- Runge-Kutta-Fehlberg (Cash-Karp)
 
 ## TODO
 
